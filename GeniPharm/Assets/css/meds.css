@@ -1,0 +1,553 @@
+/* 
+    Designer name : ahmed nadjib 
+    theme coder : ahmed nadjib.
+    Color ffa372
+    #184d47 green 
+ 
+        */
+
+
+        * { 
+            -moz-box-sizing: border-box; 
+            -webkit-box-sizing: border-box; 
+             box-sizing: border-box; 
+             
+         }
+         html
+         {
+            scroll-behavior: smooth;
+         }
+        
+         body{
+             display: flex;
+             flex-direction: column;
+             margin:0; 
+             padding: 0;
+             background-color: #ffffff;
+             color: rgba(0, 0, 0, 0.8);
+             position: relative;
+            
+
+            }
+
+        
+         /* Begin the NavBar */
+        .nav-bar
+        {
+         
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            height: 75px ;
+            padding: 0;
+            transition: all .5s ease-out;
+        
+        } 
+        .nav-bar .navbar{
+            padding-left: 40px ;
+            padding-right: 40px;
+            height: 100%;
+            background : linear-gradient(90deg, rgba(0,156,225,1) 0%, rgba(6,179,214,1) 100%); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .nav-bar .navbar .navbar-brand img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        #bien 
+        {
+            color: #000;
+        }
+        .nav-bar .navbar .navbar-brand .img_logo
+        {
+            padding-right: 20px;
+            border-right:1px solid rgba(255, 255, 255, 0.3);
+            width: auto;
+            height: auto;
+            margin-right: 30px;
+        }
+        .nav-bar .navbar .navbar-brand p
+        {
+            display: none !important;
+            margin: 0 !important;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .nav-bar .navbar .navbar-brand p span
+        {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .navbar-dark .navbar-nav .nav-link
+        {
+            font-size: 1.12em;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-family: 'Noto Sans JP', sans-serif;
+            transition: all .3s ease-out !important;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .active-link
+        {
+            border-left: 2px solid #f39200;
+        }
+        .collapse .nav-item a:hover
+        {
+            border-left: 2px solid #f39200;
+            margin: 0px 5px;
+            transform: scale(1.1);
+        }
+         
+        
+         /* End The NavbaR */
+        
+         /* Begin Footer */
+         .footer
+         {
+            position: relative;
+            bottom: 0;
+            z-index:0;
+            background: rgb(43,79,97);
+            background: linear-gradient(90deg, rgba(0,156,225,1) 0%, rgba(6,179,214,1) 100%) ; 
+            font-family: 'Noto Sans JP', sans-serif;
+         }
+         
+         .devider 
+         {
+             border-bottom: 1px solid rgba(255, 163, 114, 0.5) ;
+         }
+         .footer .container .second-row h6
+         {
+             font-weight: 600;
+             letter-spacing: 0.05em;
+         }
+         i:hover
+         {
+            cursor: pointer;
+            color: #71989b;
+         }
+         .social-media  a {
+             color:#041922 !important;
+         }
+         /* End Footer */
+        
+        
+         
+        
+         
+         /* scroolll */
+        #scroll
+        {
+            display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 9999;
+          font-size: 18px;
+          height: 50px;
+          width: 50px;
+          border: none;
+          outline: none;
+          background-color: #f39200;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 50%;
+        }
+         /* end scroll */
+
+         /* Loading  */
+
+         /* End Loading */
+
+
+        /* Media quieries  */
+/*Extra small devices */
+@media (max-width : 575px)
+{
+    .header .title h2 {
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 2.0em !important;
+    }
+    .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+        width: 100%;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .nav-bar{
+        
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+     .navbar{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+     }
+    .slider .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    } 
+    .slider .row h1
+    {
+        font-size:58px !important ;
+    }
+    .slider .row .main-text p
+    {
+        font-size: 1.5em !important;
+    }
+    .nav-bar .navbar
+    {
+        padding-left: 0px !important;
+        padding-right: 0px!important;
+    }
+    .navbar-collapse
+    {
+        background-color: rgb(43,79,97);
+        background: linear-gradient(90deg, rgba(0,156,225,1) 0%, rgba(6,179,214,1) 100%);;
+        padding-right: 15px;
+        padding-left: 35px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 10px !important;
+    }
+    .valeurs
+    {
+        margin-top: 3rem;
+        text-align: center;
+        
+    }
+    .valeurs div
+    {
+        justify-content: center!important;
+    }
+    .philo
+    {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .philo div
+    {
+        justify-content: center!important;
+    }
+    .shake
+    {
+        margin-bottom: 20px;
+        border-right: 0px solid #fff !important;
+    }
+    .card
+    {
+        margin-bottom: 20px;
+    }
+    .footer .container{
+        padding: 0px 20px !important;
+    }
+    .navbar-dark .navbar-brand
+    {
+        margin-left: 0px !important;
+    }
+    .img_logo
+    {
+        margin-right: 10px!important;
+        margin-left: 30px;
+    }
+    #btn-togler
+    {
+        margin-right: 30px !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px)
+ { 
+    .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+        width: 100%;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .nav-bar{
+        
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+     .navbar{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+     }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: none !important;
+    }
+    .slider .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .navbar-collapse
+    {
+        background-color: rgb(43,79,97);
+        background: linear-gradient(90deg, rgba(43,79,97,1) 0%, rgba(0,159,227,1) 100%);
+        padding-right: 15px;
+        padding-left: 35px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .valeurs
+    {
+        margin-top: 3rem;
+    }
+    .philo
+    {
+        margin-bottom: 3rem;
+    }
+    .shake
+    {
+        margin-bottom: 20px;
+        border-right: 0px solid #fff !important;
+    }
+     .card
+    {
+        margin-bottom: 20px;
+    }
+    .footer .container{
+        padding: 0px 20px !important;
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 10px !important;
+    }
+    .img_logo
+    {
+        margin-right: 10px!important;
+        margin-left: 30px;
+    }
+    #btn-togler
+    {
+        margin-right: 30px !important;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px)
+ {
+    
+    .container, .container-fluid,
+     .container-sm, .container-md,
+      .container-lg, .container-xl {
+        width: 100%;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .nav-bar{
+        
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        font-size: 12px;
+    }
+
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
+    .navbar-collapse
+    {
+        background-color: rgb(43,79,97);
+        background: linear-gradient(90deg, rgba(43,79,97,1) 0%, rgba(0,159,227,1) 100%);
+        padding-right: 15px;
+        padding-left: 35px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 10px !important;
+    }
+    .valeurs
+    {
+        margin-top: 3rem;
+    }
+    .philo
+    {
+        margin-bottom: 3rem;
+    }
+    .img_logo
+    {
+        margin-right: 10px!important;
+        margin-left: 30px;
+    }
+    #btn-togler
+    {
+        margin-right: 30px !important;
+    }
+ }
+
+ /* Large devices (desktops, 992px and up) */
+ 
+@media (min-width: 992px) 
+ { 
+    .navbar {
+        font-size: 12px;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) 
+ { 
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
+        .navbar {
+        font-size: 12px;
+    }
+ }
+
+        /* End media queries  */
+
+/* Begin Main  */
+
+    /* Begin header */
+        .main 
+        {
+            background-color: #f8f9fa;
+        }
+        .main .header
+        {
+            height: 40vh;
+            background: linear-gradient(90deg, rgba(0,156,225,1) 0%, rgba(6,179,214,1) 100%) ; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .header .title
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header .title h2
+        {
+            color: rgba(0, 0, 0, 0.7);
+            font-size:2.6em;
+        }
+        .col-lg-4
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+        .header .title hr
+        {
+           width: 50%;
+           color: rgba(255, 255, 255, 0.6);
+           height: 1.8px;
+        }
+        .custom-shape-divider-bottom-1613944329 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+        
+        .custom-shape-divider-bottom-1613944329 svg {
+            position: relative;
+            display: block;
+            width: calc(124% + 1.3px);
+            height: 92px;
+        }
+        
+        .custom-shape-divider-bottom-1613944329 .shape-fill {
+            fill: #f8f9fa;
+        }
+    /* ENd Header */
+
+
+    /* Begin product  */
+        .col-lg-4 .btn-primary
+        {
+            width: 100%;
+        }
+        .card-text
+        {
+            font-size: 14px;
+        }
+        .main .products .row ul
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main .products .row > div 
+        {
+            margin-top: 20px;
+        }
+
+        .main .products .row > div a
+        {
+            background-color: rgba(5, 158, 226, 0.8);
+            border-color:rgba(5, 158, 226, 1); ;
+        }
+        .main .products .row > div h5
+        {
+            color: rgba(5, 158, 226, 0.8);
+        }
+        .pagination {
+            margin-top: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+        .pagination li a 
+        {
+            color:rgba(5, 158, 226, 0.8);
+        }
+    /* End Body  */
+/* Begin my classes  */
+
+        .displaying 
+        {
+            display: flex !important;
+            justify-content: center;
+        }
+
+        .notdisplaying 
+        {
+            display: none !important;
+        }
+
+
+/* End My Classes */
+/* End Main  */
+
+
+/* Begin Modal  */
+    .modal .modal-body .row:first-child
+    {
+        height: 50vh;
+    }
+    .modal .modal-body .row:first-child .carousel
+    {
+        height: 100%;
+    }
+    .black
+    {
+        color: #000;
+    }
+/* ENd Modal  */
