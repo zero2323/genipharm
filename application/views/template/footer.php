@@ -98,6 +98,8 @@
 <?php } ?>
 <?php if ($acceuil == false && $page=="parapharma") { ?><script src="<?php echo base_url(); ?>Assets/js/cos.js"></script>
 <?php } ?>
+<?php if ($acceuil == false && $page=="com") { ?><script src="<?php echo base_url(); ?>Assets/js/com.js"></script>
+<?php } ?>
 <script src="<?php echo base_url(); ?>Assets/js/bootstrap.min.js"></script>
 <!-- End Scripts -->
 </body>

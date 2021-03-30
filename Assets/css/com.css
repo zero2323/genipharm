@@ -1,0 +1,269 @@
+/* 
+    Designer name : ahmed nadjib 
+    theme coder : ahmed nadjib.
+    Color ffa372
+    #184d47 green 
+ 
+        */
+
+
+        * { 
+            -moz-box-sizing: border-box; 
+            -webkit-box-sizing: border-box; 
+             box-sizing: border-box; 
+             
+         }
+         html
+         {
+            scroll-behavior: smooth;
+         }
+        
+         body{
+             display: flex;
+             flex-direction: column;
+             margin:0; 
+             padding: 0;
+             background-color: #ffffff;
+             color: rgba(0, 0, 0, 0.8);
+             position: relative;
+            
+
+            }
+
+        
+         /* Begin the NavBar */
+        .nav-bar
+        {
+         
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            height: 75px ;
+            padding: 0;
+            transition: all .5s ease-out;
+        
+        } 
+        .nav-bar .navbar{
+            padding-left: 40px ;
+            padding-right: 40px;
+            height: 100%;
+            background : linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .nav-bar .navbar .navbar-brand img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        #bien 
+        {
+            color: #000;
+        }
+        .nav-bar .navbar .navbar-brand .img_logo
+        {
+            padding-right: 20px;
+            border-right:1px solid rgba(255, 255, 255, 0.3);
+            width: auto;
+            height: auto;
+            margin-right: 30px;
+        }
+        .nav-bar .navbar .navbar-brand p
+        {
+            display: none !important;
+            margin: 0 !important;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .nav-bar .navbar .navbar-brand p span
+        {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .navbar-dark .navbar-nav
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-dark .navbar-nav .nav-link
+        {
+            font-size: 1.12em;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-family: 'Noto Sans JP', sans-serif;
+            transition: all .3s ease-out !important;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .active-link
+        {
+            border-left: 2px solid #f39200;
+        }
+        .collapse .nav-item a:hover
+        {
+            border-left: 2px solid #f39200;
+            margin: 0px 5px;
+            transform: scale(1.1);
+        }
+        .count-cart
+        {
+            font-size: 20px;
+        }
+         /* End The NavbaR */
+         /* Begin Footer */
+         .footer
+         {
+            position: relative;
+            bottom: 0;
+            z-index:0;
+            background: rgb(43,79,97);
+            background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+            font-family: 'Noto Sans JP', sans-serif;
+         }
+         
+         .devider 
+         {
+             border-bottom: 1px solid rgba(255, 163, 114, 0.5) ;
+         }
+         .footer .container .second-row h6
+         {
+             font-weight: 600;
+             letter-spacing: 0.05em;
+         }
+         i:hover
+         {
+            cursor: pointer;
+            color: #71989b;
+         }
+         .social-media  a {
+             color:#041922 !important;
+         }
+         /* End Footer */
+
+
+
+/* Begin the main  */
+
+.main 
+{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.main .row:first-child
+{
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .row:first-child div:nth-child(2) input
+{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.main .row:first-child div:first-child
+{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.main .row:first-child div:last-child button
+{
+    padding: 7px 40px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color:#e45826 ;
+    color: #fff;
+}
+
+
+
+
+.main .row:nth-child(2) .produits .table tbody tr td
+{
+    width:25% ;
+}
+
+
+.main .row:nth-child(2) .produits .table tbody tr td img
+{
+    width: 60%;
+}
+/* end The main  */
+
+
+    /* Begin product  */
+    .col-lg-4 .btn-primary
+    {
+        width: 100%;
+        background-color: #e45826;
+        border-color: #e45826;
+    }
+    .card-text
+    {
+        font-size: 14px;
+    }
+    .main .products .row ul
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main .products .row > div 
+    {
+        margin-top: 20px;
+    }
+
+    .main .products .row > div a
+    {
+        background-color: rgba(241, 203, 97, 0.8);
+        border-color:rgba(241, 203, 97, .9) ;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .produits .title
+    {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .clip 
+    {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        background-color: #ddd;
+        font-size: 1rem !important ;
+        width: 25%;
+        padding: 10px;
+        background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+        margin-bottom: 20px;
+    }
+    .produits .card
+    {
+        transition: all .3s ease-out;
+    }
+    .produits .card:hover
+    {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    /* end product */
+
+
+    /* begin modal  */
+
+    .modal-footer button:first-child
+    {
+        background-color:#e45826 ;
+        border-color: #e45826;
+    }
+    .modal-footer button:last-child
+    {
+        color: red;
+        background: unset;
+        border: unset;
+    }
+    .btn-danger 
+    {
+        background-color: #dc3545 !important ;
+    }
+
+    /* end modal  */
