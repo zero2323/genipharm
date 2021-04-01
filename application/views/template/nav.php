@@ -21,22 +21,22 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             notre entreprise
                             </a>
-                        <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Notre Entreprise</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Nos Valeurs</h6>
                                       <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Notre Philosophie</h6>
                                       <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                  </div>          
-                            </div>
+                                  </div> 
+                                </div>           
                         </div>
                         </li>
 
@@ -44,24 +44,23 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             nos expertises
                             </a>
-                            <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
                                       <p><a  href="">Voir nos Compliements alimentaires.</a></p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Produits parapharmaceutiques</h6>
                                       <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
-       
+                                  </div>
                             </div>
-                        </div>
                         </li>
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
@@ -106,22 +105,22 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             notre entreprise
                             </a>
-                        <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Notre Entreprise</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Nos Valeurs</h6>
                                       <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Notre Philosophie</h6>
                                       <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                  </div>          
-                            </div>
+                                  </div> 
+                                </div>           
                         </div>
                         </li>
 
@@ -129,24 +128,23 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             nos expertises
                             </a>
-                            <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
                                       <p><a  href="">Voir nos Compliements alimentaires.</a></p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Produits parapharmaceutiques</h6>
                                       <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
-       
+                                  </div>
                             </div>
-                        </div>
                         </li>
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
@@ -193,22 +191,22 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             notre entreprise
                             </a>
-                        <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Notre Entreprise</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Nos Valeurs</h6>
                                       <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Notre Philosophie</h6>
                                       <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                  </div>          
-                            </div>
+                                  </div> 
+                                </div>           
                         </div>
                         </li>
 
@@ -216,24 +214,23 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             nos expertises
                             </a>
-                            <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
                                       <p><a  href="">Voir nos Compliements alimentaires.</a></p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Produits parapharmaceutiques</h6>
                                       <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
-       
+                                  </div>
                             </div>
-                        </div>
                         </li>
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
@@ -280,22 +277,22 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             notre entreprise
                             </a>
-                        <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Notre Entreprise</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Nos Valeurs</h6>
                                       <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
                                   </div>
-                                  <div>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6>Notre Philosophie</h6>
                                       <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                  </div>          
-                            </div>
+                                  </div> 
+                                </div>           
                         </div>
                         </li>
 
@@ -303,24 +300,23 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             nos expertises
                             </a>
-                            <div class="drop-content">
-                            <div class="d-flex flex-row">
-                                  <div >
+                            <div class="drop-content  container ">
+                                <div class="row">
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
                                       <p><a  href="">Voir nos Compliements alimentaires.</a></p>
                                   </div>
-                                  <div >
-                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                  <div class="col-xl-6 col-lg-6 col-xxl-4 " >
+                                      <h6 class="text-center ">Produits parapharmaceutiques</h6>
                                       <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
-       
+                                  </div>
                             </div>
-                        </div>
                         </li>
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
