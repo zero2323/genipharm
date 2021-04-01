@@ -1,0 +1,135 @@
+         /* Begin the NavBar */
+         .nav-bar
+         {
+             position: fixed;
+             top: 0;
+             z-index: 999;
+             height: 75px ;
+             padding: 0;
+             transition: all .5s ease-out;
+         
+         } 
+         .nav-bar .navbar{
+             padding-left: 40px ;
+             padding-right: 40px;
+             height: 100%;
+             color: #fff;
+             background-color: transparent;
+             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+         }
+         .navbar-dark .navbar-nav .nav-link 
+         {
+             color: #fff  ;
+         }
+         .nav-bar .navbar .navbar-brand img
+         {
+             width: 100%;
+             height: 100%;
+         }
+         
+         .nav-bar .navbar .navbar-brand .img_logo
+         {
+             padding-right: 20px;
+             border-right:1px solid rgba(255, 255, 255, 0.3);
+             width: 80%;
+             height: auto;
+             margin-right: 30px;
+         }
+         .nav-bar .navbar .navbar-brand p
+         {
+             display: none !important;
+             margin: 0 !important;
+             font-size: 16px;
+             font-weight: 300;
+         }
+         .nav-bar .navbar .navbar-brand p span
+         {
+             font-size: 18px;
+             font-weight: 500;
+         }
+         .navbar-dark .navbar-nav .nav-link
+         {
+             font-size: 1.0em;
+             font-weight: 400;
+             text-transform: uppercase;
+             transition: all .3s ease-out !important;
+             font-family: revert;
+         }
+ 
+         .active-link
+         {
+             border-left: 2px solid #009FE3;
+         }
+         .collapse .partenaire
+         {
+             border: 2px solid #009FE3;
+             border-radius: 20px;
+         }
+         .collapse .nav-item:not(:last-child) a:hover
+         {
+             border-left: 2px solid #009FE3;
+             margin: 0px 5px;
+             transform: scale(1.1);
+         }
+         .collapse .nav-item:last-child a:hover
+         {
+             border-left: unset !important;
+         }
+        .drop-down
+        {
+            position: relative;
+            
+        }
+        .drop-down:hover .drop-content
+        {
+            display: block;
+        }
+        .drop-content
+        {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 20px 0;
+            z-index: 1;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            color: rgba(0, 0, 0, 0.9);
+            width: 35vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .drop-content div div
+        {
+            padding: 20px;
+            
+        }  
+        .drop-content div div:not(:last-child)
+        {
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .drop-content h4
+        {
+            color:#009FE3 ;
+        }
+        .drop-content h6
+        {
+            font-weight: 700;
+        }
+        .drop-content p
+        {
+            font-size: 12px;
+        }
+        .drop-content div p a 
+        {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .drop-content div p a:hover
+        {
+            all:unset !important;
+            cursor: pointer !important;
+            color:#009FE3 ;
+        }
+          /* End The NavbaR */

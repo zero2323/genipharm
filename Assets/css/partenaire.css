@@ -32,23 +32,10 @@
 
         
          /* Begin the NavBar */
-        .nav-bar
-        {
-         
-            position: fixed;
-            top: 0;
-            z-index: 999;
-            height: 75px ;
-            padding: 0;
-            transition: all .5s ease-out;
-        
-        } 
+
         .nav-bar .navbar{
-            padding-left: 40px ;
-            padding-right: 40px;
-            height: 100%;
-            background : linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%); 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+            background : linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%);
         }
         .nav-bar .navbar .navbar-brand img
         {
@@ -59,45 +46,33 @@
         {
             color: #000;
         }
-        .nav-bar .navbar .navbar-brand .img_logo
-        {
-            padding-right: 20px;
-            border-right:1px solid rgba(255, 255, 255, 0.3);
-            width: auto;
-            height: auto;
-            margin-right: 30px;
-        }
-        .nav-bar .navbar .navbar-brand p
-        {
-            display: none !important;
-            margin: 0 !important;
-            font-size: 16px;
-            font-weight: 300;
-        }
-        .nav-bar .navbar .navbar-brand p span
-        {
-            font-size: 18px;
-            font-weight: 500;
-        }
         .navbar-dark .navbar-nav .nav-link
         {
-            font-size: 1.12em;
-            font-weight: 300;
-            text-transform: uppercase;
-            font-family: 'Noto Sans JP', sans-serif;
-            transition: all .3s ease-out !important;
+
             color: rgba(0, 0, 0, 0.8);
         }
         .active-link
         {
-            border-left: 2px solid #f39200;
+            border-left: 2px solid #000 !important;
+        }
+        .collapse .nav-item a
+        {
+            color: #000 !important;
         }
         .collapse .nav-item a:hover
         {
-            border-left: 2px solid #f39200;
+            border-left: 2px solid #000 !important;
             margin: 0px 5px;
             transform: scale(1.1);
         }
+
+        .collapse .partenaire
+        {
+            border: 2px solid #000 !important;
+            border-radius: 20px;
+        }
+
+
          /* End The NavbaR */
 
 /* Start Sign Up */
@@ -130,33 +105,3 @@ border-color: transparent;
 
 
 /* end Sign Up */
-
-         /* Begin Footer */
-         .footer
-         {
-            position: relative;
-            bottom: 0;
-            z-index:0;
-            background: rgb(43,79,97);
-            background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
-            font-family: 'Noto Sans JP', sans-serif;
-         }
-         
-         .devider 
-         {
-             border-bottom: 1px solid rgba(255, 163, 114, 0.5) ;
-         }
-         .footer .container .second-row h6
-         {
-             font-weight: 600;
-             letter-spacing: 0.05em;
-         }
-         i:hover
-         {
-            cursor: pointer;
-            color: #71989b;
-         }
-         .social-media  a {
-             color:#041922 !important;
-         }
-         /* End Footer */

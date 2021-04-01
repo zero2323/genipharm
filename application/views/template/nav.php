@@ -4,9 +4,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark " id="nav-b">
             <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
                 <div class="img_logo" id="img_logo">
-                    <img src="<?php echo base_url(); ?>Assets/img/logo_white.png" id="logo_img" alt="">
+                    <img src="<?php echo base_url(); ?>Assets/img/logo_new.png" id="logo_img" alt="">
                 </div>
-                <p id="bien" class="d-flex align-items-center">Bienvenu à <span class="ms-1">Genipharm</span></p>
             </a>
             <button id="btn-togler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="">
@@ -14,27 +13,68 @@
                 </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto me-auto">
                     <li class="nav-item active ms-2">
-                        <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
+                        <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-propos" href="#information"><i class="fas fa-info-circle"></i> À Propos</a>
-                    </li>
+                    <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            notre entreprise
+                            </a>
+                        <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Nos Valeurs</h6>
+                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Notre Philosophie</h6>
+                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
+                                  </div>          
+                            </div>
+                        </div>
+                        </li>
 
-                    <li class="nav-item dropdown ms-2">
-                        <a class="nav-link " href="#big-section" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-list-ul"></i> Nos produits
-                        </a>
+                        <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            nos expertises
+                            </a>
+                            <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div >
+                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
+                                  </div>
+                                  <div >
+                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                  </div> 
+       
+                            </div>
+                        </div>
+                        </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-galerie" href="#"><i class="fas fa-image"></i> Galerie</a>
+                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
                     </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="#"><i class="fas fa-address-book"></i> Contactez-Nous</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Partenaire</a>
+                    
+                </ul>
+
+                <ul class="navbar-nav ms-auto ">
+                <li class="nav-item ms-2 partenaire">
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
                     </li>
                 </ul>
             </div>
@@ -49,9 +89,8 @@
             <nav class="navbar navbar-expand-lg navbar-dark " id="nav-b">
                 <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
                     <div class="img_logo" id="img_logo">
-                        <img src="<?php echo base_url(); ?>Assets/img/logo_white.png" id="logo_img" alt="">
+                        <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
                     </div>
-                    <p id="bien" class="d-flex align-items-center">Bienvenu à <span class="ms-1">Genipharm</span></p>
                 </a>
                 <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="">
@@ -59,26 +98,69 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active ms-2">
-                            <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-propos" href="#somme">NOTRE ENTREPRISE</a>
+                <ul class="navbar-nav ms-auto me-auto">
+                    <li class="nav-item active ms-2">
+                        <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            notre entreprise
+                            </a>
+                        <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Nos Valeurs</h6>
+                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Notre Philosophie</h6>
+                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
+                                  </div>          
+                            </div>
+                        </div>
                         </li>
 
-                        <li class="nav-item dropdown ms-2">
-                            <a class="nav-link  " href="#big-section" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                NOS EXPERTISES
+                        <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            nos expertises
                             </a>
+                            <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Nos Valeurs</h6>
+                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Notre Philosophie</h6>
+                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
+                                  </div>          
+                            </div>
+                        </div>
                         </li>
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-contact" href="#"> Gallerie</a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/com">Espace Partenaire</a>
-                        </li>
-                    </ul>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
+                    </li>
+                    
+                </ul>
+
+                <ul class="navbar-nav ms-auto ">
+                <li class="nav-item ms-2 partenaire">
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    </li>
+                </ul>
                 </div>
             </nav>
         </div>
@@ -102,26 +184,69 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active ms-2">
-                            <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-propos" href="<?php echo base_url(); ?>page/compliments"><i class="fas fa-info-circle"></i> Compliments Alimentaires</a>
+                <ul class="navbar-nav ms-auto me-auto">
+                    <li class="nav-item active ms-2">
+                        <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            notre entreprise
+                            </a>
+                        <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Nos Valeurs</h6>
+                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Notre Philosophie</h6>
+                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
+                                  </div>          
+                            </div>
+                        </div>
                         </li>
 
-                        <li class="nav-item dropdown ms-2">
-                            <a class="nav-link disabled " href="#big-section" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-list-ul"></i> Médicaments
+                        <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            nos expertises
                             </a>
+                            <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Nos Valeurs</h6>
+                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Notre Philosophie</h6>
+                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
+                                  </div>          
+                            </div>
+                        </div>
                         </li>
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-contact" href="#"><i class="fas fa-address-book"></i> Contactez-Nous</a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <i class="fas fa-cart-arrow-down fa-2x" data-bs-toggle="modal" data-bs-target="#exampleModal"></i> <span class="count-cart">(<span class="total-count"></span>)</span>
-                        </li>
-                    </ul>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
+                    </li>
+                    
+                </ul>
+
+                <ul class="navbar-nav ms-auto ">
+                <li class="nav-item ms-2 partenaire">
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    </li>
+                </ul>
                 </div>
             </nav>
         </div>
@@ -145,31 +270,69 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active ms-2">
-                            <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"><i class="fas fa-home"></i> Accueil <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-propos" href="<?php if ($page == "parapharma") {
-                                                                            echo base_url() . "page/compliments";
-                                                                        } else if ($page == "compliments") {
-                                                                            echo base_url() . "page/parapharma";
-                                                                        } ?>"><i class="fas fa-info-circle"></i> <?php if ($page == "parapharma") { ?> Complément Alimentaire <?php } else if ($page == "compliments") { ?> Produits Parapharmaceutiques <?php } ?></a>
-                        </li>
-
-                        <li class="nav-item dropdown ms-2">
-                            <a class="nav-link disabled " href="#big-section" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-list-ul"></i> Médicaments
+                <ul class="navbar-nav ms-auto me-auto">
+                    <li class="nav-item active ms-2">
+                        <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            notre entreprise
                             </a>
+                        <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Nos Valeurs</h6>
+                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Notre Philosophie</h6>
+                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
+                                  </div>          
+                            </div>
+                        </div>
                         </li>
 
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-contact" href="#"><i class="fas fa-address-book"></i> Contactez-Nous</a>
+                        <li class="nav-item ms-2 drop-down">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            nos expertises
+                            </a>
+                            <div class="drop-content">
+                            <div class="d-flex flex-row">
+                                  <div >
+                                      <h4>Notre Entreprise</h4>
+                                      <p>Genipharm est un laboratoire algérien <br> engagé dans
+                                        le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Nos Valeurs</h6>
+                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  </div>
+                                  <div>
+                                      <h6>Notre Philosophie</h6>
+                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
+                                  </div>          
+                            </div>
+                        </div>
                         </li>
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"><i class="fas fa-address-book"></i> Partenaire</a>
-                        </li>
-                    </ul>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
+                    </li>
+                    
+                </ul>
+
+                <ul class="navbar-nav ms-auto ">
+                <li class="nav-item ms-2 partenaire">
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    </li>
+                </ul>
                 </div>
             </nav>
         </div>

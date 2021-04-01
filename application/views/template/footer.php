@@ -1,5 +1,6 @@
 <!-- Begin footer -->
-<div class="footer container-fluid mt-4" id="contact">
+<div class="footer container-fluid mt-4 <?php 
+                                                if ($acceuil == true) { echo 'main-page-footer';} elseif ($page == "compliments") {echo 'compliment-footer';} ?> " id="contact">
     <div class="container">
         <div class="row mt-4 p-4">
             <div class="col-12 d-flex justify-content-center align-items-center">
@@ -47,12 +48,16 @@
 <?php if ($acceuil == true) { ?>
     <script src="<?php echo base_url(); ?>Assets/js/main.js"></script>
 <?php } ?>
-<?php if ($acceuil == false && $page=="compliments") { ?><script src="<?php echo base_url(); ?>Assets/js/meds.js"></script>
+
+<?php if ($acceuil == false && $page=="compliments") {?><script src="<?php echo base_url(); ?>Assets/js/meds.js"></script>
 <?php } ?>
+
 <?php if ($acceuil == false && $page=="parapharma") { ?><script src="<?php echo base_url(); ?>Assets/js/cos.js"></script>
 <?php } ?>
-<?php if ($acceuil == false && $page=="com") { ?><script src="<?php echo base_url(); ?>Assets/js/com.js"></script>
+
+<?php if ($acceuil == false && $page=="com") { ;?><script src="<?php echo base_url(); ?>Assets/js/com.js"></script>
 <?php } ?>
+<script src="<?php echo base_url(); ?>Assets/js/nav.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/bootstrap.min.js"></script>
 <!-- End Scripts -->
 </body>

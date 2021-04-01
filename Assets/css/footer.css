@@ -1,0 +1,39 @@
+
+/* Begin Footer */
+.footer
+{
+   position: relative;
+   bottom: 0;
+   z-index:0;
+   background: rgb(43,79,97);
+   background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+   font-family: 'Noto Sans JP', sans-serif;
+}
+
+.devider 
+{
+    border-bottom: 1px solid rgba(255, 163, 114, 0.5) ;
+}
+.footer .container .second-row h6
+{
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+i:hover
+{
+   cursor: pointer;
+   color: #71989b;
+}
+.social-media  a {
+    color:#041922 !important;
+}
+
+.main-page-footer
+{
+    background : #009FE3 !important;
+}
+.compliment-footer
+{
+    background: #01A1DF !important;
+}
+/* End Footer */
