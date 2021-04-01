@@ -47,7 +47,7 @@
                             <div class="drop-content">
                             <div class="d-flex flex-row">
                                   <div >
-                                      <h4>Notre Entreprise</h4>
+                                      <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
@@ -132,18 +132,19 @@
                             <div class="drop-content">
                             <div class="d-flex flex-row">
                                   <div >
-                                      <h4>Notre Entreprise</h4>
+                                      <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div>
-                                      <h6>Nos Valeurs</h6>
-                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  <div >
+                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
                                   </div>
-                                  <div>
-                                      <h6>Notre Philosophie</h6>
-                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                  </div>          
+                                  <div >
+                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                  </div> 
+       
                             </div>
                         </div>
                         </li>
@@ -218,18 +219,19 @@
                             <div class="drop-content">
                             <div class="d-flex flex-row">
                                   <div >
-                                      <h4>Notre Entreprise</h4>
+                                      <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div>
-                                      <h6>Nos Valeurs</h6>
-                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  <div >
+                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
                                   </div>
-                                  <div>
-                                      <h6>Notre Philosophie</h6>
-                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                  </div>          
+                                  <div >
+                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                  </div> 
+       
                             </div>
                         </div>
                         </li>
@@ -304,18 +306,19 @@
                             <div class="drop-content">
                             <div class="d-flex flex-row">
                                   <div >
-                                      <h4>Notre Entreprise</h4>
+                                      <h4>Nos Expertises</h4>
                                       <p>Genipharm est un laboratoire algérien <br> engagé dans
                                         le développement et la production de produits  pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
                                   </div>
-                                  <div>
-                                      <h6>Nos Valeurs</h6>
-                                      <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
+                                  <div >
+                                      <h6 class="text-center">Compléments alimentaires(Gélules et comprimés)</h6>
+                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
                                   </div>
-                                  <div>
-                                      <h6>Notre Philosophie</h6>
-                                      <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                  </div>          
+                                  <div >
+                                      <h6 class="text-center">Produits parapharmaceutiques</h6>
+                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                  </div> 
+       
                             </div>
                         </div>
                         </li>
