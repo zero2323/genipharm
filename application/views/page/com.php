@@ -12,90 +12,46 @@
                     <div class="col-12 title">
                         <div class="clip ">Produits Parapharmaceutique</div>
                     </div>
-                    <div class="col-lg-4 ">
-                        <div class="card" style="width: 18rem;">
-                            <img src="<?php echo base_url(); ?>Assets/img/cos/a1.jpg" class="card-img-top" alt="Fertop">
-                            <div class="card-body">
-                                <h5 class="card-title">FERTOP</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h3 class="card-title">Price</h3>
-                                <a href="#" data-name="Orange" data-price="0.5" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="FERTOP"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
+                    <?php foreach ($productsP as $product) { ?>
+                        <div class="col-lg-4 ">
+                            <div class="card" style="width: 18rem;">
+                                <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $product['designation']; ?></h5>
+                                    <p class="card-text"><?php echo $product['description']; ?></p>
+                                    <h3 class="card-title"><?php echo $product[$price]; ?> DA</h3>
+                                    <a href="#" data-name="<?php echo $product['designation']; ?>" data-price="<?php echo $product[$price]; ?>" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="<?php echo $product['designation']; ?>"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php } ?>
 
-                    <div class="col-lg-4 ">
-                        <div class="card" style="width: 18rem;">
-                            <img src="<?php echo base_url(); ?>Assets/img/cos/a2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">GYNOVAIRE</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h3 class="card-title">Price</h3>
-                                <a href="#" data-name="Otoufe7" data-price="0.5" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="FERTOP"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 ">
-                        <div class="card" style="width: 18rem;">
-                            <img src="<?php echo base_url(); ?>Assets/img/cos/a3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">GYNOVAIRE PLUS</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <h3 class="card-title">Price</h3>
-                                <a href="#" data-name="tchina" data-price="0.5" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="FERTOP"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="produits">
-                    <div id="rowone" class="row ">
-                        <div class="col-12 title">
-                            <div class="clip ">Complément Alimentaire</div>
-                        </div>
-                        <div class="col-lg-4 ">
-                            <div class="card" style="width: 18rem;">
-                                <img src="<?php echo base_url(); ?>Assets/img/cos/a4.jpg" class="card-img-top" alt="Fertop">
-                                <div class="card-body">
-                                    <h5 class="card-title">FERTOP</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <h3 class="card-title">Price</h3>
-                                    <a href="#" data-name="mendarina" data-price="0.5" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="FERTOP"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 ">
-                            <div class="card" style="width: 18rem;">
-                                <img src="<?php echo base_url(); ?>Assets/img/cos/a5.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">GYNOVAIRE</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <h3 class="card-title">Price</h3>
-                                    <a href="#" data-name="anssaj" data-price="0.5" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="FERTOP"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 ">
-                            <div class="card" style="width: 18rem;">
-                                <img src="<?php echo base_url(); ?>Assets/img/cos/a6.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">GYNOVAIRE PLUS</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <h3 class="card-title">Price</h3>
-                                    <a href="#" data-name="kiwi" data-price="0.5" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="FERTOP"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
-                                </div>
-                            </div>
-                        </div>
+        <div class="row">
+            <div class="produits">
+                <div id="rowone" class="row ">
+                    <div class="col-12 title">
+                        <div class="clip ">Complément Alimentaire</div>
                     </div>
+                    <?php foreach ($productsC as $product) { ?>
+                        <div class="col-lg-4 ">
+                            <div class="card" style="width: 18rem;">
+                                <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $product['designation']; ?></h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <h3 class="card-title"><?php echo $product[$price]; ?> DA</h3>
+                                    <a href="#" data-name="<?php echo $product['designation']; ?>" data-price="<?php echo $product[$price]; ?>" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="<?php echo $product['designation']; ?>"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- End the Main  -->
@@ -116,7 +72,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Valider la commande</button>
-                    <button type="button" class="btn btn-primary">Fermer </button>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-primary">Fermer </button>
                 </div>
             </div>
         </div>
@@ -131,8 +87,14 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="text-center modal-title" id="staticBackdropLabel">Veuillez compléter ses informations pour continuer</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
+                    <?php $error = $this->session->flashdata('error');
+                    if (isset($error)) { ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $error; ?>
+                        </div>
+                    <?php } ?>
                     <div class="modal-body">
                         <form method="POST" action="<?php echo base_url(); ?>auth/complet_signup">
                             <div class="form-group my-4">
@@ -181,7 +143,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Valider</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retourner à la page précedente</button>
+                                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retourner à la page précedente</button> -->
                             </div>
                         </form>
                     </div>

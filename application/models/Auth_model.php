@@ -61,5 +61,39 @@ class Auth_model extends CI_Model
         $res = $this->db->get_where('user', array('email' => $email))->result_array();
         return $res;
     }
+
+    public function getProductsParapharm($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $res = $this->db->get_where('produit',array('type' => "parapharm"))->result_array();
+        return $res;
+    }
+
+    public function getProductsComplement($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $res = $this->db->get_where('produit',array('type' => "complement"))->result_array();
+        return $res;
+    }
+
+    public function getProductsParapharmAll()
+    {
+        $res = $this->db->get_where('produit',array('type' => "parapharm"))->result_array();
+        return $res;
+    }
+
+    public function getProductsComplementAll()
+    {
+        $res = $this->db->get_where('produit',array('type' => "complement"))->result_array();
+        return $res;
+    }
+
+    public function record_countP() {
+        return $this->db->get_where('produit',array('type' => "parapharm"))->num_rows();
+    }
+
+    public function record_countC() {
+        return $this->db->get_where('produit',array('type' => "commplement"))->num_rows();
+    }
     
 }

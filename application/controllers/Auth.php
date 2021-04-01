@@ -64,8 +64,13 @@ class Auth extends CI_Controller
         $rc = $this->input->post('rc');
         $bank = $this->input->post('bank');
         $activity = $this->input->post('activite');
-        $this->auth_model->update_signup($email, $full_name, $adresse, $nif, $art, $rc, $bank, $activity);
-        redirect(base_url() . 'page/com');
+        if ($email == "" || $full_name == "" || $adresse == "" || $nif == "" || $art == "" || $rc == "" || $bank == "") {
+            $this->session->set_flashdata('error', "All Inputs are Required !!");
+            redirect(base_url() . 'page/com');
+        } else {
+            $this->auth_model->update_signup($email, $full_name, $adresse, $nif, $art, $rc, $bank, $activity);
+            redirect(base_url() . 'page/com');
+        }
     }
     public function signin()
     {
