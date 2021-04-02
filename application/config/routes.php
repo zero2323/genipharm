@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['page/(:any)'] = 'home/page/$1';
 $route['page/(:any)/(:num)'] = 'home/page/$1/$2';
+$route['getcommand/(:any)/(:num)'] = 'home/getcommand/$1/$2';

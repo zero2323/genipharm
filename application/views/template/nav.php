@@ -53,11 +53,11 @@
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
-                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
+                                      <p><a  href="<?php echo base_url(); ?>page/compliments">Voir nos Compliements alimentaires.</a></p>
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Produits parapharmaceutiques</h6>
-                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                      <p><a href="<?php echo base_url(); ?>page/parapharma">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
                                   </div>
                             </div>
@@ -66,7 +66,7 @@
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
                     
                 </ul>
@@ -137,11 +137,11 @@
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
-                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
+                                      <p><a  href="<?php echo base_url(); ?>page/compliments">Voir nos Compliements alimentaires.</a></p>
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Produits parapharmaceutiques</h6>
-                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                      <p><a href="<?php echo base_url(); ?>page/parapharma">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
                                   </div>
                             </div>
@@ -150,7 +150,7 @@
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
                     
                 </ul>
@@ -223,11 +223,11 @@
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
-                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
+                                      <p><a  href="<?php echo base_url(); ?>page/compliments">Voir nos Compliements alimentaires.</a></p>
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Produits parapharmaceutiques</h6>
-                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                      <p><a href="<?php echo base_url(); ?>page/parapharma">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
                                   </div>
                             </div>
@@ -236,7 +236,7 @@
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
                     
                 </ul>
@@ -309,11 +309,11 @@
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
-                                      <p><a  href="">Voir nos Compliements alimentaires.</a></p>
+                                      <p><a  href="<?php echo base_url(); ?>page/compliments">Voir nos Compliements alimentaires.</a></p>
                                   </div>
                                   <div class="col-xl-6 col-lg-6 col-xxl-4 " >
                                       <h6 class="text-center ">Produits parapharmaceutiques</h6>
-                                      <p><a href="">Voir nos produits parapharmaceutiques.</a></p>
+                                      <p><a href="<?php echo base_url(); ?>page/parapharma">Voir nos produits parapharmaceutiques.</a></p>
                                   </div> 
                                   </div>
                             </div>
@@ -322,7 +322,7 @@
                         <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="#"> Contactez-Nous</a>
+                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
                     
                 </ul>

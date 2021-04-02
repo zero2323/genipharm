@@ -3,13 +3,13 @@
         <div class="row">
             <div class="col-3">Vous recherchez </div>
             <div class="col-7"><input type="text" name="lookfor" id="look" placeholder="Entrez le nom du produit"></div>
-            <div class="col-2"><button>RECHERCHER</button></div>
+            <div class="col-2"><button id="find">RECHERCHER</button></div>
         </div>
 
         <div class="row">
             <div class="produits">
-                <div id="rowone" class="row displaying">
-                    <div class="col-12 title">
+                <div id="rowone" class="parapharm row displaying">
+                    <!-- <div class="col-12 title">
                         <div class="clip ">Produits Parapharmaceutique</div>
                     </div>
                     <?php foreach ($productsP as $product) { ?>
@@ -24,7 +24,7 @@
                                 </div>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php } ?> -->
 
                 </div>
             </div>
@@ -32,8 +32,8 @@
 
         <div class="row">
             <div class="produits">
-                <div id="rowone" class="row ">
-                    <div class="col-12 title">
+                <div id="rowone" class="complement row ">
+                    <!-- <div class="col-12 title">
                         <div class="clip ">Complément Alimentaire</div>
                     </div>
                     <?php foreach ($productsC as $product) { ?>
@@ -42,13 +42,13 @@
                                 <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $product['designation']; ?></h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text"><?php echo $product['description']; ?></p>
                                     <h3 class="card-title"><?php echo $product[$price]; ?> DA</h3>
                                     <a href="#" data-name="<?php echo $product['designation']; ?>" data-price="<?php echo $product[$price]; ?>" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="<?php echo $product['designation']; ?>"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
                                 </div>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php } ?> -->
                 </div>
             </div>
         </div>
