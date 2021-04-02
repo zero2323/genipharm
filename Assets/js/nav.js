@@ -14,7 +14,7 @@ nav.addEventListener("mouseover", function() {
     'use strict';
     nav.style.height = "70px";
     nav.style.background = "rgb(43,79,97)";
-    nav.style.background = "rgba(255,255,255,0.5)";
+    nav.style.background = "rgba(255,255,255,0.8)";
     toggler.style.borderColor = "#000000";
     toggler.style.borderRadius = "2px";
     icon.style.color = "#000";
@@ -86,9 +86,9 @@ function reset(check) {
         nav.style.transition = "all .5s easet";
         toggler.style.borderRadius = "2px";
         toggler.style.borderColor = "rgba(255, 255, 255, 0.4)";
-        icon.style.color = "#000";
+        icon.style.color = "#fff";
         nav.style.background = "linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,0))";
-        if (url != "/genipharm2/" ){
+        if (url != "/genipharm3/" ){
             image.src = base_url + "Assets/img/logo.png";
         } else {
             image.src = base_url + "Assets/img/logo_new.png";
@@ -97,7 +97,7 @@ function reset(check) {
         imag.style.borderRight = "1px solid rgba(255, 255, 255, 0.3)";
         for (let index = 0; index < link.length; index++) {
             link[index].style.color = "#fff";
-            link[index].style.fontSize = "1.05em";
+            link[index].style.fontSize = "1.00em";
             link[index].style.fontWeight = "400";
             link[index].style.transition = "all .4s ease";
         }

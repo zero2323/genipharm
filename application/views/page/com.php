@@ -13,7 +13,7 @@
                         <div class="clip ">Produits Parapharmaceutique</div>
                     </div>
                     <?php foreach ($productsP as $product) { ?>
-                        <div class="col-lg-4 ">
+                        <div class="col-lg-4  ">
                             <div class="card" style="width: 18rem;">
                                 <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
                                 <div class="card-body">
@@ -37,7 +37,7 @@
                         <div class="clip ">Complément Alimentaire</div>
                     </div>
                     <?php foreach ($productsC as $product) { ?>
-                        <div class="col-lg-4 ">
+                        <div class="col-lg-4 col-md-6  ">
                             <div class="card" style="width: 18rem;">
                                 <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
                                 <div class="card-body">

@@ -45,7 +45,7 @@
         {
 
             transition: all .3s ease-out !important;
-            color: rgba(0, 0, 0, 0.8);
+            color: rgba(0, 0, 0, 0.8)!important;
         }
         .active-link
         {
@@ -96,7 +96,7 @@
 {
     .header .title h2 {
         color: rgba(0, 0, 0, 0.7);
-        font-size: 2.0em !important;
+        font-size: 1.5em !important;
     }
     .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
         width: 100%;
@@ -104,6 +104,13 @@
         padding-left: 15px!important;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .collapse .nav-item a:hover
+    {
+        border-left: 2px solid #000 !important;
+        margin: 0px 5px;
+        transform: unset;
     }
     .nav-bar{
         
@@ -133,14 +140,27 @@
         padding-left: 0px !important;
         padding-right: 0px!important;
     }
+    .nav-link 
+    {
+        padding: 10px !important;
+        color: rgba(0, 0, 0, 0.8) !important;
+    }
+     .collapse .nav-item:not(:last-child) a:hover
+    {
+    border-left: 2px solid #009FE3 !important;
+        transform: unset !important;
+    }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
     .navbar-collapse
     {
-        background-color: rgb(43,79,97);
-        background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%);
-        padding-right: 15px;
-        padding-left: 35px;
-        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
         font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
     }
     .aboutus .container .first-row p
     {
@@ -180,15 +200,20 @@
     .navbar-dark .navbar-brand
     {
         margin-left: 0px !important;
+        margin-right: 0 !important;
     }
     .img_logo
     {
-        margin-right: 10px!important;
-        margin-left: 30px;
+        margin-right: 0px!important;
+        margin-left: 10px;
     }
     #btn-togler
     {
         margin-right: 30px !important;
+    }
+    .drop-content
+    {
+        width: 45vw !important;
     }
 }
 
@@ -201,6 +226,12 @@
         padding-left: 15px!important;
         margin-right: auto;
         margin-left: auto;
+    }
+    .collapse .nav-item a:hover
+    {
+        border-left: 2px solid #000 !important;
+        margin: 0px 5px;
+        transform: unset;
     }
     .nav-bar{
         
@@ -221,14 +252,27 @@
         align-items: center;
         height: 100vh;
     }
+    .nav-link 
+    {
+        padding: 10px !important;
+        color: rgba(0, 0, 0, 0.8) !important;
+    }
+     .collapse .nav-item:not(:last-child) a:hover
+         {
+            border-left: 2px solid #009FE3 !important;
+             transform: unset !important;
+         }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
     .navbar-collapse
     {
-        background-color: rgb(43,79,97);
-        background: linear-gradient(90deg, rgba(43,79,97,1) 0%, rgba(0,159,227,1) 100%);
-        padding-right: 15px;
-        padding-left: 35px;
-        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
         font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
     }
     .valeurs
     {
@@ -278,6 +322,12 @@
         margin-right: auto;
         margin-left: auto;
     }
+    .collapse .nav-item a:hover
+    {
+        border-left: 2px solid #000 !important;
+        margin: 0px 5px;
+        transform: unset;
+    }
     .nav-bar{
         
         padding-right: 0px !important;
@@ -289,14 +339,27 @@
     {
         display: flex !important;
     }
+    .nav-link 
+     {
+         padding: 10px !important;
+         color: rgba(0, 0, 0, 0.8) !important;
+     }
+     .collapse .nav-item:not(:last-child) a:hover
+         {
+            border-left: 2px solid #009FE3 !important;
+             transform: unset !important;
+         }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
     .navbar-collapse
     {
-        background-color: rgb(43,79,97);
-        background: linear-gradient(90deg, rgba(43,79,97,1) 0%, rgba(0,159,227,1) 100%);
-        padding-right: 15px;
-        padding-left: 35px;
-        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
         font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
     }
     .aboutus .container .first-row p
     {
@@ -325,7 +388,15 @@
  
 @media (min-width: 992px) 
  { 
-
+    .navbar {
+        font-size: 10px;
+    }
+ }
+ @media (min-width: 1100px)
+ {
+     .navbar {
+         font-size: 13px;
+     }
  }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -334,6 +405,10 @@
     .nav-bar .navbar .navbar-brand p
     {
         display: flex !important;
+    }
+    .navbar 
+    {
+        font-size: 14px;
     }
 
  }

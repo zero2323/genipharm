@@ -46,7 +46,7 @@ class Home extends CI_Controller
 		// pagination config
 		$config = array();
 		$config["use_page_numbers"] = TRUE;
-		$config["full_tag_open"] = "        <!-- Brgin Pagination  --><nav aria-label=\"...\">	<ul class=\"pagination pagination-lg\">";
+		$config["full_tag_open"] = "        <!-- Brgin Pagination  --><nav  aria-label=\"...\">	<ul class=\"pagination pagination-lg\">";
 		$config["full_tag_close"] = " </ul></nav>";
 		$config["first_tag_open"] = "                <li class=\"page-item \">";
 		$config["first_tag_close"] = "</li>";
@@ -168,7 +168,7 @@ class Home extends CI_Controller
 		// pagination config
 		$config = array();
 		$config["use_page_numbers"] = TRUE;
-		$config["full_tag_open"] = "        <!-- Brgin Pagination  --><nav style='margin-top:15px;margin-bottom:15px;' aria-label=\"...\">	<ul class=\"pagination pagination-lg\">";
+		$config["full_tag_open"] = "        <!-- Brgin Pagination  --><nav class='pagination-wrapper' style='margin-top:15px;margin-bottom:15px;' aria-label=\"...\">	<ul class=\"pagination pagination-lg\">";
 		$config["full_tag_close"] = " </ul></nav>";
 		$config["first_tag_open"] = "                <li class=\"page-item \">";
 		$config["first_tag_close"] = "</li>";
@@ -209,13 +209,13 @@ class Home extends CI_Controller
 						$productsP = $this->auth_model->getProductsParapharmSearch($search, $config["per_page"], $p * $config["per_page"]);
 						$result = "";
 						foreach ($productsP as $product) {
-							$result .= '							<div class="col-lg-4 ">' .
+							$result .= '							<div class=" col-lg-4 col-md-6 card-wrapper  ">' .
 								'<div class="card" style="width: 18rem;">' .
 								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
-								'<h3 class="card-title">' . $product[$price] . ' DA</h3>' .
+								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
 								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
@@ -232,13 +232,13 @@ class Home extends CI_Controller
 						$productsP = $this->auth_model->getProductsParapharm($config["per_page"], $p * $config["per_page"]);
 						$result = "";
 						foreach ($productsP as $product) {
-							$result .= '							<div class="col-lg-4 ">' .
+							$result .= '							<div class="col-lg-4 col-md-6 card-wrapper  ">' .
 								'<div class="card" style="width: 18rem;">' .
 								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
-								'<h3 class="card-title">' . $product[$price] . ' DA</h3>' .
+								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
 								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
@@ -259,13 +259,13 @@ class Home extends CI_Controller
 						$productsC = $this->auth_model->getProductsComplementSearch($search, $config["per_page"], $p * $config["per_page"]);
 						$result = "";
 						foreach ($productsC as $product) {
-							$result .= '							<div class="col-lg-4 ">' .
+							$result .= '							<div class=" col-lg-4 col-md-6 card-wrapper ">' .
 								'<div class="card" style="width: 18rem;">' .
 								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
-								'<h3 class="card-title">' . $product[$price] . ' DA</h3>' .
+								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
 								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
@@ -282,7 +282,7 @@ class Home extends CI_Controller
 						$productsC = $this->auth_model->getProductsComplement($config["per_page"], $p * $config["per_page"]);
 						$result = "";
 						foreach ($productsC as $product) {
-							$result .= '							<div class="col-lg-4 ">' .
+							$result .= '							<div class="col-lg-4 col-md-6 card-wrapper ">' .
 								'<div class="card" style="width: 18rem;">' .
 								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .

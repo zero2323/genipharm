@@ -63,7 +63,7 @@
             border-radius: 20px;
         }
 
-         .collapse .nav-item:last-child
+         .collapse .nav-item:nth-last-child(2)
          {
              border: 2px solid #000 !important;
              border-radius: 20px;
@@ -90,6 +90,10 @@
             border: unset !important;
             border-radius: unset !important;
         }
+        .shopping-cart i , .shopping-cart span
+        {
+            color: #000;
+        }
          /* End The NavbaR */
          
 
@@ -102,7 +106,7 @@
     margin-top: 80px;
     margin-bottom: 80px;
 }
-.main .row:first-child
+.main .row
 {
     padding: 25px;
     display: flex;
@@ -130,9 +134,6 @@
     color: #fff;
 }
 
-
-
-
 .main .row:nth-child(2) .produits .table tbody tr td
 {
     width:25% ;
@@ -147,6 +148,45 @@
 
 
     /* Begin product  */
+        /* Modifiying boostrap css */
+            .card-img, .card-img-top, .card-img-bottom 
+            {
+                width: 90% !important;
+            }
+            .produits .col-lg-4
+            {
+                margin-bottom: 30px;
+            }
+            .produits .row
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        /* End bootstrap modification */
+    .produits .card-wrapper
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .produits .card-body
+    {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .produits .card-body .card-title
+    {
+        font-size: 1.03rem;
+        margin-bottom: 10px;
+    }
+    .produits .card-body p
+    {
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 10px;
+    }
     .col-lg-4 .btn-primary
     {
         width: 100%;
@@ -155,7 +195,11 @@
     }
     .card-text
     {
-        font-size: 14px;
+        font-size: 12px;
+    }
+    .card-price
+    {
+        color: rgba(244,148,31,1);
     }
     .main .products .row ul
     {
@@ -192,13 +236,22 @@
     .produits .card
     {
         transition: all .3s ease-out;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 500px;
     }
     .produits .card:hover
     {
         cursor: pointer;
         transform: scale(1.1);
     }
-
+    .pagination-wrapper
+    {
+        display: flex;
+        justify-content: center;
+    }
+  
     /* end product */
 
 

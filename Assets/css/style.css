@@ -429,14 +429,31 @@
         padding-left: 0px !important;
         padding-right: 0px!important;
     }
+    .nav-link 
+    {
+        padding: 10px !important;
+        color: rgba(0, 0, 0, 0.8) !important;
+    }
+     .collapse .nav-item:not(:last-child) a:hover
+    {
+    border-left: 2px solid #009FE3 !important;
+        transform: unset !important;
+    }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
     .navbar-collapse
     {
-        background-color: rgb(43,79,97);
-        background: linear-gradient(90deg, rgba(43,79,97,1) 0%, rgba(0,159,227,1) 100%);
-        padding-right: 15px;
-        padding-left: 35px;
-        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
         font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 5px !important;
     }
     .aboutus .container .first-row p
     {
@@ -447,6 +464,10 @@
         margin-top: 3rem;
         text-align: center;
         
+    }
+    .navbar-brand
+    {
+        margin-right: 0 !important;
     }
     .valeurs div
     {
@@ -479,12 +500,20 @@
     }
     .img_logo
     {
-        margin-right: 10px!important;
-        margin-left: 30px;
+        margin-right: 0px!important;
+        margin-left: 10px;
+    }
+    .nav-bar .navbar .navbar-brand .img_logo {
+        padding-right: 5px !important;
+
     }
     #btn-togler
     {
         margin-right: 30px !important;
+    }
+    .drop-content
+    {
+        width: 45vw !important;
     }
 }
 
@@ -517,14 +546,31 @@
         align-items: center;
         height: 100vh;
     }
+    .nav-link 
+    {
+        padding: 10px !important;
+        color: rgba(0, 0, 0, 0.8) !important;
+    }
+     .collapse .nav-item:not(:last-child) a:hover
+         {
+            border-left: 2px solid #009FE3 !important;
+             transform: unset !important;
+         }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
     .navbar-collapse
     {
-        background-color: rgb(43,79,97);
-        background: linear-gradient(90deg, rgba(43,79,97,1) 0%, rgba(0,159,227,1) 100%);
-        padding-right: 15px;
-        padding-left: 35px;
-        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
         font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 10px !important;
     }
     .valeurs
     {
@@ -583,18 +629,27 @@
         padding-right: 0px !important;
         padding-left: 0px !important;
      } 
+     .nav-link 
+     {
+         padding: 10px !important;
+         color: rgba(0, 0, 0, 0.8) !important;
+     }
+     .collapse .nav-item:not(:last-child) a:hover
+         {
+            border-left: 2px solid #009FE3 !important;
+             transform: unset !important;
+         }
     .nav-bar .navbar .navbar-brand p
     {
         display: flex !important;
     }
     .navbar-collapse
     {
-        background-color: rgb(43,79,97);
-        background: linear-gradient(90deg, rgba(43,79,97,1) 0%, rgba(0,159,227,1) 100%);
-        padding-right: 15px;
-        padding-left: 35px;
-        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
         font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
     }
     .aboutus .container .first-row p
     {
@@ -624,16 +679,25 @@
 @media (min-width: 992px) 
  { 
     .navbar {
-        font-size: 15px;
+        font-size: 10px;
     }
  }
 
+ @media (min-width: 1100px)
+{
+    .navbar {
+        font-size: 13px;
+    }
+}
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) 
  { 
     .nav-bar .navbar .navbar-brand p
     {
         display: flex !important;
+    }
+    .navbar {
+        font-size: 14px;
     }
  }
 

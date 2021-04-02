@@ -7,13 +7,13 @@
                     <img src="<?php echo base_url(); ?>Assets/img/logo_new.png" id="logo_img" alt="">
                 </div>
             </a>
-            <button id="btn-togler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="">
                     <i id="icon-togler" class="fas fa-bars" style="color:#fff; "></i>
                 </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-auto">
+                <ul class="navbar-nav ms-auto ">
                     <li class="nav-item active ms-2">
                         <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
                     </li>
@@ -97,7 +97,7 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto me-auto">
+                <ul class="navbar-nav ms-auto ">
                     <li class="nav-item active ms-2">
                         <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
                     </li>
@@ -183,7 +183,7 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto me-auto">
+                <ul class="navbar-nav ms-auto ">
                     <li class="nav-item active ms-2">
                         <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
                     </li>
@@ -238,12 +238,16 @@
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
+
                     
                 </ul>
 
                 <ul class="navbar-nav ms-auto ">
                 <li class="nav-item ms-2 partenaire">
                         <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    </li>
+                    <li class="nav-item ms-2 shopping-cart">
+                        <i class="fas fa-cart-arrow-down fa-2x" data-bs-toggle="modal" data-bs-target="#exampleModal"></i> <span class="count-cart">(<span class="total-count"></span>)</span>
                     </li>
                 </ul>
                 </div>
@@ -269,7 +273,7 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto me-auto">
+                <ul class="navbar-nav ms-auto ">
                     <li class="nav-item active ms-2">
                         <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
                     </li>
