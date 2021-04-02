@@ -141,15 +141,6 @@ var shoppingCart = (function() {
 
 
 
-// add to cart 
-// Add item
-$('.add-to-cart').click(function(event) {
-    event.preventDefault();
-    var name = $(this).data('name');
-    var price = Number($(this).data('price'));
-    shoppingCart.addItemToCart(name, price, 1);
-    displayCart();
-});
 
 $('.clear-cart').click(function() {
     shoppingCart.clearCart();
@@ -275,6 +266,15 @@ function parapharm(p, search) {
                     data = "Aucun Resultats";
                 setTimeout(function() {
                     $(".parapharm").html(res + data);
+                    // add to cart 
+                    // Add item
+                    $('.add-to-cart.produitP').click(function(event) {
+                        event.preventDefault();
+                        var name = $(this).data('name');
+                        var price = Number($(this).data('price'));
+                        shoppingCart.addItemToCart(name, price, 1);
+                        displayCart();
+                    });
                     $(".page-link").on('click', function(e) {
                         e.preventDefault();
                         parapharm($(this).attr("data-ci-pagination-page"));
@@ -345,6 +345,15 @@ function parapharm(p, search) {
                     data = "Aucun Resultats";
                 setTimeout(function() {
                     $(".parapharm").html(res + data);
+                    // add to cart 
+                    // Add item
+                    $('.add-to-cart.produitP').click(function(event) {
+                        event.preventDefault();
+                        var name = $(this).data('name');
+                        var price = Number($(this).data('price'));
+                        shoppingCart.addItemToCart(name, price, 1);
+                        displayCart();
+                    });
                     $(".page-link").on('click', function(e) {
                         e.preventDefault();
                         parapharm($(this).attr("data-ci-pagination-page"));
@@ -419,6 +428,15 @@ function complement(p, search) {
                     data = "Aucun Resultats";
                 setTimeout(function() {
                     $(".complement").html(res + data);
+                    // add to cart 
+                    // Add item
+                    $('.add-to-cart.produitC').click(function(event) {
+                        event.preventDefault();
+                        var name = $(this).data('name');
+                        var price = Number($(this).data('price'));
+                        shoppingCart.addItemToCart(name, price, 1);
+                        displayCart();
+                    });
                     $(".page-link").on('click', function(e) {
                         e.preventDefault();
                         complement($(this).attr("data-ci-pagination-page"));
@@ -489,6 +507,15 @@ function complement(p, search) {
                     data = "Aucun Resultats";
                 setTimeout(function() {
                     $(".complement").html(res + data);
+                    // add to cart 
+                    // Add item
+                    $('.add-to-cart.produitC').click(function(event) {
+                        event.preventDefault();
+                        var name = $(this).data('name');
+                        var price = Number($(this).data('price'));
+                        shoppingCart.addItemToCart(name, price, 1);
+                        displayCart();
+                    });
                     $(".page-link").on('click', function(e) {
                         e.preventDefault();
                         complement($(this).attr("data-ci-pagination-page"));

@@ -216,7 +216,7 @@ class Home extends CI_Controller
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
 								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
-								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
+								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitP" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
 								'</div>';
@@ -239,7 +239,7 @@ class Home extends CI_Controller
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
 								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
-								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
+								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitP" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
 								'</div>';
@@ -266,7 +266,7 @@ class Home extends CI_Controller
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
 								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
-								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
+								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitC" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
 								'</div>';
@@ -289,7 +289,7 @@ class Home extends CI_Controller
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
 								'<h3 class="card-title">' . $product[$price] . ' DA</h3>' .
-								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
+								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitC" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
 								'</div>';
