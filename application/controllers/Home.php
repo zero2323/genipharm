@@ -31,6 +31,8 @@ class Home extends CI_Controller
 		$this->load->model('auth_model');
 		$this->load->library("pagination");
 	}
+
+
 	public function index()
 	{
 		$data['acceuil'] = true;
@@ -38,125 +40,6 @@ class Home extends CI_Controller
 		$this->load->view('template/header', $data);
 		$this->load->view('template/nav', $data);
 		$this->load->view('home_view');
-		$this->load->view('template/footer', $data);
-	}
-
-	public function page($p, $n = null)
-	{
-		// pagination config
-		$config = array();
-		$config["use_page_numbers"] = TRUE;
-		$config["full_tag_open"] = "        <!-- Brgin Pagination  --><nav  aria-label=\"...\">	<ul class=\"pagination pagination-lg\">";
-		$config["full_tag_close"] = " </ul></nav>";
-		$config["first_tag_open"] = "                <li class=\"page-item \">";
-		$config["first_tag_close"] = "</li>";
-		$config["last_tag_open"] = "                <li class=\"page-item \">";
-		$config["last_tag_close"] = "</li>";
-		$config["next_tag_open"] = "                <li class=\"page-item \">";
-		$config["next_tag_close"] = "</li>";
-		$config["prev_tag_open"] = "                <li class=\"page-item \">";
-		$config["prev_tag_close"] = "</li>";
-		$config["cur_tag_open"] = "                <li class=\"page-item \"><a class='page-link' >";
-		$config["cur_tag_close"] = "</a></li>";
-		$config["num_tag_open"] = "                <li class=\"page-item \">";
-		$config["num_tag_close"] = "</li>";
-		$config['attributes'] = array('class' => 'page-link');
-		// 
-		// 
-		$data['acceuil'] = false;
-		if ($p == "compliments") {
-			$config["base_url"] = base_url() . "page/compliments";
-			$config["total_rows"] = count($this->auth_model->getProductsComplementAll());
-			$config["per_page"] = 10;
-			$config["uri_segment"] = 3;
-
-			$this->pagination->initialize($config);
-
-			$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
-			$page = $page - 1;
-			$data["links"] = $this->pagination->create_links();
-			$data['productsC'] = $this->auth_model->getProductsComplement($config["per_page"], $page * $config["per_page"]);
-			$data['page'] = "compliments";
-			$data['title'] = "Compliments Alimentaires";
-		} else if ($p == "parapharma") {
-			$config["base_url"] = base_url() . "page/parapharma";
-			$config["total_rows"] = count($this->auth_model->getProductsParapharmAll());
-			$config["per_page"] = 10;
-			$config["uri_segment"] = 3;
-
-			$this->pagination->initialize($config);
-
-			$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
-			$page = $page - 1;
-			$data["links"] = $this->pagination->create_links();
-			$data['productsP'] = $this->auth_model->getProductsParapharm($config["per_page"], $page * $config["per_page"]);
-			$data['page'] = "parapharma";
-			$data['title'] = "Produits Parapharmaceutiques";
-		} else if ($p == "partenaire") {
-			if ($n != null) {
-				show_404();
-				exit();
-			}
-			$data['page'] = "partenaire";
-			$data['title'] = "Partenaire | Connection ";
-		} else if ($p == "registration") {
-			if ($n != null) {
-				show_404();
-				exit();
-			}
-			$data['page'] = "registration";
-			$data['title'] = "Partenaire | Inscription";
-		} else if ($p == "contact") {
-			if ($n != null) {
-				show_404();
-				exit();
-			}
-			$data['page'] = "contact";
-			$data['title'] = "Contact Nous";
-		} else if ($p == "com") {
-			if ($n != null) {
-				show_404();
-				exit();
-			}
-			$data['page'] = "com";
-			$data['title'] = "Partenaire | Commande";
-			if (!isset($_SESSION['_logged_in'])) {
-				redirect(base_url() . "page/partenaire");
-				exit();
-			}
-			$email = base64_decode(base64_decode($_SESSION['_logged_in']));
-			$res = $this->auth_model->getData($email)[0];
-			if ($res['full_name'] == "NS" && $res['adresse'] == "NS" && $res['bank'] == "NS" && $res['activity'] == "NS")
-				$data['first_time'] = true;
-			else {
-				$data['first_time'] = false;
-				// if ($res['activity'] == "Grossiste") {
-				// 	$data['price'] = 'prix_gros';
-				// } else if ($res['activity'] == "sGrossiste") {
-				// 	$data['price'] = 'prix_s_gros';
-				// } else if ($res['activity'] == "detaillant") {
-				// 	$data['price'] = 'prix_detail';
-				// }
-				// $config["base_url"] = base_url() . "page/getCommand/p/";
-				// $config["total_rows"] = count($this->auth_model->getProductsParapharmAll());
-				// $config["per_page"] = 6;
-				// $config["uri_segment"] = 4;
-				// $this->pagination->initialize($config);
-				// $data["links"] = $this->pagination->create_links();
-				// $data['productsP'] = $this->auth_model->getProductsParapharm($config["per_page"], 1);
-
-				// $config["base_url"] = base_url() . "page/getCommand/c/";
-				// $config["total_rows"] = count($this->auth_model->getProductsComplementAll());
-				// $config["per_page"] = 6;
-				// $config["uri_segment"] = 4;
-				// $this->pagination->initialize($config);
-				// $data["links"] = $this->pagination->create_links();
-				// $data['productsC'] = $this->auth_model->getProductsComplement($config["per_page"], 1);
-			}
-		}
-		$this->load->view('template/header', $data);
-		$this->load->view('template/nav', $data);
-		$this->load->view('page/' . $p);
 		$this->load->view('template/footer', $data);
 	}
 
@@ -321,6 +204,183 @@ class Home extends CI_Controller
 				echo $result;
 			}
 		} else {
+			exit("Forbidden");
+		}
+	}
+
+	public function page($p, $n = null)
+	{
+		// pagination config
+		$config = array();
+		$config["use_page_numbers"] = TRUE;
+		$config["full_tag_open"] = "        <!-- Brgin Pagination  --><nav  aria-label=\"...\">	<ul class=\"pagination pagination-lg\">";
+		$config["full_tag_close"] = " </ul></nav>";
+		$config["first_tag_open"] = "                <li class=\"page-item \">";
+		$config["first_tag_close"] = "</li>";
+		$config["last_tag_open"] = "                <li class=\"page-item \">";
+		$config["last_tag_close"] = "</li>";
+		$config["next_tag_open"] = "                <li class=\"page-item \">";
+		$config["next_tag_close"] = "</li>";
+		$config["prev_tag_open"] = "                <li class=\"page-item \">";
+		$config["prev_tag_close"] = "</li>";
+		$config["cur_tag_open"] = "                <li class=\"page-item \"><a class='page-link' >";
+		$config["cur_tag_close"] = "</a></li>";
+		$config["num_tag_open"] = "                <li class=\"page-item \">";
+		$config["num_tag_close"] = "</li>";
+		$config['attributes'] = array('class' => 'page-link');
+		// 
+		// 
+		$data['acceuil'] = false;
+		if ($p == "compliments") {
+			$config["base_url"] = base_url() . "page/compliments";
+			$config["total_rows"] = count($this->auth_model->getProductsComplementAll());
+			$config["per_page"] = 10;
+			$config["uri_segment"] = 3;
+
+			$this->pagination->initialize($config);
+
+			$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
+			$page = $page - 1;
+			$data["links"] = $this->pagination->create_links();
+			$data['productsC'] = $this->auth_model->getProductsComplement($config["per_page"], $page * $config["per_page"]);
+			$data['page'] = "compliments";
+			$data['title'] = "Compliments Alimentaires";
+		} else if ($p == "parapharma") {
+			$config["base_url"] = base_url() . "page/parapharma";
+			$config["total_rows"] = count($this->auth_model->getProductsParapharmAll());
+			$config["per_page"] = 10;
+			$config["uri_segment"] = 3;
+
+			$this->pagination->initialize($config);
+
+			$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 1;
+			$page = $page - 1;
+			$data["links"] = $this->pagination->create_links();
+			$data['productsP'] = $this->auth_model->getProductsParapharm($config["per_page"], $page * $config["per_page"]);
+			$data['page'] = "parapharma";
+			$data['title'] = "Produits Parapharmaceutiques";
+		} else if ($p == "partenaire") {
+			if ($n != null) {
+				show_404();
+				exit();
+			}
+			$data['page'] = "partenaire";
+			$data['title'] = "Partenaire | Connection ";
+		} else if ($p == "registration") {
+			if ($n != null) {
+				show_404();
+				exit();
+			}
+			$data['page'] = "registration";
+			$data['title'] = "Partenaire | Inscription";
+		} else if ($p == "contact") {
+			if ($n != null) {
+				show_404();
+				exit();
+			}
+			$data['page'] = "contact";
+			$data['title'] = "Contact Nous";
+		} else if ($p == "com") {
+			if ($n != null) {
+				show_404();
+				exit();
+			}
+			$data['page'] = "com";
+			$data['title'] = "Partenaire | Commande";
+			if (!isset($_SESSION['_logged_in'])) {
+				redirect(base_url() . "page/partenaire");
+				exit();
+			}
+			$email = base64_decode(base64_decode($_SESSION['_logged_in']));
+			$res = $this->auth_model->getData($email)[0];
+			if ($res['full_name'] == "NS" && $res['adresse'] == "NS" && $res['bank'] == "NS" && $res['activity'] == "NS")
+				$data['first_time'] = true;
+			else {
+				$data['first_time'] = false;
+				// if ($res['activity'] == "Grossiste") {
+				// 	$data['price'] = 'prix_gros';
+				// } else if ($res['activity'] == "sGrossiste") {
+				// 	$data['price'] = 'prix_s_gros';
+				// } else if ($res['activity'] == "detaillant") {
+				// 	$data['price'] = 'prix_detail';
+				// }
+				// $config["base_url"] = base_url() . "page/getCommand/p/";
+				// $config["total_rows"] = count($this->auth_model->getProductsParapharmAll());
+				// $config["per_page"] = 6;
+				// $config["uri_segment"] = 4;
+				// $this->pagination->initialize($config);
+				// $data["links"] = $this->pagination->create_links();
+				// $data['productsP'] = $this->auth_model->getProductsParapharm($config["per_page"], 1);
+
+				// $config["base_url"] = base_url() . "page/getCommand/c/";
+				// $config["total_rows"] = count($this->auth_model->getProductsComplementAll());
+				// $config["per_page"] = 6;
+				// $config["uri_segment"] = 4;
+				// $this->pagination->initialize($config);
+				// $data["links"] = $this->pagination->create_links();
+				// $data['productsC'] = $this->auth_model->getProductsComplement($config["per_page"], 1);
+			}
+		}
+		$this->load->view('template/header', $data);
+		$this->load->view('template/nav', $data);
+		$this->load->view('page/' . $p);
+		$this->load->view('template/footer', $data);
+	}
+
+	public function contact_us()
+	{
+		// echo str_replace("application/controllers","Assets/uploads",__DIR__);
+		if (
+			isset($_POST['sujet']) && isset($_POST['email']) && isset($_POST['nom'])
+			&& isset($_POST['societe']) && isset($_POST['fonction']) && isset($_POST['tele'])
+			&& isset($_POST['message'])
+		) {
+			$from_email = "ramzibrahimovich@gmail.com";
+			$to_email = "zeghidaramzi@gmail.com"; //$this->input->post('email');
+			//Load email library
+			$this->load->library('email');
+			$config = array();
+			$config['protocol'] = 'smtp';
+			$config['smtp_host'] = 'in-v3.mailjet.com';
+			$config['smtp_user'] = '1bba08f3071ee5ea29a0e1e5f2d7bdbd';
+			$config['smtp_pass'] = '1b90d6a7aa3ba602c09d2c3fbc0d7360';
+			$config['smtp_port'] = 25;
+			$this->email->initialize($config);
+			$this->email->set_newline("\r\n");
+			$this->email->from($from_email, 'ramzibrahimovich');
+			$this->email->to($to_email);
+			$this->email->subject($_POST['sujet']);
+			$this->email->message('Nom: ' . $_POST['nom'] . "\r\n" .
+				"Email: " . $_POST['email'] . "\r\n" .
+				"Tele: " . $_POST['tele'] . "\r\n" .
+				"Société: " . $_POST['societe'] . "\r\n" .
+				"Fonction: " . $_POST['fonction'] . "\r\n" .
+				"Message: \r\n" . $_POST['message'] . "\r\n");
+			// $config = array(
+			// 	'upload_path' => str_replace("application/controllers", "Assets/uploads", __DIR__),
+			// 	'allowed_types' => "doc|docx|pdf",
+			// 	'overwrite' => TRUE,
+			// 	'max_size' => "2048000"
+			// );
+			// $this->load->library('upload', $config);
+			// if ($this->upload->do_upload('file')) {
+			// 	$data = array('upload_data' => $this->upload->data());
+			// 	print_r($data);
+			// 	// $this->load->view('upload_success', $data);
+			// } else {
+			// 	$error = array('error' => $this->upload->display_errors());
+			// 	print_r($error);
+			// 	// $this->load->view('custom_view', $error);
+			// }
+			// // $this->email->attach('C:\Users\xyz\Desktop\images\abc.png');
+			//Send mail
+			if ($this->email->send()) {
+				$this->session->set_flashdata("success", "Congratulation Email Sent Successfully.");
+				redirect(base_url()."page/contact");
+			} else {
+				$this->session->set_flashdata("error", "You have encountered an error");
+				redirect(base_url()."page/contact");
+			}
 		}
 	}
 }

@@ -56,3 +56,4 @@ $route['page/(:any)'] = 'home/page/$1';
 $route['page/(:any)/(:num)'] = 'home/page/$1/$2';
 $route['getcommand/(:any)/(:num)'] = 'home/getcommand/$1/$2';
 $route['command'] = 'home/command';
+$route['contact_us'] = 'home/contact_us';
