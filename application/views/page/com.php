@@ -11,20 +11,7 @@
                 <div id="rowone" class="parapharm row displaying">
                     <!-- <div class="col-12 title">
                         <div class="clip ">Produits Parapharmaceutique</div>
-                    </div>
-                    <?php foreach ($productsP as $product) { ?>
-                        <div class="col-lg-4  ">
-                            <div class="card" style="width: 18rem;">
-                                <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $product['designation']; ?></h5>
-                                    <p class="card-text"><?php echo $product['description']; ?></p>
-                                    <h3 class="card-title"><?php echo $product[$price]; ?> DA</h3>
-                                    <a href="#" data-name="<?php echo $product['designation']; ?>" data-price="<?php echo $product[$price]; ?>" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="<?php echo $product['designation']; ?>"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?> -->
+                    </div> -->
 
                 </div>
             </div>
@@ -35,20 +22,7 @@
                 <div id="rowone" class="complement row ">
                     <!-- <div class="col-12 title">
                         <div class="clip ">Complément Alimentaire</div>
-                    </div>
-                    <?php foreach ($productsC as $product) { ?>
-                        <div class="col-lg-4 col-md-6  ">
-                            <div class="card" style="width: 18rem;">
-                                <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $product['designation']; ?></h5>
-                                    <p class="card-text"><?php echo $product['description']; ?></p>
-                                    <h3 class="card-title"><?php echo $product[$price]; ?> DA</h3>
-                                    <a href="#" data-name="<?php echo $product['designation']; ?>" data-price="<?php echo $product[$price]; ?>" class="btn btn-primary add-to-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="<?php echo $product['designation']; ?>"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?> -->
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -71,7 +45,7 @@
                     <div>Prix Total : DA <span class="total-cart"></span></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Valider la commande</button>
+                    <button id="validate_command" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Valider la commande</button>
                     <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-primary">Fermer </button>
                 </div>
             </div>

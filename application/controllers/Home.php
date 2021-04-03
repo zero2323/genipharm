@@ -160,6 +160,27 @@ class Home extends CI_Controller
 		$this->load->view('template/footer', $data);
 	}
 
+	public function command()
+	{
+		if (!$this->input->is_ajax_request()) {
+			exit('No direct script access allowed');
+		}
+		if (isset($_POST['name']) && isset($_POST['quantity'])) {
+			$email = base64_decode(base64_decode($_SESSION['_logged_in']));
+			$res = $this->auth_model->getData($email)[0];
+			$res_c = $this->auth_model->get_last_cart($res['id']);
+			if (count($res_c) == 0)
+				$res_c = 1;
+			else $res_c = $res_c[0]['MAX(id_cart)'] + 1;
+			foreach ($_POST['name'] as $index => $product) {
+				$res_p = $this->auth_model->getProducts($product)[0];
+				$this->auth_model->command($res_c, $res["id"], $res_p["id"], $_POST['quantity'][$index]);
+			}
+		} else {
+			exit('NO Allowed Arguments');
+		}
+	}
+
 	public function getCommand($type = null, $p = null)
 	{
 		// if (!$this->input->is_ajax_request()) {

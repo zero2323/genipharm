@@ -38,6 +38,27 @@ class Auth_model extends CI_Model
         $this->db->insert('user', $data);
     }
 
+    public function command($id_cart, $id_u, $id_p, $quantity)
+    {
+        $data = array(
+            'id_u' => $id_u,
+            'id_p' => $id_p,
+            'quantité' => $quantity,
+            'id_cart' => $id_cart
+        );
+
+        $this->db->insert('comande', $data);
+    }
+
+    public function get_last_cart($id_u)
+    {
+        $this->db->select('MAX(id_cart)');
+        $this->db->from('comande');
+        $this->db->where("id_u",$id_u);
+        $this->db->group_by('id_u'); 
+        return $this->db->get()->result_array(); 
+    }
+
     public function update_signup($email,$full_name, $address, $nif, $art, $rc, $bank, $activity)
     {
         $data = array(
@@ -54,6 +75,12 @@ class Auth_model extends CI_Model
         $this->db->set($data);
         $this->db->where("email",$email);
         $this->db->update('user');
+    }
+
+    public function getProducts($search)
+    {
+        $res = $this->db->get_where('produit',array("designation"=> $search))->result_array();
+        return $res;
     }
 
     public function getData($email)

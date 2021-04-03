@@ -155,10 +155,10 @@ function displayCart() {
         output += "<tr>" +
             "<td>" + cartArray[i].name + "</td>" +
             "<td>(" + cartArray[i].price + ")</td>" +
-            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" +
+            "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name='" + cartArray[i].name + "'>-</button>" +
             "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
-            "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>" +
-            "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
+            "<button class='plus-item btn btn-primary input-group-addon' data-name='" + cartArray[i].name + "'>+</button></div></td>" +
+            "<td><button class='delete-item btn btn-danger' data-name='" + cartArray[i].name + "'>X</button></td>" +
             " = " +
             "<td>" + cartArray[i].total + "</td>" +
             "</tr>";
@@ -206,7 +206,9 @@ function parapharm(p, search) {
     if (search == null)
         $.ajax(base_url + 'getcommand/p/' + p, {
             beforeSend: function() {
-                $('.parapharm').html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
+                $('.parapharm').html('                    <div class="col-12 title">' +
+                    '<div class="clip ">Produits Parapharmaceutique</div>' +
+                    '</div>' + '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
                     '<g transform="rotate(0 50 50)">' +
                     '  <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ffb856">' +
                     '    <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>' +
@@ -259,7 +261,7 @@ function parapharm(p, search) {
                     '</svg>');
             },
             success: function(data, status, xhr) { // success callback function
-                res = '                    <div class="col-12 title">' +
+                var res = '                    <div class="col-12 title">' +
                     '<div class="clip ">Produits Parapharmaceutique</div>' +
                     '</div>';
                 if (data == "")
@@ -275,7 +277,7 @@ function parapharm(p, search) {
                         shoppingCart.addItemToCart(name, price, 1);
                         displayCart();
                     });
-                    $(".page-link").on('click', function(e) {
+                    $(".page-link.parapharm").on('click', function(e) {
                         e.preventDefault();
                         parapharm($(this).attr("data-ci-pagination-page"));
                     });
@@ -285,7 +287,9 @@ function parapharm(p, search) {
     else {
         $.ajax(base_url + 'getcommand/p/' + p + "?search=" + search, {
             beforeSend: function() {
-                $('.parapharm').html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
+                $('.parapharm').html('                    <div class="col-12 title">' +
+                    '<div class="clip ">Produits Parapharmaceutique</div>' +
+                    '</div>' + '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
                     '<g transform="rotate(0 50 50)">' +
                     '  <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ffb856">' +
                     '    <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>' +
@@ -338,7 +342,7 @@ function parapharm(p, search) {
                     '</svg>');
             },
             success: function(data, status, xhr) { // success callback function
-                res = '                    <div class="col-12 title">' +
+                var res = '                    <div class="col-12 title">' +
                     '<div class="clip ">Produits Parapharmaceutique</div>' +
                     '</div>';
                 if (data == "")
@@ -354,7 +358,7 @@ function parapharm(p, search) {
                         shoppingCart.addItemToCart(name, price, 1);
                         displayCart();
                     });
-                    $(".page-link").on('click', function(e) {
+                    $(".page-link.parapharm").on('click', function(e) {
                         e.preventDefault();
                         parapharm($(this).attr("data-ci-pagination-page"));
                     });
@@ -368,7 +372,9 @@ function complement(p, search) {
     if (search == null)
         $.ajax(base_url + 'getcommand/c/' + p, {
             beforeSend: function() {
-                $('.complement').html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
+                $('.complement').html('                    <div class="col-12 title">' +
+                    '<div class="clip ">Complément Alimentaire</div>' +
+                    '</div>' + '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
                     '<g transform="rotate(0 50 50)">' +
                     '  <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ffb856">' +
                     '    <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>' +
@@ -421,7 +427,7 @@ function complement(p, search) {
                     '</svg>');
             },
             success: function(data, status, xhr) { // success callback function
-                res = '                    <div class="col-12 title">' +
+                var res = '                    <div class="col-12 title">' +
                     '<div class="clip ">Complément Alimentaire</div>' +
                     '</div>';
                 if (data == "")
@@ -437,7 +443,7 @@ function complement(p, search) {
                         shoppingCart.addItemToCart(name, price, 1);
                         displayCart();
                     });
-                    $(".page-link").on('click', function(e) {
+                    $(".page-link.complement").on('click', function(e) {
                         e.preventDefault();
                         complement($(this).attr("data-ci-pagination-page"));
                     });
@@ -447,7 +453,9 @@ function complement(p, search) {
     else {
         $.ajax(base_url + 'getcommand/c/' + p + "?search=" + search, {
             beforeSend: function() {
-                $('.complement').html('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
+                $('.complement').html('                    <div class="col-12 title">' +
+                    '<div class="clip ">Complément Alimentaire</div>' +
+                    '</div>' + '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(241, 242, 243,0) none repeat scroll 0% 0%; display: block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">' +
                     '<g transform="rotate(0 50 50)">' +
                     '  <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#ffb856">' +
                     '    <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite"></animate>' +
@@ -500,7 +508,7 @@ function complement(p, search) {
                     '</svg>');
             },
             success: function(data, status, xhr) { // success callback function
-                res = '                    <div class="col-12 title">' +
+                var res = '                    <div class="col-12 title">' +
                     '<div class="clip ">Complément Alimentaire</div>' +
                     '</div>';
                 if (data == "")
@@ -516,7 +524,7 @@ function complement(p, search) {
                         shoppingCart.addItemToCart(name, price, 1);
                         displayCart();
                     });
-                    $(".page-link").on('click', function(e) {
+                    $(".page-link.complement").on('click', function(e) {
                         e.preventDefault();
                         complement($(this).attr("data-ci-pagination-page"));
                     });
@@ -524,6 +532,28 @@ function complement(p, search) {
             }
         });
     }
+}
+
+function valid_command() {
+    $("#validate_command").on("click", function(e) {
+        var name = [];
+        var quantity = [];
+        $(".item-count.form-control").each(function() {
+            name.push($(this).attr("data-name"));
+            quantity.push($(this).attr("value"));
+        });
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "command",
+            data: { name: name, quantity: quantity },
+            dataType: "json",
+            complete: function(res) {
+                shoppingCart.clearCart();
+                displayCart();
+            }
+        });
+    });
 }
 
 function search() {
@@ -537,3 +567,5 @@ function search() {
 parapharm(1, null);
 complement(1, null);
 search();
+
+valid_command()
