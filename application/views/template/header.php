@@ -22,6 +22,9 @@
     <?php if ($acceuil != true && $page=="contact") { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/contact.css">
     <?php } ?>
+    <?php if ($acceuil != true && $page=="profile") { ?>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/profile.css">
+    <?php } ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/navbar.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">

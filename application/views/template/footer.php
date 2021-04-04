@@ -57,6 +57,8 @@
 
 <?php if ($acceuil == false && $page=="com") { ;?><script src="<?php echo base_url(); ?>Assets/js/com.js"></script>
 <?php } ?>
+<?php if ($acceuil == false && $page=="profile") { ;?><script src="<?php echo base_url(); ?>Assets/js/profile.js"></script>
+<?php } ?>
 <script src="<?php echo base_url(); ?>Assets/js/nav.js"></script>
 <script src="<?php echo base_url(); ?>Assets/js/bootstrap.min.js"></script>
 <!-- End Scripts -->

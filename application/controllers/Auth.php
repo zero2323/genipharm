@@ -82,7 +82,7 @@ class Auth extends CI_Controller
             if ($res['password'] == $password) {
                 $this->session->set_userdata('_logged_in', base64_encode(base64_encode($email)));
                 //$this->session->set_flashdata('succsess', "you are now logged in as " . $email);
-                redirect(base_url() . 'page/com');
+                redirect(base_url() . 'page/profile');
             } else {
                 $this->session->set_flashdata('error', "email or password is wrong");
                 redirect(base_url() . 'page/partenaire');

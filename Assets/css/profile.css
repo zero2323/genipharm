@@ -1,0 +1,214 @@
+/* 
+    Designer name : ahmed nadjib 
+    theme coder : ahmed nadjib.
+    Color ffa372
+    #184d47 green 
+ 
+        */
+
+
+        * { 
+            -moz-box-sizing: border-box; 
+            -webkit-box-sizing: border-box; 
+             box-sizing: border-box; 
+             
+         }
+         html
+         {
+            scroll-behavior: smooth;
+         }
+        
+         body{
+             display: flex;
+             flex-direction: column;
+             margin:0; 
+             padding: 0;
+             background-color: #ffffff;
+             color: rgba(0, 0, 0, 0.8);
+             position: relative;
+            
+
+            }
+
+        
+         /* Begin the NavBar */
+        .nav-bar
+        {
+         
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            height: 75px ;
+            padding: 0;
+            transition: all .5s ease-out;
+        
+        } 
+        .nav-bar .navbar{
+            padding-left: 40px ;
+            padding-right: 40px;
+            height: 100%;
+            background : linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .nav-bar .navbar .navbar-brand img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        #bien 
+        {
+            color: #000;
+        }
+        .nav-bar .navbar .navbar-brand .img_logo
+        {
+            padding-right: 20px;
+            border-right:1px solid rgba(255, 255, 255, 0.3);
+            width: auto;
+            height: auto;
+            margin-right: 30px;
+        }
+        .nav-bar .navbar .navbar-brand p
+        {
+            display: none !important;
+            margin: 0 !important;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .nav-bar .navbar .navbar-brand p span
+        {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .navbar-dark .navbar-nav .nav-link
+        {
+            font-size: 1.12em;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-family: 'Noto Sans JP', sans-serif;
+            transition: all .3s ease-out !important;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .active-link
+        {
+            border-left: 2px solid #f39200;
+        }
+        .collapse .nav-item a:hover
+        {
+            border-left: 2px solid #f39200;
+            margin: 0px 5px;
+            transform: scale(1.1);
+        }
+         /* End The NavbaR */
+
+/* /start main */
+        .wrapper 
+        {
+            margin-top: 75px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+        .wrapper .row 
+        {
+            display: flex;
+            flex-direction: row;
+        }
+        .wrapper .commandes 
+        {
+            margin-top: 20px;
+        }
+        .wrapper .commandes .table-head
+        {
+            background-color: rgba(244,148,31,0.1) !important;
+        }
+
+        .wrapper .informations > div
+        {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(244,148,31,0.1);
+            border-radius: 5px;
+            background: rgba(244,148,31,0.1);
+            margin-top: 20px;
+        }
+        .wrapper .informations ul
+        {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .wrapper .informations ul li input
+        {
+            width: 60%;
+            text-align: center;
+            border-radius: 7px;
+            border-color: transparent;
+            cursor: pointer;
+            background-color: transparent;
+        }
+        .wrapper .informations div:last-child ul li
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        .wrapper .informations div:last-child ul li label
+        {
+            font-weight: 600;
+        }
+        .wrapper .informations ul li 
+        {
+            width: 100%;
+            list-style: none;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+        }
+        .wrapper .informations ul li:nth-child(3) input ,.wrapper .informations ul li:last-child input
+        {
+            color: rgba(0, 0, 0, 0.7);
+        }
+        .wrapper .informations ul li img
+        {
+            width: 30%;
+        }
+        th,td 
+        {
+            text-align: center;
+        }
+/* end main */
+
+         /* Begin Footer */
+         .footer
+         {
+            position: relative;
+            bottom: 0;
+            z-index:0;
+            background: rgb(43,79,97);
+            background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+            font-family: 'Noto Sans JP', sans-serif;
+         }
+         
+         .devider 
+         {
+             border-bottom: 1px solid rgba(255, 163, 114, 0.5) ;
+         }
+         .footer .container .second-row h6
+         {
+             font-weight: 600;
+             letter-spacing: 0.05em;
+         }
+         i:hover
+         {
+            cursor: pointer;
+            color: #71989b;
+         }
+         .social-media  a {
+             color:#041922 !important;
+         }
+         /* End Footer */

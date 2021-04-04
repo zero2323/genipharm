@@ -57,7 +57,7 @@ class Home extends CI_Controller
 			else $res_c = $res_c[0]['MAX(id_cart)'] + 1;
 			foreach ($_POST['name'] as $index => $product) {
 				$res_p = $this->auth_model->getProducts($product)[0];
-				$this->auth_model->command($res_c, $res["id"], $res_p["id"], $_POST['quantity'][$index]);
+				$this->auth_model->command($res_c, $res["id"], $res_p["id"], $_POST['quantity'][$index], "Non Récus");
 			}
 		} else {
 			exit('NO Allowed Arguments');
@@ -96,7 +96,7 @@ class Home extends CI_Controller
 			} else if ($res['activity'] == "detaillant") {
 				$price = 'prix_detail';
 			}
-			if ($type != null) {
+			if ($type != null && isset($price)) {
 				if ($p == null)
 					$p = 0;
 				else $p = $p - 1;
@@ -208,6 +208,55 @@ class Home extends CI_Controller
 		}
 	}
 
+
+	public function update_user()
+	{
+
+		$email = base64_decode(base64_decode($_SESSION['_logged_in']));
+		$res = $this->auth_model->getData($email)[0];
+
+		if (isset($_POST['email']) && isset($_POST['adresse']) && isset($_POST['tel']) && isset($_POST['password'])) {
+			if (($_POST['email'] != "" && $_POST['adresse'] != "" && $_POST['tel'] != "" && $_POST['password'] != "") && ($_POST['email'] != $res['email'] || $_POST['adresse'] != $res['adresse'] || $_POST['tel'] != $res['tel'] || $_POST['password'] != $res['password'])) {
+				$this->auth_model->update_usr($res["id"], $_POST['email'], $_POST['tel'], $_POST['adresse'], $_POST['password']);
+				$this->session->set_flashdata("success", "Update Successful");
+				$this->session->set_userdata('_logged_in', base64_encode(base64_encode($_POST['email'])));
+				redirect(base_url() . "page/profile");
+			} else {
+				$this->session->set_flashdata("error", "Check typed information");
+				redirect(base_url() . "page/profile");
+			}
+		} else {
+			$this->session->set_flashdata("error", "Error provided Arguments");
+			redirect(base_url() . "page/profile");
+		}
+	}
+
+	public function update_command()
+	{
+		if (!isset($_SESSION['_logged_in'])) {
+			redirect(base_url() . "page/partenaire");
+			exit();
+		}
+		$email = base64_decode(base64_decode($_SESSION['_logged_in']));
+		$res = $this->auth_model->getData($email)[0];
+		if (isset($_POST['id'])) {
+			$this->auth_model->update_status($_POST['id']);
+		}
+	}
+
+	public function delete_command()
+	{
+		if (!isset($_SESSION['_logged_in'])) {
+			redirect(base_url() . "page/partenaire");
+			exit();
+		}
+		$email = base64_decode(base64_decode($_SESSION['_logged_in']));
+		$res = $this->auth_model->getData($email)[0];
+		if (isset($_POST['id'])) {
+			$this->auth_model->delete_comand($_POST['id']);
+		}
+	}
+
 	public function page($p, $n = null)
 	{
 		// pagination config
@@ -280,6 +329,42 @@ class Home extends CI_Controller
 			}
 			$data['page'] = "contact";
 			$data['title'] = "Contact Nous";
+		} else if ($p == "profile") {
+			if ($n != null) {
+				show_404();
+				exit();
+			}
+			$data['page'] = "profile";
+			$data['title'] = "Profile";
+			if (!isset($_SESSION['_logged_in'])) {
+				redirect(base_url() . "page/partenaire");
+				exit();
+			}
+			$email = base64_decode(base64_decode($_SESSION['_logged_in']));
+			$res = $this->auth_model->getData($email)[0];
+			if ($res['type'] != "Pharmacien" && $res['type'] != "Grossiste")
+				$data['employe'] = true;
+			else  $data['employe'] = false;
+			$data['full_name'] = $res["full_name"];
+			$data['adresse'] = $res["adresse"];
+			$data['activity'] = $res["activity"];
+			$data['email'] = $res["email"];
+			$data['password'] = $res["password"];
+			$data['tel'] = $res["tel"];
+			$data['commands'] = [];
+			if (!$data['employe'])
+				$comands = $this->auth_model->get_command($res['id']);
+			else $comands = $this->auth_model->get_commands();
+			foreach ($comands as $comand) {
+				$pr = $this->auth_model->getProductbyID($comand['id_p'])[0];
+				if (!$data['employe'])
+					$d = array("command_id" =>$comand['id'],"name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
+				else {
+					$usr = $this->auth_model->get_user($comand['id_u'])[0];
+					$d = array("command_id" =>$comand['id'],"u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
+				}
+				array_push($data['commands'], $d);
+			}
 		} else if ($p == "com") {
 			if ($n != null) {
 				show_404();
@@ -376,10 +461,10 @@ class Home extends CI_Controller
 			//Send mail
 			if ($this->email->send()) {
 				$this->session->set_flashdata("success", "Congratulation Email Sent Successfully.");
-				redirect(base_url()."page/contact");
+				redirect(base_url() . "page/contact");
 			} else {
 				$this->session->set_flashdata("error", "You have encountered an error");
-				redirect(base_url()."page/contact");
+				redirect(base_url() . "page/contact");
 			}
 		}
 	}

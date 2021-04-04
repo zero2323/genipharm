@@ -46,7 +46,7 @@
                            </div>
 
                            <div>
-                               <input type="radio" id="Pharmacien" name="metier" value="dewey">
+                               <input type="radio" id="Pharmacien" name="metier" value="Pharmacien">
                                <label for="Pharmacien">Pharmacien.</label>
                            </div>
                        </div>
