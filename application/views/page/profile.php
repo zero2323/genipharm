@@ -7,7 +7,7 @@
                 <div class="col-md-12 col-lg-4 col-xl-3 informations">
                     <div>
                         <ul>
-                            <li><img src="<?php echo base_url();?>Assets/img/profile.png" alt=""></li>
+                            <li><img src="<?php echo base_url(); ?>Assets/img/profile.png" alt=""></li>
                             <li>
                                 <input type="text" name="Fullname" id="fullname" value="<?php echo $full_name; ?>" readonly="readonly">
                             </li>
@@ -73,7 +73,9 @@
                                 <th scope="col">Produit</th>
                                 <th scope="col">Quantité</th>
                                 <th scope="col">Statut</th>
-                                <th scope="col">Action</th>
+                                <?php if ($employe) { ?>
+                                    <th scope="col">Action</th>
+                                <?php } ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -87,10 +89,13 @@
                                     <td><?php echo $command['name']; ?></td>
                                     <td><?php echo $command['quantity']; ?></td>
                                     <td><?php echo $command['statut']; ?></td>
-                                    <td>
-                                        <button data-id="<?php echo $command['command_id']; ?>" class="recu btn btn-success">Commande reçu</button>
-                                        <button data-id="<?php echo $command['command_id']; ?>" class="del btn btn-danger"> Supprimer</button>
-                                    </td>
+                                    <?php if ($employe) { ?>
+
+                                        <td>
+                                            <button data-id="<?php echo $command['command_id']; ?>" class="recu btn btn-success">Commande reçu</button>
+                                            <button data-id="<?php echo $command['command_id']; ?>" class="del btn btn-danger"> Supprimer</button>
+                                        </td>
+                                    <?php } ?>
 
                                 </tr>
                             <?php } ?>
