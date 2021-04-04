@@ -49,7 +49,7 @@
          }
          .navbar-dark .navbar-nav .nav-link
          {
-             font-size: 1.0em;
+             font-size: 1em;
              font-weight: 400;
              text-transform: uppercase;
              transition: all .3s ease-out !important;
@@ -138,3 +138,47 @@
             border-color: rgba(255, 255, 255, 0.1);
         }
           /* End The NavbaR */
+
+          
+          @media (min-width: 768px) and (max-width: 1199px){
+            .collapse .nav-item a:hover
+            {
+                border-left: 2px solid #000 !important;
+                margin: 0px 5px;
+                transform: unset;
+            }
+            .nav-bar{
+                
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+                font-size: 12px;
+            }
+        
+            .nav-bar .navbar .navbar-brand p
+            {
+                display: flex !important;
+            }
+            .nav-link 
+             {
+                 padding: 10px !important;
+                 color: rgba(0, 0, 0, 0.8) !important;
+             }
+             .collapse .nav-item:not(:last-child) a:hover
+                 {
+                    border-left: 2px solid #000000 !important;
+                     transform: unset !important;
+                 }
+            .nav-bar .navbar .navbar-brand p
+            {
+                display: flex !important;
+            }
+            .navbar-collapse
+            {
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 20px;
+                text-align: left;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.8);
+            }
+        
+        }

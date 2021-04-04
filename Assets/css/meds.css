@@ -351,7 +351,7 @@
      }
      .collapse .nav-item:not(:last-child) a:hover
          {
-            border-left: 2px solid #009FE3 !important;
+            border-left: 2px solid #000000 !important;
              transform: unset !important;
          }
     .nav-bar .navbar .navbar-brand p

@@ -80,23 +80,32 @@
             font-weight: 500;
         }
         .navbar-dark .navbar-nav .nav-link
+         {
+             font-size: 1em;
+             font-weight: 400;
+             text-transform: uppercase;
+             transition: all .3s ease-out !important;
+             font-family: revert;
+         }
+ 
+         .active-link
         {
-            font-size: 1.12em;
-            font-weight: 300;
-            text-transform: uppercase;
-            font-family: 'Noto Sans JP', sans-serif;
-            transition: all .3s ease-out !important;
-            color: rgba(0, 0, 0, 0.8);
+            border-left: 2px solid #000 !important;
         }
-        .active-link
+        .collapse .nav-item a
         {
-            border-left: 2px solid #f39200;
+            color: #000 !important;
         }
         .collapse .nav-item a:hover
         {
-            border-left: 2px solid #f39200;
+            border-left: 2px solid #000 !important;
             margin: 0px 5px;
             transform: scale(1.1);
+        }
+        .collapse .partenaire
+        {
+            border: 2px solid #000  !important;
+            border-radius: 20px;
         }
          /* End The NavbaR */
 
@@ -183,6 +192,118 @@
         }
 /* end main */
 
+
+
+/* Begin responsive  */
+@media  only screen and (max-width: 1200px),
+(min-device-width: 768px) and (max-device-width: 1200px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+            
+        
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+    .btn
+    {
+        width: 50% !important;
+        margin-bottom: 5px;
+    }
+    label
+    {
+        font-size: 13px;
+    }
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Commande N°"; }
+	td:nth-of-type(2):before { content: "Client"; }
+	td:nth-of-type(3):before { content: "Numéro de tél"; }
+	td:nth-of-type(4):before { content: "Produit"; }
+	td:nth-of-type(5):before { content: "Quantité"; }
+	td:nth-of-type(6):before { content: "Statut"; }
+	td:nth-of-type(7):before { content: "Action"; }
+
+}
+
+@media (min-width: 576px) { 
+/* Force table to not be like tables anymore */
+
+ }
+
+
+@media (min-width: 768px) {  }
+
+label
+{
+    font-size: 13px;
+}
+@media (min-width: 992px) { 
+    
+
+}
+@media (min-width: 1200px) { 
+    input
+    {
+        font-size: 13px;
+        width: 50% !important;
+    }
+    .btn
+    {
+        margin-bottom: 5px;
+    }
+    label
+    {
+        font-size: 12px !important;
+    }
+    .navbar-dark .navbar-nav .nav-link
+    {
+        font-size: 14px !important;
+    }
+ }
+
+ @media (min-width: 1400px) { 
+    .navbar-dark .navbar-nav .nav-link
+    {
+        font-size: 1em !important;
+    }
+}
+
+
+
+/* End responsive */
          /* Begin Footer */
          .footer
          {

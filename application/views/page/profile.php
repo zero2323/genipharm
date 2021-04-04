@@ -4,7 +4,7 @@
     <section class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 col-lg-4 informations">
+                <div class="col-md-12 col-lg-4 col-xl-3 informations">
                     <div>
                         <ul>
                             <li><img src="<?php echo base_url();?>Assets/img/profile.png" alt=""></li>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-12 col-lg-8 commandes">
+                <div class="col-md-12 col-lg-8 col-xl-9 commandes">
                     <h5>Mes Commande</h5>
                     <table class="table">
                         <thead class="table-head">
@@ -79,7 +79,7 @@
                         <tbody>
                             <?php foreach ($commands as $command) { ?>
                                 <tr>
-                                    <th class="id" scope="row"><?php echo $command['command']; ?></th>
+                                    <td class="id" scope="row"><?php echo $command['command']; ?></td>
                                     <?php if ($employe) { ?>
                                         <td><?php echo $command['u_name']; ?></td>
                                         <td><?php echo $command['tele']; ?></td>

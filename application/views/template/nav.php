@@ -1,7 +1,7 @@
 <?php if ($acceuil == true) { ?>
     <!-- Begin Navbar  -->
     <div class="nav-bar container-fluid sticky-top" id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-dark " id="nav-b">
+        <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
             <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
                 <div class="img_logo" id="img_logo">
                     <img src="<?php echo base_url(); ?>Assets/img/logo_new.png" id="logo_img" alt="">
@@ -85,7 +85,7 @@
     <!-- Begin Navbar  -->
     <div class="navigation-bar">
         <div class="nav-bar container-fluid sticky-top" id="nav-bar">
-            <nav class="navbar navbar-expand-lg navbar-dark " id="nav-b">
+            <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
                 <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
                     <div class="img_logo" id="img_logo">
                         <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
@@ -170,12 +170,11 @@
     <!-- Begin Navbar  -->
     <div class="navigation-bar">
         <div class="nav-bar container-fluid sticky-top" id="nav-bar">
-            <nav class="navbar navbar-expand-lg navbar-dark " id="nav-b">
+            <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
                 <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
                     <div class="img_logo" id="img_logo">
                         <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
                     </div>
-                    <p id="bien" class="d-flex align-items-center">Bienvenu à <span class="ms-1">Genipharm</span></p>
                 </a>
                 <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="">
@@ -260,12 +259,12 @@
     <!-- Begin Navbar  -->
     <div class="navigation-bar">
         <div class="nav-bar container-fluid sticky-top" id="nav-bar">
-            <nav class="navbar navbar-expand-lg navbar-dark " id="nav-b">
+            <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
                 <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
                     <div class="img_logo" id="img_logo">
                         <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
                     </div>
-                    <p id="bien" class="d-flex align-items-center">Bienvenu à <span class="ms-1">Genipharm</span></p>
+                   
                 </a>
                 <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="">
