@@ -61,7 +61,7 @@ $(document).ready(function() {
 });
 
 $(".btn-primary").on("click", function(e) {
-    description = $(this).parent().find('.card-text').text();
+    description = $(this).parent().find('#des').attr("value");
     title = $(this).parent().find('.card-title').text();
     file = $(this).parent().find('#file').attr("value");
     image = $(this).parent().find('.image');
@@ -83,17 +83,38 @@ $(".btn-primary").on("click", function(e) {
             '</div>';
         $(".carousel-inner").prepend(html);
     }
-    $("#fichier_d_n").attr("href", file);
-    $(".description").html("<h3>" + title + "</h3>" + description);
+    if (file == base_url)
+        $("#fichier_d_n").remove();
+    else
+        $("#fichier_d_n").attr("href", file);
+    $(".description").html("<h3>" + title + "</h3><p>" + description + "</p>");
+});
+
+$("#fichier_d_n").on("click", function(e) {
+    $("#staticBackdrop").modal("hide");
 });
 
 
 // modifiyin text of card 
 
+const modal = document.querySelectorAll(".modal");
+const btn = document.querySelectorAll(".btn");
 const text = document.getElementsByClassName("card-text");
-const length = 250; 
+const length = 250;
+
 for (let index = 0; index < text.length; index++) {
-    
-    var myTruncatedString = text[index].innerHTML.substring(0,length);
-    text[index].innerText = myTruncatedString + "...etc.";
+
+    {
+        var myTruncatedString = text[index].innerHTML.substring(0, length);
+        text[index].innerText = myTruncatedString + "...etc.";
+    }
+
+}
+for (let index = 0; index < btn.length; index++) {
+    btn[index].addEventListener("click", () => {
+        var trunc = text[index].innerHTML.substring(0, 500);
+
+        text[index].innerText = trunc;
+    })
+
 }

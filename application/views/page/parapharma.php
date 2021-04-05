@@ -24,7 +24,8 @@
                                 <h5 class="card-title"><?php echo $product['designation']; ?></h5>
                                 <p class="card-text"><?php echo $product['description']; ?></p>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="<?php echo $product['designation']; ?>">EN SAVOIR PLUS</a>
-                                <input id="file" value="test" type="text" hidden />
+                                <input id="file" value="<?php echo base_url().$product['fdn']; ?>" type="text" hidden />
+                                <input id="des" value="<?php echo $product['description']; ?>" type="text" hidden />
                                 <?php foreach (getimage($product['image']) as $image) { ?>
                                     <input class="image" value="<?php echo base_url() . $image; ?>" type="text" hidden />
                                 <?php } ?>
