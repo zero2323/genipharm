@@ -88,87 +88,12 @@ $(".btn-primary").on("click", function(e) {
 });
 
 
-// // Start Pagination 
+// modifiyin text of card 
 
-// let rowOne = document.getElementById("rowone");
-// let rowTwo = document.getElementById("rowtwo");
-// let rowThree = document.getElementById("rowthree");
-// let pageOne = document.getElementById("p1");
-// let pageTwo = document.getElementById("p2");
-
-
-
-
-
-// pageOne.addEventListener("click", () => {
-//     pageOne.style.color = "#ddd";
-//     pageTwo.style.color = "rgba(5, 158, 226, 0.8) ";
-//     if (rowOne.classList.contains("notdisplaying") && rowTwo.classList.contains("notdisplaying")) {
-//         rowOne.classList.remove("notdisplaying");
-//         rowTwo.classList.remove("notdisplaying");
-
-//         rowOne.classList.add("displaying");
-//         rowTwo.classList.add("displaying");
-
-//         rowThree.classList.remove("displaying");
-//         rowThree.classList.add("notdisplaying");
-//     }
-// })
-
-// pageTwo.addEventListener("click", () => {
-//     pageOne.style.color = "rgba(5, 158, 226, 0.8) ";
-//     pageTwo.style.color = "#ddd";
-//     if (rowThree.classList.contains("notdisplaying")) {
-//         rowOne.classList.add("notdisplaying");
-//         rowTwo.classList.add("notdisplaying");
-
-//         rowThree.classList.remove("notdisplaying");
-//         rowThree.classList.add("displaying");
-//     }
-// })
-
-
-// // begin carousel 
-
-// let products = document.getElementsByClassName("btn-primary");
-// let img1 = document.getElementById("productone");
-// console.log(img1);
-// let img2 = document.getElementById("producttwo");
-// for (let index = 0; index < products.length; index++) {
-
-//     if (products[index].getAttribute("value") === "FERTOP") {
-//         products[index].addEventListener("click", () => {
-//             img1.src = base_url + "Assets/img/cos/a1.jpg";
-
-//         })
-//     } else if (products[index].getAttribute("value") === "GYNOVAIRE") {
-//         products[index].addEventListener("click", () => {
-//             img1.src = base_url + "Assets/img/cos/a2.jpg";
-
-//         })
-//     } else if (products[index].getAttribute("value") === "GYNOVAIRE PLUS") {
-//         products[index].addEventListener("click", () => {
-//             img1.src = base_url + "Assets/img/cos/a3.jpg";
-
-//         })
-//     } else if (products[index].getAttribute("value") === "HEPATIX") {
-//         products[index].addEventListener("click", () => {
-//             img1.src = base_url + "Assets/img/cos/a4.jpg";
-//         })
-//     } else if (products[index].getAttribute("value") === "MAXI CARDIO") {
-//         products[index].addEventListener("click", () => {
-//             img1.src = base_url + "Assets/img/cos/a5.jpg";
-
-//         })
-//     } else if (products[index].getAttribute("value") === "PROMENO") {
-//         products[index].addEventListener("click", () => {
-//             img1.src = base_url + "Assets/img/cos/a6.jpg";
-
-//         })
-//     } else if (products[index].getAttribute("value") === "RICOVRI") {
-//         products[index].addEventListener("click", () => {
-//             img1.src = base_url + "Assets/img/cos/a7.jpg";
-
-//         })
-//     }
-// }
+const text = document.getElementsByClassName("card-text");
+const length = 250; 
+for (let index = 0; index < text.length; index++) {
+    
+    var myTruncatedString = text[index].innerHTML.substring(0,length);
+    text[index].innerText = myTruncatedString + "...etc.";
+}

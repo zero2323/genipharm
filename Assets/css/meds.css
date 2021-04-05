@@ -522,6 +522,10 @@
         {
             color:rgba(5, 158, 226, 0.8);
         }
+        .description p
+        {
+            font-size: 14px !important;
+        }
     /* End Body  */
 /* Begin my classes  */
 

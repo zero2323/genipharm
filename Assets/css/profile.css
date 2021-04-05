@@ -178,6 +178,7 @@
             flex-direction: row;
             align-items: center;
         }
+        
         .wrapper .informations ul li:nth-child(3) input ,.wrapper .informations ul li:last-child input
         {
             color: rgba(0, 0, 0, 0.7);
