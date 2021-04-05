@@ -19,11 +19,15 @@
                 <?php foreach ($productsC as $product) { ?>
                     <div class="col-lg-4 ">
                         <div class="card" style="width: 18rem;">
-                            <img src="<?php echo base_url().$product['image'];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
+                            <img src="<?php echo base_url() . getimage($product['image'])[0];  ?>" class="card-img-top" alt="<?php echo $product['designation']; ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $product['designation']; ?></h5>
                                 <p class="card-text"><?php echo $product['description']; ?></p>
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="<?php echo $product['designation']; ?>">EN SAVOIR PLUS</a>
+                                <input id="file" value="test" type="text" hidden/>
+                                <?php foreach (getimage($product['image']) as $image) { ?>
+                                    <input class="image" value="<?php echo base_url() . $image; ?>" type="text" hidden/>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -31,7 +35,7 @@
             </div>
         </div>
 
-        <?php print_r($links);?>
+        <?php print_r($links); ?>
 
         <!-- Brgin Pagination  -->
         <!-- <nav aria-label="...">
@@ -67,14 +71,8 @@
             <div class="modal-body">
                 <!-- begin the carousel -->
                 <div class="row">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div style="overflow:hidden;" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="<?php echo base_url(); ?>Assets/img/medicaments/a1.jpg" id="productone" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="<?php echo base_url(); ?>Assets/img/medicaments/b1.jpg" id="producttwo" class="d-block w-100" alt="...">
-                            </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <i class="fas fa-chevron-left black fa-2x"></i>
@@ -87,7 +85,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="row">
+                <div class="description row">
                     <h3>Description</h3>
                 </div>
 
@@ -95,6 +93,7 @@
             </div>
 
             <div class="modal-footer">
+                <a id="fichier_d_n" href="#" target="_blanc"  class="btn btn-primary">Fichier de Notice</a>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
             </div>

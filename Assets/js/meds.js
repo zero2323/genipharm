@@ -61,94 +61,121 @@ $(document).ready(function() {
 });
 
 
-// Start Pagination 
+// // Start Pagination 
 
-let rowOne = document.getElementById("rowone");
-let rowTwo = document.getElementById("rowtwo");
-let rowThree = document.getElementById("rowthree");
-let pageOne = document.getElementById("p1");
-let pageTwo = document.getElementById("p2");
-
-
+// let rowOne = document.getElementById("rowone");
+// let rowTwo = document.getElementById("rowtwo");
+// let rowThree = document.getElementById("rowthree");
+// let pageOne = document.getElementById("p1");
+// let pageTwo = document.getElementById("p2");
 
 
 
-pageOne.addEventListener("click", () => {
-    pageOne.style.color = "#ddd";
-    pageTwo.style.color = "rgba(5, 158, 226, 0.8) ";
-    if (rowOne.classList.contains("notdisplaying") && rowTwo.classList.contains("notdisplaying")) {
-        rowOne.classList.remove("notdisplaying");
-        rowTwo.classList.remove("notdisplaying");
 
-        rowOne.classList.add("displaying");
-        rowTwo.classList.add("displaying");
 
-        rowThree.classList.remove("displaying");
-        rowThree.classList.add("notdisplaying");
+// pageOne.addEventListener("click", () => {
+//     pageOne.style.color = "#ddd";
+//     pageTwo.style.color = "rgba(5, 158, 226, 0.8) ";
+//     if (rowOne.classList.contains("notdisplaying") && rowTwo.classList.contains("notdisplaying")) {
+//         rowOne.classList.remove("notdisplaying");
+//         rowTwo.classList.remove("notdisplaying");
+
+//         rowOne.classList.add("displaying");
+//         rowTwo.classList.add("displaying");
+
+//         rowThree.classList.remove("displaying");
+//         rowThree.classList.add("notdisplaying");
+//     }
+// })
+
+// pageTwo.addEventListener("click", () => {
+//     pageOne.style.color = "rgba(5, 158, 226, 0.8) ";
+//     pageTwo.style.color = "#ddd";
+//     if (rowThree.classList.contains("notdisplaying")) {
+//         rowOne.classList.add("notdisplaying");
+//         rowTwo.classList.add("notdisplaying");
+
+//         rowThree.classList.remove("notdisplaying");
+//         rowThree.classList.add("displaying");
+//     }
+// })
+
+
+$(".btn-primary").on("click", function(e) {
+    description = $(this).parent().find('.card-text').text();
+    title = $(this).parent().find('.card-title').text();
+    file = $(this).parent().find('#file').attr("value");
+    image = $(this).parent().find('.image');
+    $(".carousel-inner").html("");
+    for (i = 0; i < image.length; i++) {
+        if (i == 0)
+            html = '<div class="carousel-item active"> <' +
+            'img src= "' + image[i].value + '"' +
+            'class = "w-75"' +
+            'id = "productone"' +
+            'alt = "..." >' +
+            '</div>';
+        else
+            html = '<div class="carousel-item"> <' +
+            'img src= "' + image[i].value + '"' +
+            'class = "w-75"' +
+            'id = "productone"' +
+            'alt = "..." >' +
+            '</div>';
+        $(".carousel-inner").prepend(html);
     }
-})
+    $("#fichier_d_n").attr("href", file);
+    $(".description").html("<h3>" + title + "</h3>" + description);
+});
 
-pageTwo.addEventListener("click", () => {
-    pageOne.style.color = "rgba(5, 158, 226, 0.8) ";
-    pageTwo.style.color = "#ddd";
-    if (rowThree.classList.contains("notdisplaying")) {
-        rowOne.classList.add("notdisplaying");
-        rowTwo.classList.add("notdisplaying");
+// // begin carousel 
 
-        rowThree.classList.remove("notdisplaying");
-        rowThree.classList.add("displaying");
-    }
-})
+// let products = document.getElementsByClassName("btn-primary");
+// let img1 = document.getElementById("productone");
+// console.log(img1);
+// let img2 = document.getElementById("producttwo");
+// for (let index = 0; index < products.length; index++) {
 
+//     if (products[index].getAttribute("value") === "FERTOP") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a1.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b1.jpg";
+//         })
+//     } else if (products[index].getAttribute("value") === "GYNOVAIRE") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a2.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b2.jpg";
+//         })
+//     } else if (products[index].getAttribute("value") === "GYNOVAIRE PLUS") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a3.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b3.jpg";
+//         })
+//     } else if (products[index].getAttribute("value") === "HEPATIX") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a4.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b4.jpg";
+//         })
+//     } else if (products[index].getAttribute("value") === "MAXI CARDIO") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a5.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b5.jpg";
+//         })
+//     } else if (products[index].getAttribute("value") === "PROMENO") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a6.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b6.jpg";
+//         })
+//     } else if (products[index].getAttribute("value") === "RICOVRI") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a7.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b7.jpg";
+//         })
+//     } else if (products[index].getAttribute("value") === "SYNAPSE") {
+//         products[index].addEventListener("click", () => {
+//             img1.src = base_url + "Assets/img/medicaments/a8.jpg";
+//             img2.src = base_url + "Assets/img/medicaments/b8.jpg";
+//         })
+//     }
 
-// begin carousel 
-
-let products = document.getElementsByClassName("btn-primary");
-let img1 = document.getElementById("productone");
-console.log(img1);
-let img2 = document.getElementById("producttwo");
-for (let index = 0; index < products.length; index++) {
-
-    if (products[index].getAttribute("value") === "FERTOP") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a1.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b1.jpg";
-        })
-    } else if (products[index].getAttribute("value") === "GYNOVAIRE") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a2.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b2.jpg";
-        })
-    } else if (products[index].getAttribute("value") === "GYNOVAIRE PLUS") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a3.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b3.jpg";
-        })
-    } else if (products[index].getAttribute("value") === "HEPATIX") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a4.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b4.jpg";
-        })
-    } else if (products[index].getAttribute("value") === "MAXI CARDIO") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a5.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b5.jpg";
-        })
-    } else if (products[index].getAttribute("value") === "PROMENO") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a6.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b6.jpg";
-        })
-    } else if (products[index].getAttribute("value") === "RICOVRI") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a7.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b7.jpg";
-        })
-    } else if (products[index].getAttribute("value") === "SYNAPSE") {
-        products[index].addEventListener("click", () => {
-            img1.src = base_url + "Assets/img/medicaments/a8.jpg";
-            img2.src = base_url + "Assets/img/medicaments/b8.jpg";
-        })
-    }
-
-}
+// }

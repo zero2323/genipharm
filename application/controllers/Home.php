@@ -64,6 +64,11 @@ class Home extends CI_Controller
 		}
 	}
 
+	public function getimage($string)
+	{
+		return explode("@@@",$string);
+	}
+
 	public function getCommand($type = null, $p = null)
 	{
 		// if (!$this->input->is_ajax_request()) {
@@ -115,7 +120,7 @@ class Home extends CI_Controller
 						foreach ($productsP as $product) {
 							$result .= '							<div class=" col-lg-4 col-md-6 card-wrapper  ">' .
 								'<div class="card" style="width: 18rem;">' .
-								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
+								'<img src="' . base_url() . $this->getimage($product['image'])[0] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
@@ -138,7 +143,7 @@ class Home extends CI_Controller
 						foreach ($productsP as $product) {
 							$result .= '							<div class="col-lg-4 col-md-6 card-wrapper  ">' .
 								'<div class="card" style="width: 18rem;">' .
-								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
+								'<img src="' . base_url() . $this->getimage($product['image'])[0] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
@@ -165,7 +170,7 @@ class Home extends CI_Controller
 						foreach ($productsC as $product) {
 							$result .= '							<div class=" col-lg-4 col-md-6 card-wrapper ">' .
 								'<div class="card" style="width: 18rem;">' .
-								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
+								'<img src="' . base_url() . $this->getimage($product['image'])[0] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
@@ -188,7 +193,7 @@ class Home extends CI_Controller
 						foreach ($productsC as $product) {
 							$result .= '							<div class="col-lg-4 col-md-6 card-wrapper ">' .
 								'<div class="card" style="width: 18rem;">' .
-								'<img src="' . base_url() . $product['image'] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
+								'<img src="' . base_url() . $this->getimage($product['image'])[0] . '" class="card-img-top" alt="' . $product['designation'] . '">' .
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .

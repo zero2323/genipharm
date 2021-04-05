@@ -8,21 +8,21 @@
     <?php if ($acceuil == true) { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/style.css">
     <?php } ?>
-    <?php if ($acceuil != true && $page=="compliments") { ?>
+    <?php if ($acceuil != true && $page == "compliments") { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/meds.css"><?php } ?>
-    <?php if ($acceuil != true && $page=="parapharma") { ?>
+    <?php if ($acceuil != true && $page == "parapharma") { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/parapharma.css">
     <?php } ?>
-    <?php if ($acceuil != true && ($page=="partenaire" || $page=="registration" )) { ?>
+    <?php if ($acceuil != true && ($page == "partenaire" || $page == "registration")) { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/partenaire.css">
     <?php } ?>
-    <?php if ($acceuil != true && $page=="com") { ?>
+    <?php if ($acceuil != true && $page == "com") { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/com.css">
     <?php } ?>
-    <?php if ($acceuil != true && $page=="contact") { ?>
+    <?php if ($acceuil != true && $page == "contact") { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/contact.css">
     <?php } ?>
-    <?php if ($acceuil != true && $page=="profile") { ?>
+    <?php if ($acceuil != true && $page == "profile") { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/profile.css">
     <?php } ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/navbar.css">
@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Roboto+Condensed:wght@300&family=Ubuntu:wght@500&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Roboto+Condensed:wght@300&family=Ubuntu:wght@500&display=swap">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap">
@@ -42,3 +42,7 @@
 </head>
 
 <body>
+    <?php function getimage($string)
+    {
+        return explode("@@@", $string);
+    } ?>
