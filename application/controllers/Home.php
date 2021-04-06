@@ -66,7 +66,7 @@ class Home extends CI_Controller
 
 	public function getimage($string)
 	{
-		return explode("@@@",$string);
+		return explode("@@@", $string);
 	}
 
 	public function getCommand($type = null, $p = null)
@@ -363,10 +363,10 @@ class Home extends CI_Controller
 			foreach ($comands as $comand) {
 				$pr = $this->auth_model->getProductbyID($comand['id_p'])[0];
 				if (!$data['employe'])
-					$d = array("command_id" =>$comand['id'],"name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
+					$d = array("command_id" => $comand['id'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
 				else {
 					$usr = $this->auth_model->get_user($comand['id_u'])[0];
-					$d = array("command_id" =>$comand['id'],"u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
+					$d = array("command_id" => $comand['id'], "u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
 				}
 				array_push($data['commands'], $d);
 			}
@@ -425,16 +425,18 @@ class Home extends CI_Controller
 			&& isset($_POST['societe']) && isset($_POST['fonction']) && isset($_POST['tele'])
 			&& isset($_POST['message'])
 		) {
-			$from_email = "ramzibrahimovich@gmail.com";
-			$to_email = "zeghidaramzi@gmail.com"; //$this->input->post('email');
+			$from_email = "zeghidaramzi@gmail.com";
+			$to_email = "ramzibrahimovich@gmail.com"; //$this->input->post('email');
 			//Load email library
 			$this->load->library('email');
 			$config = array();
 			$config['protocol'] = 'smtp';
-			$config['smtp_host'] = 'in-v3.mailjet.com';
-			$config['smtp_user'] = '1bba08f3071ee5ea29a0e1e5f2d7bdbd';
-			$config['smtp_pass'] = '1b90d6a7aa3ba602c09d2c3fbc0d7360';
-			$config['smtp_port'] = 25;
+			$config['smtp_host'] = 'ssl://smtp.googlemail.com';
+			$config['smtp_user'] = 'zeghidaramzi@gmail.com';
+			$config['smtp_pass'] = 'Ramzie23';
+			$config['smtp_port'] = 465;
+			$config['charset']   = 'utf-8';
+			$config['mailtype']  = 'text';
 			$this->email->initialize($config);
 			$this->email->set_newline("\r\n");
 			$this->email->from($from_email, 'ramzibrahimovich');
@@ -446,23 +448,26 @@ class Home extends CI_Controller
 				"Société: " . $_POST['societe'] . "\r\n" .
 				"Fonction: " . $_POST['fonction'] . "\r\n" .
 				"Message: \r\n" . $_POST['message'] . "\r\n");
-			// $config = array(
-			// 	'upload_path' => str_replace("application/controllers", "Assets/uploads", __DIR__),
-			// 	'allowed_types' => "doc|docx|pdf",
-			// 	'overwrite' => TRUE,
-			// 	'max_size' => "2048000"
-			// );
-			// $this->load->library('upload', $config);
-			// if ($this->upload->do_upload('file')) {
-			// 	$data = array('upload_data' => $this->upload->data());
-			// 	print_r($data);
-			// 	// $this->load->view('upload_success', $data);
-			// } else {
-			// 	$error = array('error' => $this->upload->display_errors());
-			// 	print_r($error);
-			// 	// $this->load->view('custom_view', $error);
-			// }
-			// // $this->email->attach('C:\Users\xyz\Desktop\images\abc.png');
+			$config = array(
+				'upload_path' => str_replace("application/controllers", "Assets/uploads", __DIR__),
+				'allowed_types' => "doc|docx|pdf",
+				'overwrite' => TRUE,
+				'max_size' => "2048000"
+			);
+			$this->load->library('upload', $config);
+			if ($this->upload->do_upload('userfile')) {
+				$data = array('upload_data' => $this->upload->data());
+				//print_r($data);
+				$this->email->attach($data['upload_data']['full_path']);
+				$this->load->helper("file");
+				unlink($data['upload_data']['full_path']);
+				//print_r($data);
+				// $this->load->view('upload_success', $data);
+			} else {
+				$error = array('error' => $this->upload->display_errors());
+				//print_r($error);
+				// $this->load->view('custom_view', $error);
+			}
 			//Send mail
 			if ($this->email->send()) {
 				$this->session->set_flashdata("success", "Congratulation Email Sent Successfully.");

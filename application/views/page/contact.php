@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-group col-6 d-flex flex-column">
                         <label for="uploadPdf">Votre CV <span>*</span></label>
-                        <input name="file" type="file" id="docpicker" accept=".pdf,.doc">
+                        <input name="userfile" type="file" id="docpicker" accept=".pdf,.doc">
 
                     </div>
                     <div class="col-12">
