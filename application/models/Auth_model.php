@@ -10,6 +10,29 @@ class Auth_model extends CI_Model
 
         $this->load->database();
     }
+
+    public function isRobot($token)
+    {
+        $ch = curl_init();
+        $secret="6LeTO58aAAAAAHHiPzN5J58ufIfcUj2gI1Rpf-Rw";
+
+        curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt(
+            $ch,
+            CURLOPT_POSTFIELDS,
+            "secret=".$secret."&response=".$token
+        );
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $server_output = curl_exec($ch);
+
+        curl_close($ch);
+
+        $server_output=json_decode($server_output);
+        return $server_output->success;
+    }
+
     public function isSignup($email)
     {
         $query = $this->db->get_where('user', array('email' => $email));

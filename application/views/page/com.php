@@ -115,6 +115,7 @@
                                     <label for="detaillant">Détaillant</label>
                                 </div>
                             </div>
+                            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>" />
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Valider</button>
                                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retourner à la page précedente</button> -->

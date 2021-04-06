@@ -37,12 +37,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title><?php echo $title; ?></title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>Assets/img/logo_title.png" />
 </head>
 
 <body>
-    <?php function getimage($string)
+    <?php
+    function getimage($string)
     {
         return explode("@@@", $string);
-    } ?>
+    
+    };
+    ?>

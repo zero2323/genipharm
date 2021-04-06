@@ -27,6 +27,7 @@ class Home extends CI_Controller
 		parent::__construct();
 		// Your own constructor code
 		$this->load->helper('url');
+		$this->load->helper('security');
 		$this->load->library('session');
 		$this->load->model('auth_model');
 		$this->load->library("pagination");
@@ -71,9 +72,9 @@ class Home extends CI_Controller
 
 	public function getCommand($type = null, $p = null)
 	{
-		// if (!$this->input->is_ajax_request()) {
-		// 	exit('No direct script access allowed');
-		// }
+		if (!$this->input->is_ajax_request()) {
+			exit('No direct script access allowed');
+		}
 		// pagination config
 		$config = array();
 		$config["use_page_numbers"] = TRUE;
@@ -217,6 +218,9 @@ class Home extends CI_Controller
 	public function update_user()
 	{
 
+		if (!$this->input->is_ajax_request()) {
+			exit('No direct script access allowed');
+		}
 		$email = base64_decode(base64_decode($_SESSION['_logged_in']));
 		$res = $this->auth_model->getData($email)[0];
 

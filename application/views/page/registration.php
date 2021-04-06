@@ -50,6 +50,10 @@
                                <label for="Pharmacien">Pharmacien.</label>
                            </div>
                        </div>
+                       <div class="form-group my-4">
+                           <div class="g-recaptcha" data-sitekey="6LeTO58aAAAAALtZm4nO5AamhOQ-JnG_VlFYs5zv"></div>
+                       </div>
+                       <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>" />
                        <div class="resetPassword">
                            <button type="submit" class="btn btn-primary my-4 connecter">S'inscrire </button>
                            <small id="emailHelp" class="form-text text-muted">Vous avez déja un compte ?<a href="<?php echo base_url(); ?>page/partenaire"><span> cliquez ici.</span></a></small>

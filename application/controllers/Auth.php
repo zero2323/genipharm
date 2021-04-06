@@ -39,19 +39,32 @@ class Auth extends CI_Controller
         $r_password = $this->input->post('r_password');
         $type = $this->input->post('metier');
         $signed = $this->auth_model->isSignup($email);
+        $error = "";
         if ($signed) {
-            $this->session->set_flashdata('error', "Email already exists");
+            if (!$this->auth_model->isRobot($this->input->post("g-recaptcha-response")))
+                $error .= "Please check the Robot test<br>";
+            $error .= "Email already exists";
+            $this->session->set_flashdata('error', $error);
         } else {
             if ($password != $r_password) {
-                $this->session->set_flashdata('error', "Password Doesnt Match");
+                if (!$this->auth_model->isRobot($this->input->post("g-recaptcha-response")))
+                    $error .= "Please check the Robot test<br>";
+                $error .= "Password Doesnt Match";
+                $this->session->set_flashdata('error', $error);
             } else {
-                $this->auth_model->signup($email, $password, "NS", $phone, "NS", "NS", "NS", "NS", "NS", "NS", $type);
-                $this->session->set_userdata('_logged_in', base64_encode(base64_encode($email)));
-                $this->session->set_flashdata('success', "Your account created successfully");
+                if (!$this->auth_model->isRobot($this->input->post("g-recaptcha-response"))) {
+                    $error .= "Please check the Robot test<br>";
+                    $this->session->set_flashdata('error', $error);
+                } else {
+                    $this->auth_model->signup($email, $password, "NS", $phone, "NS", "NS", "NS", "NS", "NS", "NS", $type);
+                    $this->session->set_userdata('_logged_in', base64_encode(base64_encode($email)));
+                    $this->session->set_flashdata('success', "Your account created successfully");
+                }
             }
         }
         redirect(base_url() . 'page/registration');
     }
+
 
     public function complet_signup()
     {
@@ -77,19 +90,38 @@ class Auth extends CI_Controller
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $signed = $this->auth_model->isSignup($email);
+        $error = '';
+        print_r($_POST);
         if ($signed) {
             $res = $this->auth_model->getData($email)[0];
             if ($res['password'] == $password) {
-                $this->session->set_userdata('_logged_in', base64_encode(base64_encode($email)));
-                //$this->session->set_flashdata('succsess', "you are now logged in as " . $email);
-                redirect(base_url() . 'page/profile');
+                if ($this->auth_model->isRobot($this->input->post("g-recaptcha-response"))) {
+                    $this->session->set_userdata('_logged_in', base64_encode(base64_encode($email)));
+                    //$this->session->set_flashdata('succsess', "you are now logged in as " . $email);
+                    redirect(base_url() . 'page/profile');
+                } else {
+                    $error .= "Please check the Robot test.<br>";
+                    $this->session->set_flashdata('error', $error);
+                }
             } else {
-                $this->session->set_flashdata('error', "email or password is wrong");
+                if (!$this->auth_model->isRobot($this->input->post("g-recaptcha-response")))
+                    $error .= "Please check the Robot test<br>";
+                $error .= "email or password is wrong";
+                $this->session->set_flashdata('error', $error);
                 redirect(base_url() . 'page/partenaire');
             }
         } else {
-            $this->session->set_flashdata('error', "No Account with this email or phone number");
+            if (!$this->auth_model->isRobot($this->input->post("g-recaptcha-response")))
+                $error .= "Please check the Robot test.<br>";
+            $error .= "No Account with this email or phone number";
+            $this->session->set_flashdata('error', $error);
             redirect(base_url() . 'page/partenaire');
         }
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('_logged_in');
+        redirect(base_url() . 'page/partenaire');
     }
 }
