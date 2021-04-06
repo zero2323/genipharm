@@ -94,8 +94,8 @@
             </div>
 
             <div class="modal-footer">
-                <a id="fichier_d_n" href="#" target="_blanc"  class="btn btn-primary">Fichier de Notice</a>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="fichier_d_n" href="#" target="_blanc"  class="btn btn-primary">Télécharger la notice </a>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer </button>
 
             </div>
         </div>

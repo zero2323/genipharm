@@ -63,11 +63,7 @@
             border-radius: 20px;
         }
 
-         .collapse .nav-item:nth-last-child(2)
-         {
-             border: 2px solid #000 !important;
-             border-radius: 20px;
-         }
+
         .navbar-dark .navbar-nav .nav-link
         {
 
@@ -93,6 +89,14 @@
         .shopping-cart i , .shopping-cart span
         {
             color: #000;
+        }
+        .collapse .partenaire
+        {
+            border-color: #000  !important;
+        }
+        .nav-link
+        {
+            font-size: 0.8em !important;
         }
          /* End The NavbaR */
          
@@ -274,3 +278,80 @@
     }
 
     /* end modal  */
+    @media (max-width: 575px) { 
+        .clip 
+        {
+            clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+            background-color: #ddd;
+            font-size: 0.6rem !important ;
+            width: 50%;
+            padding: 10px;
+            background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+            margin-bottom: 20px;
+        }
+    }
+    @media (min-width: 576px) {  
+    .clip 
+    {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        background-color: #ddd;
+        font-size: 0.6rem !important ;
+        width: 40%;
+        padding: 10px;
+        background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+        margin-bottom: 20px;
+    }
+    }
+
+
+@media (min-width: 768px) { 
+    .clip 
+    {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        background-color: #ddd;
+        font-size: 0.8rem !important ;
+        width: 40%;
+        padding: 10px;
+        background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+        margin-bottom: 20px;
+    }
+    .chercher 
+    {
+        font-size: 1.2rem !important;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    .clip 
+    {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        background-color: #ddd;
+        font-size: 0.8rem !important ;
+        width: 30%;
+        padding: 10px;
+        background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+        margin-bottom: 20px;
+    }
+    .chercher 
+    {
+        font-size: 1.5rem !important;
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    .clip 
+    {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        background-color: #ddd;
+        font-size: 0.9rem !important ;
+        width: 25%;
+        padding: 10px;
+        background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+        margin-bottom: 20px;
+    }
+ }
+
+
+@media (min-width: 1400px) {  }

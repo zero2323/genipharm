@@ -522,6 +522,23 @@
         {
             height: 100% !important;
         }
+        .card
+        {
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+        }
+
+        .card:hover
+        {
+            transform: scale(1.05);
+        }
+        .drop-content h4 {
+            color: #f39200 !important;
+        }
+        .drop-content h6 {
+            color: #f39200 !important;
+        }
+
     /* End Body  */
 /* Begin my classes  */
 

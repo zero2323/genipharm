@@ -526,6 +526,16 @@
         {
             font-size: 14px !important;
         }
+        .card
+        {
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+        }
+
+        .card:hover
+        {
+            transform: scale(1.05);
+        }
     /* End Body  */
 /* Begin my classes  */
 

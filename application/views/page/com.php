@@ -1,9 +1,9 @@
     <!-- Begin the main  -->
     <section class="main container ">
         <div class="row">
-            <div class="col-3">Vous recherchez </div>
-            <div class="col-7"><input type="text" name="lookfor" id="look" placeholder="Entrez le nom du produit"></div>
-            <div class="col-2"><button id="find">RECHERCHER</button></div>
+            <div class=" chercher col-md-3 mt-3 text-center">Vous recherchez </div>
+            <div class="col-md-7 mt-3 text-center"><input type="text" name="lookfor" id="look" placeholder="Entrez le nom du produit"></div>
+            <div class="col-md-2 mt-3 text-center"><button id="find">RECHERCHER</button></div>
         </div>
 
         <div class="row">

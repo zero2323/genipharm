@@ -107,6 +107,11 @@
             border: 2px solid #000  !important;
             border-radius: 20px;
         }
+        .shopping-cart
+        {
+            list-style: none;
+            color: #000;
+        }
          /* End The NavbaR */
 
 /* /start main */

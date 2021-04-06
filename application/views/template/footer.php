@@ -1,5 +1,5 @@
 <!-- Begin footer -->
-<div class="footer container-fluid mt-4 <?php 
+<div class="footer container-fluid  <?php 
                                                 if ($acceuil == true) { echo 'main-page-footer';} elseif ($page == "compliments") {echo 'compliment-footer';} ?> " id="contact">
     <div class="container">
         <div class="row mt-4 p-4">

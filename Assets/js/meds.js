@@ -96,14 +96,14 @@ $(".btn-primary").on("click", function(e) {
         if (i == 0)
             html = '<div class="carousel-item active"> <' +
             'img src= "' + image[i].value + '"' +
-            'class = "w-75"' +
+            'class = "w-100"' +
             'id = "productone"' +
             'alt = "..." >' +
             '</div>';
         else
             html = '<div class="carousel-item"> <' +
             'img src= "' + image[i].value + '"' +
-            'class = "w-75"' +
+            'class = "w-100"' +
             'id = "productone"' +
             'alt = "..." >' +
             '</div>';

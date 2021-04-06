@@ -167,6 +167,8 @@ function displayCart() {
     $('.total-cart').html(shoppingCart.totalCart());
     $('.total-count').html(shoppingCart.totalCount());
 }
+
+
 // display cart 
 // Delete item button
 
@@ -447,6 +449,17 @@ function complement(p, search) {
                         e.preventDefault();
                         complement($(this).attr("data-ci-pagination-page"));
                     });
+                    const text = document.querySelectorAll(".card-text");
+                    const length = 200;
+                
+                for (let index = 0; index < text.length; index++) {
+                
+                    {
+                        var myTruncatedString = text[index].innerHTML.substring(0, length);
+                        text[index].innerText = myTruncatedString + "...etc.";
+                    }
+                
+                }
                 }, 1000);
             }
         });
@@ -534,6 +547,13 @@ function complement(p, search) {
     }
 }
 
+$( document ).ajaxComplete(function( event,request, settings ) {
+    const text = document.querySelectorAll(".card");
+    const length = 50;
+    console.log(text.length);
+});
+
+
 function valid_command() {
     $("#validate_command").on("click", function(e) {
         var name = [];
@@ -569,3 +589,6 @@ complement(1, null);
 search();
 
 valid_command()
+
+
+

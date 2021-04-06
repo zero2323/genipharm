@@ -105,3 +105,226 @@ border-color: transparent;
 
 
 /* end Sign Up */
+
+
+@media (max-width : 575px)
+{
+    .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+        width: 100%;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .nav-bar{
+        
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+     .navbar{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+     }
+    .slider .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    } 
+    .slider .row h1
+    {
+        font-size:58px !important ;
+    }
+    .slider .row .main-text p
+    {
+        font-size: 1.5em !important;
+    }
+    .nav-bar .navbar
+    {
+        padding-left: 0px !important;
+        padding-right: 0px!important;
+    }
+    .nav-link 
+    {
+        padding: 10px !important;
+        color: rgba(0, 0, 0, 0.8) !important;
+    }
+     .collapse .nav-item:not(:last-child) a:hover
+    {
+    border-left: 2px solid #009FE3 !important;
+        transform: unset !important;
+    }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
+    .navbar-collapse
+    {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 5px !important;
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 10px !important;
+    }
+    .valeurs
+    {
+        margin-top: 3rem;
+        text-align: center;
+        
+    }
+    .navbar-brand
+    {
+        margin-right: 0 !important;
+    }
+    .valeurs div
+    {
+        justify-content: center!important;
+    }
+    .philo
+    {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .philo div
+    {
+        justify-content: center!important;
+    }
+    .shake
+    {
+        margin-bottom: 20px;
+        border-right: 0px solid #fff !important;
+    }
+    .card
+    {
+        margin-bottom: 20px;
+    }
+    .footer .container{
+        padding: 0px 20px !important;
+    }
+    .navbar-dark .navbar-brand
+    {
+        margin-left: 0px !important;
+    }
+    .img_logo
+    {
+        margin-right: 0px!important;
+        margin-left: 10px;
+    }
+    .nav-bar .navbar .navbar-brand .img_logo {
+        padding-right: 5px !important;
+
+    }
+    #btn-togler
+    {
+        margin-right: 30px !important;
+    }
+    .drop-content
+    {
+        width: 45vw !important;
+    }
+   
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px)
+ { 
+    .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+        width: 100%;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .collapse .nav-item a:hover
+    {
+        border-left: 2px solid #000 !important;
+        margin: 0px 5px;
+        transform: unset;
+    }
+    .nav-bar{
+        
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+     .navbar{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+     }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: none !important;
+    }
+    .slider .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .nav-link 
+    {
+        padding: 10px !important;
+        color: rgba(0, 0, 0, 0.8) !important;
+    }
+     .collapse .nav-item:not(:last-child) a:hover
+         {
+            border-left: 2px solid #009FE3 !important;
+             transform: unset !important;
+         }
+    .nav-bar .navbar .navbar-brand p
+    {
+        display: flex !important;
+    }
+    .navbar-collapse
+    {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        text-align: left;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.8);
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 10px !important;
+    }
+    .valeurs
+    {
+        margin-top: 3rem;
+    }
+    .philo
+    {
+        margin-bottom: 3rem;
+    }
+    .shake
+    {
+        margin-bottom: 20px;
+        border-right: 0px solid #fff !important;
+    }
+     .card
+    {
+        margin-bottom: 20px;
+    }
+    .footer .container{
+        padding: 0px 20px !important;
+    }
+    .aboutus .container .first-row p
+    {
+        padding: 10px !important;
+    }
+    .img_logo
+    {
+        margin-right: 10px!important;
+        margin-left: 30px;
+    }
+    #btn-togler
+    {
+        margin-right: 30px !important;
+    }
+ }

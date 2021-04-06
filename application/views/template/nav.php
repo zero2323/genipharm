@@ -62,9 +62,7 @@
                                   </div>
                             </div>
                         </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
-                    </li>
+
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
@@ -72,15 +70,15 @@
                 </ul>
 
                 <ul class="navbar-nav ms-auto ">
-                <li class="nav-item ms-2 partenaire">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    <li class="nav-item ms-2 partenaire ">
+                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire" > Espace partenaire</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
     <!-- ENd Nav Bar  -->
-<?php } else if ($acceuil == false && ($page == "partenaire" || $page == "registration")) {
+<?php } else if ($acceuil == false && ($page == "partenaire" || $page == "registration" )) {
 ?>
     <!-- Begin Navbar  -->
     <div class="navigation-bar">
@@ -146,9 +144,7 @@
                                   </div>
                             </div>
                         </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
-                    </li>
+
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
@@ -156,15 +152,16 @@
                 </ul>
 
                 <ul class="navbar-nav ms-auto ">
-                <li class="nav-item ms-2 partenaire">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    <li class="nav-item ms-2 partenaire ">
+                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Espace partenaire</a>
+
                     </li>
                 </ul>
                 </div>
             </nav>
         </div>
     </div>
-<?php } else if ($acceuil == false && ($page == "com")) {
+<?php } else if ($acceuil == false && ($page == "com" || $page == "profile")) {
 ?>
 
     <!-- Begin Navbar  -->
@@ -231,9 +228,7 @@
                                   </div>
                             </div>
                         </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
-                    </li>
+
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
@@ -242,9 +237,16 @@
                 </ul>
 
                 <ul class="navbar-nav ms-auto ">
-                <li class="nav-item ms-2 partenaire">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    <li class="nav-item ms-2 partenaire dropdown">
+                        <a class="nav-link dropdown-toggle" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Espace partenaire</a>
+                        <ul class="dropdown-menu" aria-labelledby="btn-contact">
+                            <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/profile">Mon Profile</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/com">Commader produits</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+                        </ul>
                     </li>
+                </ul>
                     <li class="nav-item ms-2 shopping-cart">
                         <i class="fas fa-cart-arrow-down fa-2x" data-bs-toggle="modal" data-bs-target="#exampleModal"></i> <span class="count-cart">(<span class="total-count"></span>)</span>
                     </li>
@@ -321,9 +323,7 @@
                                   </div>
                             </div>
                         </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-galerie" href="#"> Galerie</a>
-                    </li>
+
                     <li class="nav-item ms-2">
                         <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
                     </li>
@@ -331,8 +331,9 @@
                 </ul>
 
                 <ul class="navbar-nav ms-auto ">
-                <li class="nav-item ms-2 partenaire">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    <li class="nav-item ms-2 partenaire ">
+                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                        
                     </li>
                 </ul>
                 </div>
