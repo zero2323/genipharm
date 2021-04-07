@@ -64,6 +64,10 @@
                         <input name="userfile" type="file" id="docpicker" accept=".pdf,.doc">
 
                     </div>
+                    <div class="form-group col-6 d-flex flex-column">
+                           <div class="g-recaptcha" data-sitekey="6LeTO58aAAAAALtZm4nO5AamhOQ-JnG_VlFYs5zv"></div>
+                       </div>
+                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>" />
                     <div class="col-12">
                         <button value="upload" type="submit" class="btn btn-primary ">Envoyer</button>
                     </div>
