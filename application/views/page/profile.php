@@ -103,7 +103,9 @@
                             <?php } ?>
                         </tbody>
                     </table>
-                    <button id="valider" type="submit" class="btn btn-success ms-auto me-2 ">Valider la commande</button>
+                    <?php if (!$employe) { ?>
+                        <button id="valider" type="submit" class="btn btn-success ms-auto me-2 ">Valider la commande</button>
+                    <?php } ?>
                 </div>
             </div>
         </div>

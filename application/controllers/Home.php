@@ -275,7 +275,7 @@ class Home extends CI_Controller
 		$email = base64_decode(base64_decode($_SESSION['_logged_in']));
 		$res = $this->auth_model->getData($email)[0];
 		if (isset($_POST['id']) && isset($_POST['q'])) {
-			$this->auth_model->v_command($_POST['id'],$_POST['q']);
+			$this->auth_model->v_command($_POST['id'], $_POST['q']);
 		}
 	}
 
@@ -368,13 +368,6 @@ class Home extends CI_Controller
 				$data['employe'] = true;
 			else  $data['employe'] = false;
 
-			if ($res['activity'] == "Grossiste") {
-				$data['price'] = 'prix_gros';
-			} else if ($res['activity'] == "sGrossiste") {
-				$data['price'] = 'prix_s_gros';
-			} else if ($res['activity'] == "detaillant") {
-				$data['price'] = 'prix_detail';
-			}
 
 			$data['full_name'] = $res["full_name"];
 			$data['adresse'] = $res["adresse"];
@@ -388,11 +381,25 @@ class Home extends CI_Controller
 			else $comands = $this->auth_model->get_commands();
 			foreach ($comands as $comand) {
 				$pr = $this->auth_model->getProductbyID($comand['id_p'])[0];
-				if (!$data['employe'])
-					$d = array("command_id" => $comand['id'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'],"prix"=> $pr[$data['price']], "command" => $comand['id_cart']);
-				else {
+				if (!$data['employe']) {
+					if ($res['activity'] == "Grossiste") {
+						$data['price'] = 'prix_gros';
+					} else if ($res['activity'] == "sGrossiste") {
+						$data['price'] = 'prix_s_gros';
+					} else if ($res['activity'] == "detaillant") {
+						$data['price'] = 'prix_detail';
+					}
+					$d = array("command_id" => $comand['id'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "prix" => $pr[$data['price']], "command" => $comand['id_cart']);
+				} else {
 					$usr = $this->auth_model->get_user($comand['id_u'])[0];
-					$d = array("command_id" => $comand['id'], "u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "prix"=> $pr[$data['price']],"command" => $comand['id_cart']);
+					if ($usr['activity'] == "Grossiste") {
+						$data['price'] = 'prix_gros';
+					} else if ($usr['activity'] == "sGrossiste") {
+						$data['price'] = 'prix_s_gros';
+					} else if ($usr['activity'] == "detaillant") {
+						$data['price'] = 'prix_detail';
+					}
+					$d = array("command_id" => $comand['id'], "u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "prix" => $pr[$data['price']], "command" => $comand['id_cart']);
 				}
 				array_push($data['commands'], $d);
 			}
