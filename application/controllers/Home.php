@@ -382,6 +382,13 @@ class Home extends CI_Controller
 			foreach ($comands as $comand) {
 				$pr = $this->auth_model->getProductbyID($comand['id_p'])[0];
 				if (!$data['employe']) {
+					if ($res['activity'] == "Grossiste") {
+						$data['price'] = 'prix_gros';
+					} else if ($res['activity'] == "sGrossiste") {
+						$data['price'] = 'prix_s_gros';
+					} else if ($res['activity'] == "detaillant") {
+						$data['price'] = 'prix_detail';
+					}
 					$d = array("command_id" => $comand['id'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "prix" => $pr[$data['price']], "command" => $comand['id_cart']);
 				} else {
 					$usr = $this->auth_model->get_user($comand['id_u'])[0];
