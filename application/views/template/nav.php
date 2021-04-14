@@ -241,7 +241,9 @@
                             <a class="nav-link dropdown-toggle" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Espace partenaire</a>
                             <ul class="dropdown-menu" aria-labelledby="btn-contact">
                                 <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/profile">Mon Profile</a></li>
+                                <?php if (!$employe) { ?>
                                 <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/com">Commader produits</a></li>
+                                <?php } ?>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

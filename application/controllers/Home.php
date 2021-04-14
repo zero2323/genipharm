@@ -416,6 +416,12 @@ class Home extends CI_Controller
 			}
 			$email = base64_decode(base64_decode($_SESSION['_logged_in']));
 			$res = $this->auth_model->getData($email)[0];
+			if ($res['type'] != "Pharmacien" && $res['type'] != "Grossiste") {
+				redirect(base_url() . "page/profile");
+				$data['employe'] = true;
+				exit();
+			} else 	$data['employe'] = false;
+
 			if ($res['full_name'] == "NS" && $res['adresse'] == "NS" && $res['bank'] == "NS" && $res['activity'] == "NS") {
 				$data['first_time'] = true;
 				$data['u'] = $res;
