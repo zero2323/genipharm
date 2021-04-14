@@ -141,6 +141,18 @@ class Auth_model extends CI_Model
         $this->db->delete('comande');
     }
 
+    public function v_command($id, $quantity)
+    {
+        $data = array(
+            'quantité' => $quantity,
+            'v_client' => 'true'
+        );
+
+        $this->db->set($data);
+        $this->db->where("id",$id);
+        $this->db->update('comande');
+    }
+
     public function update_usr($id,$email,$tel, $address,$password)
     {
         $data = array(

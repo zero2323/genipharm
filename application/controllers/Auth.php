@@ -91,17 +91,18 @@ class Auth extends CI_Controller
         $password = $this->input->post('password');
         $signed = $this->auth_model->isSignup($email);
         $error = '';
-        print_r($_POST);
+        // print_r($_POST);
         if ($signed) {
             $res = $this->auth_model->getData($email)[0];
             if ($res['password'] == $password) {
                 if ($this->auth_model->isRobot($this->input->post("g-recaptcha-response"))) {
                     $this->session->set_userdata('_logged_in', base64_encode(base64_encode($email)));
                     //$this->session->set_flashdata('succsess', "you are now logged in as " . $email);
-                    redirect(base_url() . 'page/profile');
+                    redirect(base_url() . 'page/com');
                 } else {
                     $error .= "Please check the Robot test.<br>";
                     $this->session->set_flashdata('error', $error);
+                    redirect(base_url() . 'page/partenaire');
                 }
             } else {
                 if (!$this->auth_model->isRobot($this->input->post("g-recaptcha-response")))

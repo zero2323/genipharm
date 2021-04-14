@@ -99,23 +99,25 @@
                             </div>
                             <div class="form-group my-4 ">
                                 <label for="exampleInputPassword1">Activité :</label> <br>
+                                <?php if ($u['type'] == "Grossiste") { ?>
+                                    <div>
+                                        <input type="radio" id="grossiste" name="activite" value="Grossiste" checked>
+                                        <label for="grossiste">Grossiste.</label>
+                                    </div>
 
-                                <div>
-                                    <input type="radio" id="grossiste" name="activite" value="Grossiste" checked>
-                                    <label for="grossiste">Grossiste.</label>
-                                </div>
+                                    <div>
+                                        <input type="radio" id="sGrossiste" name="activite" value="sGrossiste">
+                                        <label for="sGrossiste">Super Grossiste.</label>
+                                    </div>
 
-                                <div>
-                                    <input type="radio" id="sGrossiste" name="activite" value="sGrossiste">
-                                    <label for="sGrossiste">Super Grossiste.</label>
-                                </div>
-
-                                <div>
-                                    <input type="radio" id="detaillant" name="activite" value="detaillant">
-                                    <label for="detaillant">Détaillant</label>
-                                </div>
+                                <?php } else if ($u['type'] == "Pharmacien") { ?>
+                                    <div>
+                                        <input type="radio" id="detaillant" name="activite" value="detaillant" checked>
+                                        <label for="detaillant">Détaillant</label>
+                                    </div>
+                                <?php } ?>
                             </div>
-                            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>" />
+                            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>" />
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Valider</button>
                                 <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Retourner à la page précedente</button> -->

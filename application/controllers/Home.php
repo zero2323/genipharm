@@ -125,7 +125,7 @@ class Home extends CI_Controller
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
-								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
+
 								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitP" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
@@ -148,7 +148,7 @@ class Home extends CI_Controller
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
-								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
+
 								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitP" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
@@ -175,7 +175,7 @@ class Home extends CI_Controller
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
-								'<h3 class="card-price">' . $product[$price] . ' DA</h3>' .
+
 								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitC" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
@@ -198,7 +198,7 @@ class Home extends CI_Controller
 								'<div class="card-body">' .
 								'<h5 class="card-title">' . $product['designation'] . '</h5>' .
 								'<p class="card-text">' . $product['description'] . '</p>' .
-								'<h3 class="card-title">' . $product[$price] . ' DA</h3>' .
+
 								'<a href="#" data-name="' . $product['designation'] . '" data-price="' . $product[$price] . '" class="btn btn-primary add-to-cart produitC" data-bs-toggle="modal" data-bs-target="#staticBackdrop" value="' . $product['designation'] . '"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>' .
 								'</div>' .
 								'</div>' .
@@ -263,6 +263,19 @@ class Home extends CI_Controller
 		$res = $this->auth_model->getData($email)[0];
 		if (isset($_POST['id'])) {
 			$this->auth_model->delete_comand($_POST['id']);
+		}
+	}
+
+	public function v_command()
+	{
+		if (!isset($_SESSION['_logged_in'])) {
+			redirect(base_url() . "page/partenaire");
+			exit();
+		}
+		$email = base64_decode(base64_decode($_SESSION['_logged_in']));
+		$res = $this->auth_model->getData($email)[0];
+		if (isset($_POST['id']) && isset($_POST['q'])) {
+			$this->auth_model->v_command($_POST['id'],$_POST['q']);
 		}
 	}
 
@@ -354,6 +367,15 @@ class Home extends CI_Controller
 			if ($res['type'] != "Pharmacien" && $res['type'] != "Grossiste")
 				$data['employe'] = true;
 			else  $data['employe'] = false;
+
+			if ($res['activity'] == "Grossiste") {
+				$data['price'] = 'prix_gros';
+			} else if ($res['activity'] == "sGrossiste") {
+				$data['price'] = 'prix_s_gros';
+			} else if ($res['activity'] == "detaillant") {
+				$data['price'] = 'prix_detail';
+			}
+
 			$data['full_name'] = $res["full_name"];
 			$data['adresse'] = $res["adresse"];
 			$data['activity'] = $res["activity"];
@@ -367,10 +389,10 @@ class Home extends CI_Controller
 			foreach ($comands as $comand) {
 				$pr = $this->auth_model->getProductbyID($comand['id_p'])[0];
 				if (!$data['employe'])
-					$d = array("command_id" => $comand['id'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
+					$d = array("command_id" => $comand['id'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'],"prix"=> $pr[$data['price']], "command" => $comand['id_cart']);
 				else {
 					$usr = $this->auth_model->get_user($comand['id_u'])[0];
-					$d = array("command_id" => $comand['id'], "u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "command" => $comand['id_cart']);
+					$d = array("command_id" => $comand['id'], "u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "prix"=> $pr[$data['price']],"command" => $comand['id_cart']);
 				}
 				array_push($data['commands'], $d);
 			}
@@ -387,9 +409,10 @@ class Home extends CI_Controller
 			}
 			$email = base64_decode(base64_decode($_SESSION['_logged_in']));
 			$res = $this->auth_model->getData($email)[0];
-			if ($res['full_name'] == "NS" && $res['adresse'] == "NS" && $res['bank'] == "NS" && $res['activity'] == "NS")
+			if ($res['full_name'] == "NS" && $res['adresse'] == "NS" && $res['bank'] == "NS" && $res['activity'] == "NS") {
 				$data['first_time'] = true;
-			else {
+				$data['u'] = $res;
+			} else {
 				$data['first_time'] = false;
 				// if ($res['activity'] == "Grossiste") {
 				// 	$data['price'] = 'prix_gros';
@@ -417,7 +440,7 @@ class Home extends CI_Controller
 		}
 		$this->load->view('template/header', $data);
 		$this->load->view('template/nav', $data);
-		$this->load->view('page/' . $p);
+		$this->load->view('page/' . $p, $data);
 		$this->load->view('template/footer', $data);
 	}
 
@@ -473,6 +496,10 @@ class Home extends CI_Controller
 				// $this->load->view('custom_view', $error);
 			}
 			//Send mail
+			if (!$this->auth_model->isRobot($this->input->post("g-recaptcha-response"))) {
+				$this->session->set_flashdata("error", "Please check the Robot test<br>");
+				redirect(base_url() . "page/contact");
+			}
 			if ($this->email->send()) {
 				$this->session->set_flashdata("success", "Congratulation Email Sent Successfully.");
 				redirect(base_url() . "page/contact");
