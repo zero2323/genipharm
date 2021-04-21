@@ -25,7 +25,12 @@
     <?php if ($acceuil != true && $page == "profile") { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/profile.css">
     <?php } ?>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/navbar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">

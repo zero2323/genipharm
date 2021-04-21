@@ -100,7 +100,7 @@ $("#fichier_d_n").on("click", function(e) {
 const modal = document.querySelectorAll(".modal");
 const btn = document.querySelectorAll(".btn");
 const text = document.getElementsByClassName("card-text");
-const length = 250;
+const length = 200;
 
 for (let index = 0; index < text.length; index++) {
 

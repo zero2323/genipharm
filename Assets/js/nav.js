@@ -3,29 +3,31 @@ let url = window.location.pathname;
 console.log(url);
 var nav = document.getElementById("nav-bar");
 var link = document.getElementsByClassName("nav-link");
+var linktwo = document.getElementsByClassName("nav-item");
 var image = document.getElementById("logo_img");
 var navb = document.getElementById("nav-b");
 var btns = document.getElementById("scroll");
 var imag = document.getElementById("img_logo");
 var toggler = document.getElementById("btn-togler");
 var icon = document.getElementById("icon-togler");
+let drop = document.querySelectorAll(".dropdown-menu");
 
 nav.addEventListener("mouseover", function() {
     'use strict';
     nav.style.height = "70px";
-    nav.style.background = "rgb(43,79,97)";
-    nav.style.background = "rgba(255,255,255,0.8)";
+    nav.style.background = "rgba(255, 255, 255, 0.8)";
+    nav.style.background = "linear-gradient(to left, rgba(255, 255, 255, 1) 50%, transparent 50%) right";
+    nav.style.backgroundSize = "200%";
     toggler.style.borderColor = "#000000";
     toggler.style.borderRadius = "2px";
     icon.style.color = "#000";
-    nav.style.transition = "all .5s ease";
+    nav.style.transition = "all 1s ease";
     image.src = base_url + "Assets/img/logo.png";
     for (let index = 0; index < link.length; index++) {
         link[index].style.color = "#000000";
         link[index].style.fontWeight = "500";
         link[index].style.fontSize = "1em";
         link[index].style.transition = "all .1s ease";
-
     }
 
 })
@@ -85,7 +87,7 @@ function reset(check) {
         nav.style.backgroundColor = "transparent";
         nav.style.transition = "all .5s easet";
         toggler.style.borderRadius = "2px";
-        toggler.style.borderColor = "rgba(255, 255, 255, 0.4)";
+        toggler.style.borderColor = "rgba(255, 255, 255, 0.8)";
         icon.style.color = "#fff";
         nav.style.background = "linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,0))";
         if (url != "/genipharm/" ){
@@ -94,7 +96,7 @@ function reset(check) {
             image.src = base_url + "Assets/img/logo_new.png";
         }
         
-        imag.style.borderRight = "1px solid rgba(255, 255, 255, 0.3)";
+        imag.style.borderRight = "1px solid rgba(255, 255, 255, 0.6)";
         for (let index = 0; index < link.length; index++) {
             link[index].style.color = "#fff";
             link[index].style.fontSize = "1.00em";
@@ -133,4 +135,30 @@ window.onscroll = function() {
     scrolling();
 };
 window.addEventListener("scroll", scrollFunction);
-// End Navbar ---------------
+
+
+let btn_comp = document.getElementById("show-compl");
+let btn_cos = document.getElementById("show-cos");
+
+let prod_wrap = document.querySelectorAll(".compl");
+
+btn_comp.addEventListener("click", ()=> {
+    if (!prod_wrap[0].classList.contains("prod-show")) {
+        prod_wrap[0].classList.add("prod-show");
+        prod_wrap[1].classList.remove("prod-show");
+    }
+})
+
+btn_cos.addEventListener("click", ()=> {
+    if (!prod_wrap[1].classList.contains("prod-show")) {
+        prod_wrap[1].classList.add("prod-show");
+        prod_wrap[0].classList.remove("prod-show");
+    }
+})
+
+
+
+// modify the carousel 
+
+const domaine_title = document.querySelectorAll(".titre");
+console.log(domaine_title);

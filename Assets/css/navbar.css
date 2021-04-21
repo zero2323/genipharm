@@ -7,15 +7,20 @@
              height: 75px ;
              padding: 0;
              transition: all .5s ease-out;
+             
          
          } 
+         .nav-bar:hover
+         {
+            background-position: left;
+         }
          .nav-bar .navbar{
              padding-left: 40px ;
              padding-right: 40px;
              height: 100%;
              color: #fff;
              background-color: transparent;
-             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+             border-bottom: 1px solid rgba(255, 255, 255, 1);
          }
          .navbar-dark .navbar-nav .nav-link 
          {
@@ -65,11 +70,16 @@
              border: 2px solid #009FE3;
              border-radius: 20px;
          }
+         .collapse .nav-item:not(:last-child) a
+         {
+             transition: all 0.5s ease-out;
+         }
          .collapse .nav-item:not(:last-child) a:hover
          {
-             border-left: 2px solid #009FE3;
-             margin: 0px 5px;
-             transform: scale(1.1);
+             background: transparent;
+             margin-left: 15px;
+             font-weight: 600;
+             
          }
          .collapse .nav-item:last-child a:hover
          {
@@ -137,16 +147,76 @@
             color: rgba(0,0,0, 0.55) !important;
             border-color: rgba(255, 255, 255, 0.1);
         }
+        .dropdown-item
+        {
+            color: #000  !important;
+        }
         .shopping-cart
 
         {
             color: #000;
             list-style: none;
         }
+        .dropdown-menu.show
+        {
+            display: flex !important;
+        }
+        .dropdown-menu 
+        {
+            border-radius: unset !important;
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .domaine-wrap
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .domaine
+        {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
           /* End The NavbaR */
-
+          
+          @media (min-width: 350px) and (max-width:767px) { 
+            .dropdown-menu.show {
+                display: flex !important;
+                flex-direction: column;
+                background: rgba;
+                border: 0;
+                background: rgba(255,255,255,0);
+           }
+           .dropdown-menu.show a {
+              margin-top: 10px; 
+              margin-bottom: 10px;
+           }
+           .domaine 
+           {
+               display: flex;
+               flex-direction: column !important;
+           }
+           
+        }
           
           @media (min-width: 768px) and (max-width: 1199px){
+            .dropdown-menu.show {
+                display: flex !important;
+                flex-direction: column;
+                background: rgba;
+                border: 0;
+                background: rgba(255,255,255,0);
+           }
+           .dropdown-menu.show a {
+              margin-top: 10px; 
+              margin-bottom: 10px;
+           }
+           .domaine 
+           {
+               display: flex;
+               flex-direction: column !important;
+           }
             .collapse .nav-item a:hover
             {
                 border-left: 2px solid #000 !important;
