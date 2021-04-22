@@ -210,7 +210,7 @@
                 <?php for ($i = 0; $i < 6; $i++) { ?>
                     <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
                         <div class="domaine-img  "><img src="<?php echo ucfirst($imgs[$i]); ?>" class="img-domaine"></div>
-                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
+                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $domain[$i]; ?>" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
                     </div>
                 <?php } ?>
 
@@ -220,7 +220,7 @@
              { for ($i=6;$i<count($domain);$i++) {?> 
                     <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
                         <div class="domaine-img  "><img src="<?php echo ucfirst($imgs[$i]); ?>" class="img-domaine"></div>
-                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
+                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $domain[$i]; ?>" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
                     </div>
                     <?php      }}?>
             </div>

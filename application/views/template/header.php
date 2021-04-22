@@ -13,6 +13,9 @@
     <?php if ($acceuil != true && ($page == "parapharma" || $page == "p_p_d")) { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/parapharma.css">
     <?php } ?>
+    <?php if ($acceuil != true && $page == "histoire") { ?>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/histoire.css">
+    <?php } ?>
     <?php if ($acceuil != true && ($page == "partenaire" || $page == "registration")) { ?>
         <link rel="stylesheet" href="<?php echo base_url(); ?>Assets/css/partenaire.css">
     <?php } ?>

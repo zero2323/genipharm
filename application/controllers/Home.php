@@ -373,6 +373,13 @@ class Home extends CI_Controller
 			$data['productsP'] = $this->auth_model->getProductsParapharm($config["per_page"], $page * $config["per_page"]);
 			$data['page'] = "parapharma";
 			$data['title'] = "Produits Parapharmaceutiques";
+		} else if ($p == "histoire") {
+			if ($n != null) {
+				show_404();
+				exit();
+			}
+			$data['page'] = "histoire";
+			$data['title'] = "Genipharm";
 		} else if ($p == "partenaire") {
 			if ($n != null) {
 				show_404();
@@ -449,39 +456,39 @@ class Home extends CI_Controller
 		} else if ($p == "produit_par_domaine") {
 			if (isset($_GET["d"])) {
 				$d = $_GET["d"];
-				$data['p_title']=$d;
+				$data['p_title'] = $d;
 				if ($d == "neurologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "gynecologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "urologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "gastrologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "medcine interne") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "cardiologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "rhumatologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "dermatologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "traumatologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "endocrinologie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "psyciatrie") {
-					$data['title'] = $d." | Produites";
+					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else {
 					show_404();

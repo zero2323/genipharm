@@ -19,9 +19,9 @@
                             Qui Somme Nous ?
                         </a>
                         <div class="dropdown-menu w-100 p-4 " aria-labelledby="navbarDropdown">
-                            <a class=" dropdown-item" href="#">Notre Vision </a>
-                            <a class="  dropdown-item" href="#">Notre Mission</a>
-                            <a class=" dropdown-item" href="#">Nos Valeurs</a>
+                            <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Vision </a>
+                            <a class="  dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Mission</a>
+                            <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Nos Valeurs</a>
                         </div>
                     </li>
 
@@ -115,9 +115,9 @@
                                 Qui Somme Nous ?
                             </a>
                             <div class="dropdown-menu w-100 p-4 " aria-labelledby="navbarDropdown">
-                                <a class=" dropdown-item" href="#">Notre Vision </a>
-                                <a class="  dropdown-item" href="#">Notre Mission</a>
-                                <a class=" dropdown-item" href="#">Nos Valeurs</a>
+                                <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Vision </a>
+                                <a class="  dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Mission</a>
+                                <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Nos Valeurs</a>
                             </div>
                         </li>
 
@@ -311,9 +311,9 @@
                                 Qui Somme Nous ?
                             </a>
                             <div class="dropdown-menu w-100 p-4 " aria-labelledby="navbarDropdown">
-                                <a class=" dropdown-item" href="#">Notre Vision </a>
-                                <a class="  dropdown-item" href="#">Notre Mission</a>
-                                <a class=" dropdown-item" href="#">Nos Valeurs</a>
+                                <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Vision </a>
+                                <a class="  dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Mission</a>
+                                <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Nos Valeurs</a>
                             </div>
                         </li>
 
