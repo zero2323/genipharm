@@ -38,9 +38,44 @@ class Home extends CI_Controller
 	{
 		$data['acceuil'] = true;
 		$data['title'] = "GeniPharm";
+		$domaines = $this->auth_model->getDomains();
+		$d_array = array();
+		$imgs = array();
+		foreach ($domaines as $domain) {
+			foreach (explode(";", $domain["classe"]) as $exp)
+				array_push($d_array, $exp);
+		}
+		$d_array = array_unique($d_array);
+		$data['domain'] = array_values($d_array);
+		foreach ($data['domain'] as $d) {
+			if ($d == "neurologie") {
+				array_push($imgs, 'Assets/img/dom/neurology.svg');
+			} else if ($d == "gynecologie") {
+				array_push($imgs, 'Assets/img/dom/sante.svg');
+			} else if ($d == "urologie") {
+				array_push($imgs, 'Assets/img/dom/urology.svg');
+			} else if ($d == "gastrologie") {
+				array_push($imgs, 'Assets/img/dom/gastro.svg');
+			} else if ($d == "medcine interne") {
+				array_push($imgs, 'Assets/img/dom/med_interne.svg');
+			} else if ($d == "cardiologie") {
+				array_push($imgs, 'Assets/img/dom/cardio.svg');
+			} else if ($d == "rhumatologie") {
+				array_push($imgs, 'Assets/img/dom/rhumatologie.svg');
+			} else if ($d == "dermatologie") {
+				array_push($imgs, 'Assets/img/dom/dermatology.svg');
+			} else if ($d == "traumatologie") {
+				array_push($imgs, 'Assets/img/dom/traumato.svg');
+			} else if ($d == "endocrinologie") {
+				array_push($imgs, 'Assets/img/dom/endo.svg');
+			} else if ($d == "psyciatrie") {
+				array_push($imgs, 'Assets/img/dom/psy.svg');
+			}
+		}
+		$data['imgs'] = $imgs;
 		$this->load->view('template/header', $data);
 		$this->load->view('template/nav', $data);
-		$this->load->view('home_view');
+		$this->load->view('home_view', $data);
 		$this->load->view('template/footer', $data);
 	}
 
@@ -302,6 +337,14 @@ class Home extends CI_Controller
 		// 
 		// 
 		$data['acceuil'] = false;
+		$domaines = $this->auth_model->getDomains();
+		$d_array = array();
+		foreach ($domaines as $domain) {
+			foreach (explode(";", $domain["classe"]) as $exp)
+				array_push($d_array, $exp);
+		}
+		$d_array = array_unique($d_array);
+		$data['domain'] = array_values($d_array);
 		if ($p == "compliments") {
 			$config["base_url"] = base_url() . "page/compliments";
 			$config["total_rows"] = count($this->auth_model->getProductsComplementAll());
@@ -402,6 +445,52 @@ class Home extends CI_Controller
 					$d = array("command_id" => $comand['id'], "u_name" => $usr['full_name'], "tele" => $usr['tel'], "name" => $pr['designation'], "quantity" => $comand['quantité'], "statut" => $comand['statut'], "prix" => $pr[$data['price']], "command" => $comand['id_cart']);
 				}
 				array_push($data['commands'], $d);
+			}
+		} else if ($p == "produit_par_domaine") {
+			if (isset($_GET["d"])) {
+				$d = $_GET["d"];
+				$data['p_title']=$d;
+				if ($d == "neurologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "gynecologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "urologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "gastrologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "medcine interne") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "cardiologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "rhumatologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "dermatologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "traumatologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "endocrinologie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "psyciatrie") {
+					$data['title'] = $d." | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else {
+					show_404();
+					exit();
+				}
+				$data['page'] = "p_p_d";
+			} else {
+				show_404();
+				exit();
 			}
 		} else if ($p == "com") {
 			if ($n != null) {

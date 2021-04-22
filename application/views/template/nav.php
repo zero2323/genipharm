@@ -16,9 +16,9 @@
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item dropdown position-static">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Qui Somme Nous ?
+                            Qui Somme Nous ?
                         </a>
-                        <div class="dropdown-menu w-100 p-4 "  aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu w-100 p-4 " aria-labelledby="navbarDropdown">
                             <a class=" dropdown-item" href="#">Notre Vision </a>
                             <a class="  dropdown-item" href="#">Notre Mission</a>
                             <a class=" dropdown-item" href="#">Nos Valeurs</a>
@@ -27,67 +27,68 @@
 
                     <li class="nav-item dropdown position-static">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Nos produits 
+                            Nos produits
                         </a>
                         <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                            <div class="domaine-wrap">
+                                <div class="dropdown-item domaine"><b>Domaines :</b> </div>
+                                <?php
+                                $i = 0;
+                                foreach ($domain as $d) {
+                                    if ($i < 4) {
+                                        if ($i == 0) { ?>
+                                            <div class="domaine">
+                                                <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
+                                            <?php $i++;
+                                        } else { ?>
+                                                <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
+                                            <?php $i++;
+                                        }
+                                    } else {
+                                        $i = 0; ?>
+                                            </div>
+                                        <?php } ?>
+                                    <?php      }
+                                if ($i < 4) { ?>
+                            </div><?php } ?>
+                        </div>
+
                         <div class="domaine-wrap">
-                            <div class="dropdown-item domaine"><b>Domaines :</b>  </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Urologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Gynecologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Gastrologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Medecine Interne.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Endocrinologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Neurologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Psychiatre.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Traumatologie.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Cardiologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Rhumatologie.</a>
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Dermatologie.</a>
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item disabled"></a>
+                            <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques :</b> </div>
+                            <div class="domaine">
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
                             </div>
-                        </div>
-                                 
-                        <div class="domaine-wrap">
-                            <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques  :</b>  </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
-                                    </div>
-                                    
-                        </div>
-                            
-                        </div>
-                    </li>
+                            <div class="domaine">
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
+                            </div>
 
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
-                    </li>
+                        </div>
 
-                </ul>
-
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item ms-2 partenaire ">
-                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
-                    </li>
-                </ul>
             </div>
-        </nav>
+            </li>
+
+            <li class="nav-item ms-2">
+                <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
+            </li>
+            <li class="nav-item ms-2">
+                <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
+            </li>
+
+            </ul>
+
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item ms-2 partenaire ">
+                    <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                </li>
+            </ul>
+    </div>
+    </nav>
 
     </div>
     <!-- ENd Nav Bar  -->
@@ -95,84 +96,84 @@
 ?>
     <!-- Begin Navbar  -->
     <div class="navigation-bar">
-    <div class="nav-bar container-fluid sticky-top" id="nav-bar">
-        <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
-            <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
-                <div class="img_logo" id="img_logo">
-                    <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
-                </div>
-            </a>
-            <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="">
-                    <i id="icon-togler" class="fas fa-bars" style="color:#fff; "></i>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Qui Somme Nous ?
-                        </a>
-                        <div class="dropdown-menu w-100 p-4 "  aria-labelledby="navbarDropdown">
-                            <a class=" dropdown-item" href="#">Notre Vision </a>
-                            <a class="  dropdown-item" href="#">Notre Mission</a>
-                            <a class=" dropdown-item" href="#">Nos Valeurs</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Nos produits 
-                        </a>
-                        <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                        <div class="domaine-wrap">
-                            <div class="dropdown-item domaine"><b>Domaines :</b>  </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Urologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Gynecologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Gastrologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Medecine Interne.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Endocrinologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Neurologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Psychiatre.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Traumatologie.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Cardiologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Rhumatologie.</a>
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Dermatologie.</a>
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item disabled"></a>
+        <div class="nav-bar container-fluid sticky-top" id="nav-bar">
+            <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
+                <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
+                    <div class="img_logo" id="img_logo">
+                        <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
+                    </div>
+                </a>
+                <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">
+                        <i id="icon-togler" class="fas fa-bars" style="color:#fff; "></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Qui Somme Nous ?
+                            </a>
+                            <div class="dropdown-menu w-100 p-4 " aria-labelledby="navbarDropdown">
+                                <a class=" dropdown-item" href="#">Notre Vision </a>
+                                <a class="  dropdown-item" href="#">Notre Mission</a>
+                                <a class=" dropdown-item" href="#">Nos Valeurs</a>
                             </div>
-                        </div>
-                                 
-                        <div class="domaine-wrap">
-                            <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques  :</b>  </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
-                                    </div>
-                                    
-                        </div>
-                            
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
-                    </li>
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Nos produits
+                            </a>
+                            <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                                <div class="domaine-wrap">
+                                    <div class="dropdown-item domaine"><b>Domaines :</b> </div>
+                                    <?php
+                                    $i = 0;
+                                    foreach ($domain as $d) {
+                                        if ($i < 4) {
+                                            if ($i == 0) { ?>
+                                                <div class="domaine">
+                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
+                                                <?php $i++;
+                                            } else { ?>
+                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
+                                                <?php $i++;
+                                            }
+                                        } else {
+                                            $i = 0; ?>
+                                                </div>
+                                            <?php } ?>
+                                        <?php      }
+                                    if ($i < 4) { ?> </div><?php } ?>
+                            </div>
+
+                            <div class="domaine-wrap">
+                                <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques :</b> </div>
+                                <div class="domaine">
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
+                                </div>
+                                <div class="domaine">
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
+                                </div>
+
+                            </div>
+
+                </div>
+                </li>
+
+                <li class="nav-item ms-2">
+                    <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
+                </li>
+                <li class="nav-item ms-2">
+                    <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
+                </li>
 
                 </ul>
 
@@ -181,7 +182,7 @@
                         <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
                     </li>
                 </ul>
-            </div>
+        </div>
         </nav>
 
     </div>
@@ -267,7 +268,7 @@
                             <ul class="dropdown-menu" aria-labelledby="btn-contact">
                                 <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/profile">Mon Profile</a></li>
                                 <?php if (!$employe) { ?>
-                                <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/com">Commader produits</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/com">Commader produits</a></li>
                                 <?php } ?>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -291,84 +292,85 @@
 <?php } else if ($acceuil == false) { ?>
     <!-- Begin Navbar  -->
     <div class="navigation-bar">
-    <div class="nav-bar container-fluid sticky-top" id="nav-bar">
-        <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
-            <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
-                <div class="img_logo" id="img_logo">
-                    <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
-                </div>
-            </a>
-            <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="">
-                    <i id="icon-togler" class="fas fa-bars" style="color:#fff; "></i>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Qui Somme Nous ?
-                        </a>
-                        <div class="dropdown-menu w-100 p-4 "  aria-labelledby="navbarDropdown">
-                            <a class=" dropdown-item" href="#">Notre Vision </a>
-                            <a class="  dropdown-item" href="#">Notre Mission</a>
-                            <a class=" dropdown-item" href="#">Nos Valeurs</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Nos produits 
-                        </a>
-                        <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                        <div class="domaine-wrap">
-                            <div class="dropdown-item domaine"><b>Domaines :</b>  </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Urologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Gynecologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Gastrologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Medecine Interne.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Endocrinologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Neurologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Psychiatre.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Traumatologie.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Cardiologie.</a>
-                                        <a  href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Rhumatologie.</a>
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item">Dermatologie.</a>
-                                        <a href="<?php echo base_url(); ?>page/compliments" class="dropdown-item disabled"></a>
+        <div class="nav-bar container-fluid sticky-top" id="nav-bar">
+            <nav class="navbar navbar-expand-xl navbar-dark " id="nav-b">
+                <a class="navbar-brand d-flex flex-row text-left " href="<?php echo base_url(); ?>">
+                    <div class="img_logo" id="img_logo">
+                        <img src="<?php echo base_url(); ?>Assets/img/logo.png" id="logo_img" alt="">
+                    </div>
+                </a>
+                <button id="btn-togler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="">
+                        <i id="icon-togler" class="fas fa-bars" style="color:#fff; "></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Qui Somme Nous ?
+                            </a>
+                            <div class="dropdown-menu w-100 p-4 " aria-labelledby="navbarDropdown">
+                                <a class=" dropdown-item" href="#">Notre Vision </a>
+                                <a class="  dropdown-item" href="#">Notre Mission</a>
+                                <a class=" dropdown-item" href="#">Nos Valeurs</a>
                             </div>
-                        </div>
-                                 
-                        <div class="domaine-wrap">
-                            <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques  :</b>  </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
-                                    </div>
-                                    <div class="domaine">
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
-                                        <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
-                                    </div>
-                                    
-                        </div>
-                            
-                        </div>
-                    </li>
+                        </li>
 
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
-                    </li>
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Nos produits
+                            </a>
+                            <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                                <div class="domaine-wrap">
+                                    <div class="dropdown-item domaine"><b>Domaines :</b> </div>
+                                    <?php
+                                    $i = 0;
+                                    foreach ($domain as $d) {
+                                        if ($i < 4) {
+                                            if ($i == 0) { ?>
+                                                <div class="domaine">
+                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
+                                                <?php $i++;
+                                            } else { ?>
+                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
+                                                <?php $i++;
+                                            }
+                                        } else {
+                                            $i = 0; ?>
+                                                </div>
+                                            <?php } ?>
+                                        <?php      }
+                                    if ($i < 4) { ?>
+                                </div><?php } ?>
+                            </div>
+
+                            <div class="domaine-wrap">
+                                <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques :</b> </div>
+                                <div class="domaine">
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
+                                </div>
+                                <div class="domaine">
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
+                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
+                                </div>
+
+                            </div>
+
+                </div>
+                </li>
+
+                <li class="nav-item ms-2">
+                    <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
+                </li>
+                <li class="nav-item ms-2">
+                    <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
+                </li>
 
                 </ul>
 
@@ -377,7 +379,7 @@
                         <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
                     </li>
                 </ul>
-            </div>
+        </div>
         </nav>
 
     </div>

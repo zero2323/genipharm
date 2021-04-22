@@ -176,7 +176,21 @@ class Auth_model extends CI_Model
 
     public function getProductbyID($search)
     {
+        
         $res = $this->db->get_where('produit',array("id"=> $search))->result_array();
+        return $res;
+    }
+
+    public function getDomains()
+    {
+        $this->db->select('classe');
+        $res = $this->db->get_where('produit',array("classe !="=> ""))->result_array();
+        return $res;
+    }
+
+    public function getProductsByD($domain)
+    {
+        $res = $this->db->get_where('produit',array("classe LIKE "=> "%".$domain."%"))->result_array();
         return $res;
     }
 

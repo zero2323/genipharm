@@ -52,7 +52,7 @@
 <?php if ($acceuil == false && $page=="compliments") {?><script src="<?php echo base_url(); ?>Assets/js/meds.js"></script>
 <?php } ?>
 
-<?php if ($acceuil == false && $page=="parapharma") { ?><script src="<?php echo base_url(); ?>Assets/js/cos.js"></script>
+<?php if ($acceuil == false && ($page=="parapharma" || $page=="p_p_d")) { ?><script src="<?php echo base_url(); ?>Assets/js/cos.js"></script>
 <?php } ?>
 
 <?php if ($acceuil == false && $page=="com") { ;?><script src="<?php echo base_url(); ?>Assets/js/com.js"></script>
