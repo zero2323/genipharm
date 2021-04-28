@@ -41,38 +41,62 @@ class Home extends CI_Controller
 		$domaines = $this->auth_model->getDomains();
 		$d_array = array();
 		$imgs = array();
+		$imgs2 = array();
 		foreach ($domaines as $domain) {
 			foreach (explode(";", $domain["classe"]) as $exp)
 				array_push($d_array, $exp);
 		}
 		$d_array = array_unique($d_array);
-		$data['domain'] = array_values($d_array);
-		foreach ($data['domain'] as $d) {
+		$domains = array_values($d_array);
+		$data['domain'] = array();
+		$data['domain_cos'] = array();
+		foreach ($domains as $d) {
 			if ($d == "neurologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/neurology.svg');
 			} else if ($d == "gynecologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/sante.svg');
 			} else if ($d == "urologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/urology.svg');
 			} else if ($d == "gastrologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/gastro.svg');
 			} else if ($d == "medcine interne") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/med_interne.svg');
 			} else if ($d == "cardiologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/cardio.svg');
 			} else if ($d == "rhumatologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/rhumatologie.svg');
 			} else if ($d == "dermatologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/dermatology.svg');
 			} else if ($d == "traumatologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/traumato.svg');
 			} else if ($d == "endocrinologie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/endo.svg');
 			} else if ($d == "psyciatrie") {
+				array_push($data['domain'], $d);
 				array_push($imgs, 'Assets/img/dom/psy.svg');
+			} else if ($d == "soin pour les main") {
+				array_push($data['domain_cos'], $d);
+				array_push($imgs2, 'Assets/img/dom/love.svg');
+			} else if ($d == "soin pour visage") {
+				array_push($data['domain_cos'], $d);
+				array_push($imgs2, 'Assets/img/dom/facial.svg');
+			} else if ($d == "soin partie intime") {
+				array_push($data['domain_cos'], $d);
+				array_push($imgs2, 'Assets/img/dom/sante.svg');
 			}
 		}
 		$data['imgs'] = $imgs;
+		$data['imgs_cos'] = $imgs2;
 		$this->load->view('template/header', $data);
 		$this->load->view('template/nav', $data);
 		$this->load->view('home_view', $data);
@@ -488,6 +512,15 @@ class Home extends CI_Controller
 					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else if ($d == "psyciatrie") {
+					$data['title'] = $d . " | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "soin pour les main") {
+					$data['title'] = $d . " | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "soin pour visage") {
+					$data['title'] = $d . " | Produites";
+					$data['productsP'] = $this->auth_model->getProductsByD($d);
+				} else if ($d == "soin partie intime") {
 					$data['title'] = $d . " | Produites";
 					$data['productsP'] = $this->auth_model->getProductsByD($d);
 				} else {

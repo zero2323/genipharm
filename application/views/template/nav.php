@@ -31,11 +31,11 @@
                         </a>
                         <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
                             <div class="domaine-wrap">
-                                <a class="dropdown-item domaine" href="">Complément alimentaires </a>
+                                <a class="dropdown-item domaine" href="<?php echo base_url(); ?>page/compliments">Complément alimentaires </a>
                             </div>
 
                             <div class="domaine-wrap">
-                                <a href="" class="dropdown-item domaine">Dermo-cosmétique </a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item domaine">Dermo-cosmétique </a>
                             </div>
                         </div>
                     </li>
@@ -105,11 +105,11 @@
                         </a>
                         <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
                             <div class="domaine-wrap">
-                                <a class="dropdown-item domaine" href="">Complément alimentaires </a>
+                                <a class="dropdown-item domaine" href="<?php echo base_url(); ?>page/compliments">Complément alimentaires </a>
                             </div>
 
                             <div class="domaine-wrap">
-                                <a href="" class="dropdown-item domaine">Dermo-cosmétique </a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item domaine">Dermo-cosmétique </a>
                             </div>
                         </div>
                     </li>
@@ -279,11 +279,11 @@
                         </a>
                         <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
                             <div class="domaine-wrap">
-                                <a class="dropdown-item domaine" href="">Complément alimentaires </a>
+                                <a class="dropdown-item domaine" href="<?php echo base_url(); ?>page/compliments">Complément alimentaires </a>
                             </div>
 
                             <div class="domaine-wrap">
-                                <a href="" class="dropdown-item domaine">Dermo-cosmétique </a>
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item domaine">Dermo-cosmétique </a>
                             </div>
                         </div>
                     </li>

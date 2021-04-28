@@ -155,18 +155,12 @@
 
         <div class="row text-center p-4 hide " id="domaine-dermo">
             <div class="first  row text-center ">
+            <?php for ($i = 0; $i < count($domain_cos); $i++) { ?>
                 <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
-                    <div class="domaine-img "><img src="Assets/img/dom/facial.svg" alt="" class="img-domaine"></div>
-                    <label class="dom-label"><a href="" class="nav-link">Soin Visage.</a></label>
+                    <div class="domaine-img "><img src="<?php echo ucfirst($imgs_cos[$i]); ?>" alt="" class="img-domaine"></div>
+                    <label class="dom-label"><a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $domain_cos[$i]; ?>" class="nav-link"><?php echo ucfirst($domain_cos[$i]); ?></a></label>
                 </div>
-                <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
-                    <div class="domaine-img "><img src="Assets/img/dom/love.svg" alt="" class="img-domaine"></div>
-                    <label class="dom-label"><a href="" class="nav-link">Soin pour les mains.</a></label>
-                </div>
-                <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
-                    <div class="domaine-img "><img src="Assets/img/dom/sante.svg" alt="" class="img-domaine"></div>
-                    <label class="dom-label"><a href="" class="nav-link">Soin partie intime.</a></label>
-                </div>
+            <?php } ?>
             </div>
         </div>
         
