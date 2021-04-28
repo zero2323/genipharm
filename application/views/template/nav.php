@@ -31,47 +31,14 @@
                         </a>
                         <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
                             <div class="domaine-wrap">
-                                <div class="dropdown-item domaine"><b>Domaines :</b> </div>
-                                <?php
-                                $i = 0;
-                                foreach ($domain as $d) {
-                                    if ($i < 4) {
-                                        if ($i == 0) { ?>
-                                            <div class="domaine">
-                                                <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
-                                            <?php $i++;
-                                        } else { ?>
-                                                <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
-                                            <?php $i++;
-                                        }
-                                    } else {
-                                        $i = 0; ?>
-                                            </div>
-                                        <?php } ?>
-                                    <?php      }
-                                if ($i < 4) { ?>
-                            </div><?php } ?>
-                        </div>
-
-                        <div class="domaine-wrap">
-                            <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques :</b> </div>
-                            <div class="domaine">
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
-                            </div>
-                            <div class="domaine">
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
-                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
+                                <a class="dropdown-item domaine" href="">Complément alimentaires </a>
                             </div>
 
+                            <div class="domaine-wrap">
+                                <a href="" class="dropdown-item domaine">Dermo-cosmétique </a>
+                            </div>
                         </div>
-
-            </div>
-            </li>
+                    </li>
 
             <li class="nav-item ms-2">
                 <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
@@ -81,10 +48,21 @@
             </li>
 
             </ul>
+            <ul class="navbar-nav ms-auto social-media ">
+                <li class="nav-item ms-2 ">
+                    <a href="https://www.facebook.com/laboGP23"><i class="fab soc fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li class="nav-item ms-3 ">
+                    <a href="https://www.linkedin.com/company/laboratoire-genipharm/""><i class="fab soc fa-linkedin fa-2x"></i></a>
+                </li>
+                <li class="nav-item ms-3 ">
+                    <a href="https://www.instagram.com/labo_merine/"><i class="fab soc fa-instagram-square fa-2x"></i></a>
+                </li>
+            </ul>                            
 
             <ul class="navbar-nav ms-auto ">
                 <li class="nav-item ms-2 partenaire ">
-                    <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                    <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace client</a>
                 </li>
             </ul>
     </div>
@@ -122,51 +100,19 @@
                         </li>
 
                         <li class="nav-item dropdown position-static">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Nos produits
-                            </a>
-                            <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                                <div class="domaine-wrap">
-                                    <div class="dropdown-item domaine"><b>Domaines :</b> </div>
-                                    <?php
-                                    $i = 0;
-                                    foreach ($domain as $d) {
-                                        if ($i < 4) {
-                                            if ($i == 0) { ?>
-                                                <div class="domaine">
-                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
-                                                <?php $i++;
-                                            } else { ?>
-                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
-                                                <?php $i++;
-                                            }
-                                        } else {
-                                            $i = 0; ?>
-                                                </div>
-                                            <?php } ?>
-                                        <?php      }
-                                    if ($i < 4) { ?> </div><?php } ?>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nos produits
+                        </a>
+                        <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                            <div class="domaine-wrap">
+                                <a class="dropdown-item domaine" href="">Complément alimentaires </a>
                             </div>
 
                             <div class="domaine-wrap">
-                                <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques :</b> </div>
-                                <div class="domaine">
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
-                                </div>
-                                <div class="domaine">
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
-                                </div>
-
+                                <a href="" class="dropdown-item domaine">Dermo-cosmétique </a>
                             </div>
-
-                </div>
-                </li>
+                        </div>
+                    </li>
 
                 <li class="nav-item ms-2">
                     <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
@@ -176,10 +122,20 @@
                 </li>
 
                 </ul>
-
+                <ul class="navbar-nav ms-auto social-media ">
+                    <li class="nav-item ms-2 ">
+                        <a href="https://www.facebook.com/laboGP23"><i class="fab soc fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li class="nav-item ms-3 ">
+                        <a href="https://www.linkedin.com/company/laboratoire-genipharm/""><i class="fab soc fa-linkedin fa-2x"></i></a>
+                    </li>
+                    <li class="nav-item ms-3 ">
+                        <a href="https://www.instagram.com/labo_merine/"><i class="fab soc fa-instagram-square fa-2x"></i></a>
+                    </li>
+                </ul>                               
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item ms-2 partenaire ">
-                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace client</a>
                     </li>
                 </ul>
         </div>
@@ -264,7 +220,7 @@
 
                     <ul class="navbar-nav ms-auto ">
                         <li class="nav-item ms-2 partenaire dropdown">
-                            <a class="nav-link dropdown-toggle" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Espace partenaire</a>
+                            <a class="nav-link dropdown-toggle" id="btn-contact" href="<?php echo base_url(); ?>page/partenaire" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Espace client</a>
                             <ul class="dropdown-menu" aria-labelledby="btn-contact">
                                 <li><a class="dropdown-item" href="<?php echo base_url(); ?>page/profile">Mon Profile</a></li>
                                 <?php if (!$employe) { ?>
@@ -318,52 +274,19 @@
                         </li>
 
                         <li class="nav-item dropdown position-static">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Nos produits
-                            </a>
-                            <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                                <div class="domaine-wrap">
-                                    <div class="dropdown-item domaine"><b>Domaines :</b> </div>
-                                    <?php
-                                    $i = 0;
-                                    foreach ($domain as $d) {
-                                        if ($i < 4) {
-                                            if ($i == 0) { ?>
-                                                <div class="domaine">
-                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
-                                                <?php $i++;
-                                            } else { ?>
-                                                    <a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $d; ?>" class="dropdown-item"><?php echo ucfirst($d); ?>.</a>
-                                                <?php $i++;
-                                            }
-                                        } else {
-                                            $i = 0; ?>
-                                                </div>
-                                            <?php } ?>
-                                        <?php      }
-                                    if ($i < 4) { ?>
-                                </div><?php } ?>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nos produits
+                        </a>
+                        <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                            <div class="domaine-wrap">
+                                <a class="dropdown-item domaine" href="">Complément alimentaires </a>
                             </div>
 
                             <div class="domaine-wrap">
-                                <div class="dropdown-item domaine"><b>Produits Parapharmaceutiques :</b> </div>
-                                <div class="domaine">
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Main.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Hydratante Visage.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme Anti-rides.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Gel Intime.</a>
-                                </div>
-                                <div class="domaine">
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Attenyl(piqures).</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme réparatrice .</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item">Créme dépigmantante.</a>
-                                    <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item disable"></a>
-                                </div>
-
+                                <a href="" class="dropdown-item domaine">Dermo-cosmétique </a>
                             </div>
-
-                </div>
-                </li>
+                        </div>
+                    </li>
 
                 <li class="nav-item ms-2">
                     <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
@@ -373,10 +296,20 @@
                 </li>
 
                 </ul>
-
+                <ul class="navbar-nav ms-auto social-media ">
+                <li class="nav-item ms-2 ">
+                    <a href="https://www.facebook.com/laboGP23"><i class="fab soc fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li class="nav-item ms-3 ">
+                    <a href="https://www.linkedin.com/company/laboratoire-genipharm/""><i class="fab soc fa-linkedin fa-2x"></i></a>
+                </li>
+                <li class="nav-item ms-3 ">
+                    <a href="https://www.instagram.com/labo_merine/"><i class="fab soc fa-instagram-square fa-2x"></i></a>
+                </li>
+            </ul>                           
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item ms-2 partenaire ">
-                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace partenaire</a>
+                        <a class="nav-link " id="btn-contact" href="<?php echo base_url(); ?>page/partenaire"> Espace client</a>
                     </li>
                 </ul>
         </div>

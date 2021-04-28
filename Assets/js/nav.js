@@ -1,6 +1,5 @@
 // Begin navbar -------------
 let url = window.location.pathname;
-console.log(url);
 var nav = document.getElementById("nav-bar");
 var link = document.getElementsByClassName("nav-link");
 var linktwo = document.getElementsByClassName("nav-item");
@@ -11,6 +10,7 @@ var imag = document.getElementById("img_logo");
 var toggler = document.getElementById("btn-togler");
 var icon = document.getElementById("icon-togler");
 let drop = document.querySelectorAll(".dropdown-menu");
+let social  = document.querySelectorAll(".soc");
 
 nav.addEventListener("mouseover", function() {
     'use strict';
@@ -28,6 +28,10 @@ nav.addEventListener("mouseover", function() {
         link[index].style.fontWeight = "500";
         link[index].style.fontSize = "1em";
         link[index].style.transition = "all .1s ease";
+    }
+    for (let index = 0; index < social.length; index++) {
+        social[index].style.color = "#000000";
+        
     }
 
 })
@@ -47,8 +51,10 @@ nav.addEventListener("mouseout", function() {
         link[index].style.fontWeight = "500";
         link[index].style.fontSize = "1em";
         link[index].style.transition = "all .1s ease";
-
-
+    }
+    for (let index = 0; index < social.length; index++) {
+        social[index].style.color = "#000000";
+        
     }
 
 })
@@ -70,8 +76,10 @@ function set() {
         link[index].style.fontWeight = "500";
         link[index].style.fontSize = "1em";
         link[index].style.transition = "all .1s ease";
-
-
+    }
+    for (let index = 0; index < social.length; index++) {
+        social[index].style.color = "#000000";
+        
     }
 }
 
@@ -102,6 +110,10 @@ function reset(check) {
             link[index].style.fontSize = "1.00em";
             link[index].style.fontWeight = "500";
             link[index].style.transition = "all .4s ease";
+        }
+        for (let index = 0; index < social.length; index++) {
+            social[index].style.color = "#f2f2f2";
+            
         }
     }
 
@@ -161,4 +173,26 @@ btn_cos.addEventListener("click", ()=> {
 // modify the carousel 
 
 const domaine_title = document.querySelectorAll(".titre");
-console.log(domaine_title);
+
+
+// create the counter function 
+function animateValue(id, start, end, duration) {
+    if (start === end) return;
+    var range = end - start;
+    var current = start;
+    var increment = end > start? 1 : -1;
+    var stepTime = Math.abs(Math.floor(duration / range));
+    var obj = document.getElementById(id);
+    var timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = current;
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+
+animateValue("chiffre-produit", 0, 13, 2000);
+animateValue("chiffre-employe", 0, 50, 2000);
+animateValue("chiffre-activite",2000, 2020, 2000);
+

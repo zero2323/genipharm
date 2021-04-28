@@ -1,6 +1,6 @@
 
 <!-- Photo Grid -->
-<Section class="histoire mt-5">
+<Section class="histoire ">
     <div class="container">
         <div class="row first">
             <h2 class="text-center">Notre Histoire</h2>

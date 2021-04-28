@@ -558,7 +558,7 @@
 /* Begin Modal  */
     .modal .modal-body .row:first-child
     {
-        height: 50vh;
+        height: 440px;
     }
     .modal .modal-body .row:first-child .carousel
     {

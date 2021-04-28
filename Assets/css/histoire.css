@@ -1,6 +1,19 @@
 .nav-bar .navbar {
     background: linear-gradient(90deg, rgba(244, 148, 31, 1) 0%, rgba(241, 203, 97, 1) 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #000 !important;
+}
+.navbar-dark .navbar-nav .nav-link
+{
+    color: #000 !important;
+}
+.collapse .partenaire
+{
+    border-color: #000 !important;
+}
+.histoire
+{
+    margin-top: 150px !important;
 }
 
 .histoire .container .row .his-img {
@@ -39,7 +52,7 @@ span::after {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
     font-size: 3rem;
-    color: #009CE1;
+    color: #000;
 }
 
 .row:not(:first-child)>div {

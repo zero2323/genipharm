@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item active carousel-one" data-bs-interval="100000000">
+            <div class="carousel-item active carousel-one" data-bs-interval="10000">
 
                 <div class="custom-shape-divider-bottom-1619009125">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="somme-nous-btn mt-3">
-                    <button class="btn btn-primary btn-somme"> EN SAVOIR PLUS </button>
+                    <a class="btn btn-primary btn-somme" href="<?php echo base_url(); ?>page/histoire"> EN SAVOIR PLUS </a>
                 </div>
             </div>
         </div>
@@ -119,45 +119,60 @@
         <div class="row text-center">
             <h2 class="h1 col-md-12 p-4">Découvrez nos solutions </h2>
         </div>
-        <div class="row text-center p-4">
-            <div class="col-lg-6 type">
-                <p id="show-compl">NOS COMPLEMENTS ALIMENTAIRES</p>
+        <div class="row text-center p-4" id="icon-wrapper">
+            <div  class="back">
+                <i class="fas fa-arrow-alt-circle-left fa-3x hide " id="back-icon"></i>
             </div>
-            <div class="col-lg-6 type">
-                <p id="show-cos">NOS PRODUITS PARAPHARMACEUTIQUE</p>
+            <div class="col-lg-6 type" id="typeone">
+                <img src="Assets/img/vitamine.svg" alt="">
+                <p id="show-compl">NOS COMPLEMENTS <br> ALIMENTAIRES</p>
             </div>
-        </div>
-        <div class="row compl prod-show">
-            <div class="col-lg-4 text-center">
-                <img class="img-prod" src="Assets/img/medicaments/a1.jpg" alt="p1">
-                <h6 class="mt-2"><a class="nav-link" href="">FERTOP</a></h6>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img class="img-prod" src="Assets/img/medicaments/a2.jpg" alt="p1">
-                <h6 class="mt-2"><a class="nav-link" href="">GYNOVAIRE</a></h6>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img class="img-prod" src="Assets/img/medicaments/a3.jpg" alt="p1">
-                <h6 class="mt-2"><a class="nav-link" href="">GYNOVAIRE PLUS</a></h6>
+            <div class="col-lg-6 type " id="typetwo">
+                <img src="Assets/img/cosmetique.svg" alt="">
+                <p id="show-cos"> Nos Produits <br> DERMO-COSMETIQUE</p>
             </div>
         </div>
-        <div class="row compl  ">
-            <div class="col-lg-4 text-center">
-                <img class="img-prod" src="Assets/img/cos/a1.jpg" alt="p1">
-                <h6 class="mt-2"><a class="nav-link" href="">Créme Depigmentante</a></h6>
+        <div class="row text-center p-4 hide" id="domaine-comp">
+            <div class="first  row text-center">
+                <?php for ($i = 0; $i < 6; $i++) { ?>
+                    <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
+                        <div class="domaine-img  "><img src="<?php echo ucfirst($imgs[$i]); ?>" class="img-domaine"></div>
+                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $domain[$i]; ?>" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
+                    </div>
+                <?php } ?>
+
             </div>
-            <div class="col-lg-4 text-center">
-                <img class="img-prod" src="Assets/img/cos/a2.jpg" alt="p1">
-                <h6 class="mt-2"><a class="nav-link" href="">Soins Anti-ride</a></h6>
-            </div>
-            <div class="col-lg-4 text-center">
-                <img class="img-prod" src="Assets/img/cos/a4.jpg" alt="p1">
-                <h6 class="mt-2"><a class="nav-link" href="">Créme Réparatrice</a></h6>
+            <div class="second text-center row">
+            <?php if (count($domain)>6)
+             { for ($i=6;$i<count($domain);$i++) {?> 
+                    <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
+                        <div class="domaine-img  "><img src="<?php echo ucfirst($imgs[$i]); ?>" class="img-domaine"></div>
+                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $domain[$i]; ?>" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
+                    </div>
+                    <?php      }}?>
             </div>
         </div>
+
+        <div class="row text-center p-4 hide " id="domaine-dermo">
+            <div class="first  row text-center ">
+                <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
+                    <div class="domaine-img "><img src="Assets/img/dom/facial.svg" alt="" class="img-domaine"></div>
+                    <label class="dom-label"><a href="" class="nav-link">Soin Visage.</a></label>
+                </div>
+                <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
+                    <div class="domaine-img "><img src="Assets/img/dom/love.svg" alt="" class="img-domaine"></div>
+                    <label class="dom-label"><a href="" class="nav-link">Soin pour les mains.</a></label>
+                </div>
+                <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
+                    <div class="domaine-img "><img src="Assets/img/dom/sante.svg" alt="" class="img-domaine"></div>
+                    <label class="dom-label"><a href="" class="nav-link">Soin partie intime.</a></label>
+                </div>
+            </div>
+        </div>
+        
         <div class="row ">
             <div class="col-12 text-center mt-4">
-                <a class="btn btn-produit" href="<?php echo base_url(); ?>page/parapharma">Découvrez nos produits</a>
+                <a class="btn btn-produit" href="<?php echo base_url(); ?>page/compliments">Découvrez nos produits</a>
             </div>
         </div>
     </div>
@@ -184,7 +199,7 @@
                 </div>
 
                 <div class="somme-nous-btn mt-3">
-                    <button class="btn btn-primary btn-somme"> EN SAVOIR PLUS</button>
+                    <a class="btn btn-primary btn-somme" href="<?php echo base_url(); ?>page/histoire"> EN SAVOIR PLUS</a>
                 </div>
             </div>
             <div class="col-md-6 div-image ">
@@ -199,8 +214,91 @@
     </div>
 </div>
 <!-- End notre vsion -->
+
+<!-- Begin Statistic -->
+
+<section class="stat">
+    <div class="container">
+        <div class="row">
+                <div class="col-12 stat-img">
+                    <div class="overlay col-12">
+                        <div class="row ">
+                            <div class="col-12 stat-para my-2" >
+                            <span> <i class="fas fa-check-double fa-lg"> </i> Toujours en évolution,</span> <br>
+                                Pour des meilleurs résultats.
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-3 col-md-6 text-center">
+                                <p class="chiffre" id="chiffre-produit">13</p>
+                                <label for="produits">Produits</label>
+                            </div>
+                            <div class="col-lg-3 col-md-6 text-center">
+                                <p class="chiffre" id="chiffre-employe">50</p>
+                                <label for="produits">Employés</label>
+                            </div>
+                            <div class="col-lg-3 col-md-6 text-center">
+                                <p class="chiffre" id="chiffre-activite">2020</p>
+                                <label for="produits">Début d'activité</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- End statistique -->
+<!-- Begin actualité -->
+
+<section class="actual">
+    <div class="container">
+        <div class="row text-center">
+            <h2 class="h1 titre-actual">ACTUALITE</h2>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="Assets/img/visite.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Visite Du Ministre</h5>
+                        <p class="card-text">Visite du ministre de l’industrie.</p>
+                        <a href="#" class="btn btn-primary">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="Assets/img/visite.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Visite Du Ministre</h5>
+                        <p class="card-text">Visite du ministre de l’industrie.</p>
+                        <a href="#" class="btn btn-primary">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="Assets/img/visite.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Visite Du Ministre</h5>
+                        <p class="card-text">Visite du ministre de l’industrie.</p>
+                        <a href="#" class="btn btn-primary">Voir Plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Actualité -->
+
+
 <!--  Begin Dommaines -->
-<div class="container-fluid big-section " id="big-section">
+<!-- <div class="container-fluid big-section " id="big-section">
     <div class="container section">
         <div class="row text-center">
             <h2 class="h1 col-md-12 p-4">Une solution pour chacun de vos besoins </h2>
@@ -227,14 +325,14 @@
         </div>
         <div class="row">
             <div class="col-12 text-center mt-4">
-                <button class="btn btn-produit ">Découvrez nos produits</button>
+                <a class="btn btn-produit  " href="<?php echo base_url(); ?>page/compliments">Découvrez nos produits</a>
             </div>
         </div>
     </div>
 
     <img src="Assets/img/h3.svg" class="img-svg1" alt="skin">
     <img src="Assets/img/h4.svg" class="img-svg2" alt="skin">
-</div>
+</div> -->
 
 <!-- End Dommaines  -->
 
@@ -274,13 +372,35 @@
 
 <!-- Begin Map -->
 <div class="Position container-fluid  p-4" id="map">
-    <div class="container">
-        <div class="row text-center row-one p-3">
-            <h2 class="h1 col-md-12 ">Notre Emplacement</h2>
-            <!-- <div class="col-md-12 "><img   src=" Assets/img/devider.png" alt=""></div> -->
+    <div class="row">
+        <div class="col-lg-6 part">
+            <div class="row text-center row-one p-3">
+                <h2 class="h1 col-md-12 ">Notre Emplacement</h2>
+            </div>
+            <div class="row row-two">
+                <iframe class="col-md" src="https://www.google.com/maps/d/u/0/embed?mid=1nzSezBZbcJOrxjs89569NN9DkJqJLOcG" width="640" height="480"></iframe>
+            </div>
         </div>
-        <div class="row row-two">
-            <iframe class="col-md" src="https://www.google.com/maps/d/u/0/embed?mid=1nzSezBZbcJOrxjs89569NN9DkJqJLOcG" width="640" height="480"></iframe>
+        <div class="col-lg-6 part">
+            <div class="row text-center row-one p-3">
+                <h2 class="h1 col-md-12 ">Nos coordonnées </h2>
+            </div>
+            <div class="row row-two ">
+                <div class="mb-4 coord col-12">
+                    <h6>Siége social</h6>
+                    <p> Le siège social se situe à Annaba (Cité El Rym 44 logts, Bat 04, étage 02, Annaba).</p>
+                </div>
+                <div class="mb-4  coord col-12">
+                    <h6>Usine</h6>
+                    <p> L'usine se situe à ZAC Bir Bouhouch, Souk Ahras.</p>
+                </div>
+                <div class="col-12 coord" >
+                    <h6>Contactez nous </h6>
+                    <p><i class="fa fa-phone"></i> +213 (0)556 21 61 19</p>
+                    <p><i class="fa fa-envelope"></i> Genipharm.co@gmail.com</p>
+                   
+                </div>
+            </div>
         </div>
     </div>
 </div>

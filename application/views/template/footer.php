@@ -7,7 +7,7 @@
                 <img src="<?php echo base_url(); ?>Assets/img/logo_footer.png" alt="logo">
             </div>
         </div>
-        <div class="second-row row mt-4 mb-4">
+        <div class="second-row row mt-4 ">
             <div class="col-md p-2">
                 <h6 class="devider pb-2">Siége Social</h6>
                 <p>Annaba,Algérie</p>
@@ -26,10 +26,7 @@
                     <a href="https://www.linkedin.com/company/laboratoire-genipharm/"><i class="fab fa-linkedin fa-2x"></i></a>
                 </div>
             </div>
-            <div class="col-md p-2">
-                <h6 class="devider pb-2">Siége Social</h6>
-                <p>Annaba,Algérie</p>
-            </div>
+            
         </div>
     </div>
 </div>

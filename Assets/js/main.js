@@ -63,3 +63,66 @@ $(document).ready(function() {
 
 
 //
+
+let compl = document.getElementById("show-compl");
+let para = document.getElementById("show-cos");
+let btn_produit = document.querySelectorAll(".btn-produit");
+
+compl.addEventListener("click", ()=> {
+    btn_produit[0].href = "page/compliments";
+})
+para.addEventListener("click", ()=> {
+    btn_produit[0].href = "page/parapharma";
+})
+
+
+
+
+// editing domaine 
+
+let complement = document.getElementById("typeone");
+let dermo = document.getElementById("typetwo");
+let domaine_com = document.getElementById("domaine-comp");
+let icon_wrapper = document.getElementById("icon-wrapper");
+let domaine_dermo = document.getElementById("domaine-dermo");
+let back = document.getElementById("back-icon");
+
+
+complement.addEventListener("click", ()=> {
+    dermo.classList.add("hide");
+    complement.style.borderRight = "0px";
+    domaine_com.classList.add("show");
+    domaine_com.classList.remove("hide");
+    icon_wrapper.style.display = "flex"
+    icon_wrapper.style.justifyContent = "center";
+    icon_wrapper.style.alignItems = "center";
+    back.classList.remove("hide");
+    
+})
+
+dermo.addEventListener("click", ()=> {
+    domaine_dermo.classList.remove("hide");
+    domaine_dermo.classList.add("show");
+    complement.style.borderRight = "0px";
+    complement.classList.add("hide");
+    icon_wrapper.style.display = "flex"
+    icon_wrapper.style.justifyContent = "center";
+    icon_wrapper.style.alignItems = "center";
+    back.classList.remove("hide");
+    
+})
+
+back.addEventListener("click", ()=> {
+    complement.classList.add("show");
+    dermo.classList.add("show");
+    dermo.classList.remove("hide");
+    complement.classList.remove("hide");
+    domaine_com.classList.add("hide");
+    domaine_com.classList.remove("show");
+    domaine_dermo.classList.remove("show");
+    domaine_dermo.classList.add("hide");
+    complement.style.borderRight = "solid 1px rgba(0, 0, 0, 0.1)";
+    back.classList.add("hide");
+    back.classList.remove("show");
+})
+// ENd editing domaine 

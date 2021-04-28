@@ -480,6 +480,13 @@
 
 
     /* Begin product  */
+        .card-body
+        {
+            height: 270px !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
+        }
         .col-lg-4 .btn-primary
         {
             width: 100%;
@@ -561,7 +568,7 @@
 /* Begin Modal  */
     .modal .modal-body .row:first-child
     {
-        height: 50vh;
+        height: 440px;
     }
     .modal .modal-body .row:first-child .carousel
     {
