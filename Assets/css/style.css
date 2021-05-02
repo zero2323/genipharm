@@ -86,12 +86,12 @@
         height: 15px;
         border-radius: 50%;
     }
-    /* .carousel-control-prev, 
-    .carousel-control-next
+    .slider .carousel-control-prev, 
+    .slider .carousel-control-next
     {
         z-index: 6!important;
         
-    } */
+    }
     .btn-produit
     {
         background-color: #009CE1;
