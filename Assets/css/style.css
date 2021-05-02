@@ -86,12 +86,12 @@
         height: 15px;
         border-radius: 50%;
     }
-    .carousel-control-prev, 
+    /* .carousel-control-prev, 
     .carousel-control-next
     {
         z-index: 6!important;
         
-    }
+    } */
     .btn-produit
     {
         background-color: #009CE1;
@@ -338,6 +338,7 @@
             font-family: 'Noto Sans JP', sans-serif;
             font-size: 1.07em;
             font-weight: 500;
+            height: 70px;
          }
          .card .card-body
          {
@@ -744,7 +745,31 @@
         /* Media quieries  */
 /*Extra small devices */
 @media (max-width : 575px)
-{
+{   
+    .stat-img .overlay {
+    border-radius: 5px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 1px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+    .chiffre {
+        color: #f8f8f8;
+        font-size: 2rem;
+    }
+    .stat-para {
+        color: #f8f8f8;
+        font-family: 'Cairo', sans-serif;
+        font-size: 1.5rem;
+    }
+    .stat span {
+        color: #009CE1;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: 'Cairo', sans-serif;
+    }
     .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
         width: 100%;
         padding-right: 15px!important;
@@ -893,6 +918,38 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767px)
  { 
+    .Position .part:first-child {
+        border-right: solid 0px rgba(255,255,255,1);
+        border-bottom: solid 4px rgba(255,255,255,1);
+    }
+    .stat-img .overlay {
+        border-radius: 5px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 1px;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+    }
+        .chiffre {
+            color: #f8f8f8;
+            font-size: 2rem;
+        }
+        .stat-para {
+            color: #f8f8f8;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.5rem;
+        }
+        .stat span {
+            color: #009CE1;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Cairo', sans-serif;
+        }
+    .navbar-nav
+    {
+        margin-left: 0px !important;
+    }
     .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
         width: 100%;
         padding-right: 15px!important;
@@ -933,14 +990,7 @@
     {
         display: flex !important;
     }
-    .navbar-collapse
-    {
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        text-align: left;
-        font-weight: 600;
-        color: rgba(0, 0, 0, 0.8);
-    }
+  
     .aboutus .container .first-row p
     {
         padding: 10px !important;
@@ -992,12 +1042,12 @@
     }
     .qui-somme-nouss 
     {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    font-weight: 300;
-    position: relative;
-    width: 35%;
-    color: #000;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: 300;
+        position: relative;
+        width: 35%;
+        color: #000;
     }
     .notre-vision
     {
@@ -1009,7 +1059,14 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px)
  {
-    
+    .Position .part:first-child {
+        border-right: solid 0px rgba(255,255,255,1);
+        border-bottom: solid 4px rgba(255,255,255,1);
+    }
+    .navbar-nav
+    {
+        margin-left: 0px !important;
+    }
     .container, .container-fluid,
      .container-sm, .container-md,
       .container-lg, .container-xl {
@@ -1101,26 +1158,30 @@
  
 @media (min-width: 992px) 
  { 
-    .navbar {
+    
+    .navbar 
+    {
         font-size: 10px;
     }
-    .qui-somme-nous {
+    .qui-somme-nous 
+    {
         font-family: 'Times New Roman', Times, serif;
         font-size: 20px;
         font-weight: 300;
         position: relative;
         width: 40% !important;
         color: #000;
- }
- .aboutus .second-row .labo-img .overlay {
-    position: absolute;
-    background-color: #000;
-    width: 100%;
-    height: 79% !important;
-    top: 0;
-    opacity: 0.2;
-    border-radius: 8px;
-}
+    }
+ .aboutus .second-row .labo-img .overlay 
+    {
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 79% !important;
+        top: 0;
+        opacity: 0.2;
+        border-radius: 8px;
+    }
     .somme-nous-description {
         font-size: 3.0rem;
         font-family: 'Cairo', sans-serif;
@@ -1129,8 +1190,9 @@
 
  @media (min-width: 1100px)
 {
+    
     .navbar {
-        font-size: 13px;
+        font-size: 11px;
     }
     .qui-somme-nous 
     {
@@ -1169,7 +1231,7 @@
         display: flex !important;
     }
     .navbar {
-        font-size: 14px;
+        font-size: 12px;
     }
     .div-image
     {
@@ -1254,5 +1316,9 @@
 {
     background-color: #009FE3;
     border-color: #009FE3;
+}
+.actual span
+{
+    color: #009FE3;
 }
 /* End Actual section  */

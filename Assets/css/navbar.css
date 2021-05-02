@@ -7,8 +7,6 @@
              height: 75px ;
              padding: 0;
              transition: all .5s ease-out;
-             
-         
          } 
          .nav-bar:hover
          {
@@ -54,7 +52,7 @@
          }
          .navbar-dark .navbar-nav .nav-link
          {
-             font-size: 1em;
+             font-size: 0.8em;
              font-weight: 500;
              text-transform: uppercase;
              transition: all .3s ease-out !important;
@@ -161,6 +159,7 @@
         {
             display: flex !important;
             padding: 20px 0;
+            
         }
         .dropdown-menu 
         {
@@ -194,6 +193,14 @@
           /* End The NavbaR */
           
           @media (min-width: 350px) and (max-width:767px) { 
+            .nav-link
+            {
+                font-size: 0.7em !important;
+            }
+            .navbar-nav
+            {
+                margin-left: 0px !important;
+            }
             .dropdown-menu.show {
                 display: flex !important;
                 flex-direction: column;
@@ -210,10 +217,74 @@
                display: flex;
                flex-direction: column !important;
            }
+           .navbar-collapse
+           {
+               background-color: rgba(255, 255, 255, 0.9);
+               padding: 20px;
+               text-align: left;
+               font-weight: 600;
+               color: rgba(0, 0, 0, 0.8);
+               display: flex;
+               flex-direction: column;
+               justify-content: left;
+               align-items: flex-start;
+           }
+           .nav-bar .navbar
+           {
+               padding: 0 !important;
+           }
+           .navbar-dark .navbar-brand
+           {
+               padding-left: 40px;            
+           }
+           #btn-togler
+           {
+               margin-right: 40px;
+           }
+           .soc
+           {
+               color: #000 !important;
+           }
+           .navbar-nav:nth-child(2)
+           {
+               display: flex;
+               flex-direction: row;
+               margin: 10px 0;
+           }
+           .navbar-nav:nth-child(2) .nav-item
+           {
+               margin-right: 10px !important;
+           }
+           .navbar-nav:nth-child(3) .nav-item
+           {
+               padding: 5px 10px;
+           }
            
         }
           
           @media (min-width: 768px) and (max-width: 1199px){
+            .nav-item
+            {
+                margin: 0!important;
+            }  
+            .navbar-nav
+            {
+                margin-left: 0px !important;
+            }
+            .navbar-nav:nth-child(2)
+            {
+                display: flex;
+                flex-direction: row;
+                margin: 10px 0;
+            }
+            .navbar-nav:nth-child(2) .nav-item
+            {
+                margin-right: 10px !important;
+            }
+            .navbar-nav:nth-child(3) .nav-item
+            {
+                padding: 5px 10px;
+            }
             .dropdown-menu.show {
                 display: flex !important;
                 flex-direction: column;
@@ -249,7 +320,6 @@
             }
             .nav-link 
              {
-                 padding: 10px !important;
                  color: rgba(0, 0, 0, 0.8) !important;
              }
              .collapse .nav-item:not(:last-child) a:hover
@@ -268,6 +338,26 @@
                 text-align: left;
                 font-weight: 600;
                 color: rgba(0, 0, 0, 0.8);
+                flex-direction: column;
+                justify-content: left;
+                align-items: flex-start;
+                padding: 30px;    
+            }
+            .nav-bar .navbar
+            {
+                padding: 0 !important;
+            }
+            .navbar-dark .navbar-brand
+            {
+                padding-left: 40px;            
+            }
+            #btn-togler
+            {
+                margin-right: 40px;
+            }
+            .soc
+            {
+                color: #000 !important;
             }
         
         }

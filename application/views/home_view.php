@@ -223,15 +223,15 @@
                             </div>
                         </div>
                         <div class="row mt-4">
-                            <div class="col-lg-3 col-md-6 text-center">
+                            <div class="col-lg-3 col-md-4 text-center">
                                 <p class="chiffre" id="chiffre-produit">13</p>
                                 <label for="produits">Produits</label>
                             </div>
-                            <div class="col-lg-3 col-md-6 text-center">
+                            <div class="col-lg-3 col-md-4 text-center">
                                 <p class="chiffre" id="chiffre-employe">50</p>
                                 <label for="produits">Employés</label>
                             </div>
-                            <div class="col-lg-3 col-md-6 text-center">
+                            <div class="col-lg-3 col-md-4 text-center">
                                 <p class="chiffre" id="chiffre-activite">2020</p>
                                 <label for="produits">Début d'activité</label>
                             </div>
@@ -252,38 +252,33 @@
             <h2 class="h1 titre-actual">ACTUALITE</h2>
         </div>
         <div class="row mt-4">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 ">
                 <div class="card" style="width: 18rem;">
                     <img src="Assets/img/visite.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Visite Du Ministre</h5>
-                        <p class="card-text">Visite du ministre de l’industrie.</p>
+                        <p class="card-text">Visite du ministre de l’industrie. <br>
+                        <span><i class="far fa-clock"></i>  02 Avril 2021.</span>
+                        </p>
                         <a href="#" class="btn btn-primary">Voir Plus</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-6 ">
                 <div class="card" style="width: 18rem;">
-                    <img src="Assets/img/visite.jpeg" class="card-img-top" alt="...">
+                    <img src="Assets/img/even.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Visite Du Ministre</h5>
-                        <p class="card-text">Visite du ministre de l’industrie.</p>
+                        <h5 class="card-title">Journée d'urologie.</h5>
+                        <p class="card-text">Participation a la journée d’urologie acepa annaba et Alger. <br>
+                            <span><i class="far fa-clock"></i>  02 Avril 2021.</span> 
+                        </p>
                         <a href="#" class="btn btn-primary">Voir Plus</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-6">
-                <div class="card" style="width: 18rem;">
-                    <img src="Assets/img/visite.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Visite Du Ministre</h5>
-                        <p class="card-text">Visite du ministre de l’industrie.</p>
-                        <a href="#" class="btn btn-primary">Voir Plus</a>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>
@@ -291,44 +286,6 @@
 <!-- End Actualité -->
 
 
-<!--  Begin Dommaines -->
-<!-- <div class="container-fluid big-section " id="big-section">
-    <div class="container section">
-        <div class="row text-center">
-            <h2 class="h1 col-md-12 p-4">Une solution pour chacun de vos besoins </h2>
-        </div>
-        <div class="row text-center p-4">
-            <div class="first  row text-center">
-                <?php for ($i = 0; $i < 6; $i++) { ?>
-                    <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
-                        <div class="domaine-img  "><img src="<?php echo ucfirst($imgs[$i]); ?>" class="img-domaine"></div>
-                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $domain[$i]; ?>" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
-                    </div>
-                <?php } ?>
-
-            </div>
-            <div class="second text-center row">
-            <?php if (count($domain)>6)
-             { for ($i=6;$i<count($domain);$i++) {?> 
-                    <div class="d-flex flex-column align-items-center col-sm-6 col-md-4 col-lg-2">
-                        <div class="domaine-img  "><img src="<?php echo ucfirst($imgs[$i]); ?>" class="img-domaine"></div>
-                        <label class="dom-label" for="<?php echo ucfirst($domain[$i]); ?>"><a href="<?php echo base_url(); ?>page/produit_par_domaine?d=<?php echo $domain[$i]; ?>" class="nav-link"><?php echo ucfirst($domain[$i]); ?></a></label>
-                    </div>
-                    <?php      }}?>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center mt-4">
-                <a class="btn btn-produit  " href="<?php echo base_url(); ?>page/compliments">Découvrez nos produits</a>
-            </div>
-        </div>
-    </div>
-
-    <img src="Assets/img/h3.svg" class="img-svg1" alt="skin">
-    <img src="Assets/img/h4.svg" class="img-svg2" alt="skin">
-</div> -->
-
-<!-- End Dommaines  -->
 
 <!-- Start Gallery -->
 <div class="container-fluid galerie pt-4 pb-4" id="galerie">
@@ -336,7 +293,7 @@
     <div class="row text-center">
         <h2 class="h1 col-md-12 mb-3">GALERIE </h2>
     </div>
-    <div id="carouselExampleFade" class=" d-flex carousel slide carousel-fade" data-ride="carousel">
+    <div id="carouselExampleFade" class=" d-flex carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="overlay"></div>
             <div class="carousel-item active car-one "></div>
@@ -344,13 +301,13 @@
             <div class="carousel-item car-three"></div>
             <div class="carousel-item car-four "></div>
         </div>
-        <a class="carousel-control-prev car-control " href="#carouselExampleFade" role="button" data-slide="prev">
+        <a class="carousel-control-prev car-control " data-bs-target="#carouselExampleFade" data-bs-slide="prev">
             <div>
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </div>
         </a>
-        <a class="carousel-control-next car-control " href="#carouselExampleFade" role="button" data-slide="next">
+        <a class="carousel-control-next car-control " data-bs-target="#carouselExampleFade" data-bs-slide="next">
             <div>
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>

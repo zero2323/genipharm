@@ -1,5 +1,5 @@
 .nav-bar .navbar {
-    background: linear-gradient(90deg, rgba(244, 148, 31, 1) 0%, rgba(241, 203, 97, 1) 100%);
+    background: linear-gradient(260deg, rgba(129,178,20,1) 0%, rgba(80,182,20,1) 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: #000 !important;
 }
@@ -19,6 +19,10 @@
 .histoire .container .row .his-img {
     width: 70vw;
     height: 350px;
+}
+.footer 
+{
+    background: linear-gradient(260deg, rgba(129,178,20,1) 0%, rgba(80,182,20,1) 100%) !important;
 }
 
 .histoire .container .row .his-img img {

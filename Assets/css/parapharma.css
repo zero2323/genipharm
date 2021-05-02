@@ -32,7 +32,7 @@
          /* Begin the NavBar */
         .nav-bar .navbar
         {
-            background : linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%); 
+            background: linear-gradient(260deg, rgba(129,178,20,1) 0%, rgba(80,182,20,1) 100%); 
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
         #bien 
@@ -51,7 +51,7 @@
         {
             border-left: 2px solid #000 !important;
         }
-        .collapse .nav-item a:hover
+        .collapse .navbar-nav:first-child .nav-item a:hover
         {
             border-left: 2px solid #000 !important;
             margin: 0px 5px;
@@ -425,7 +425,8 @@
         .main .header
         {
             height: 40vh;
-            background: linear-gradient(90deg, rgba(244,148,31,1) 0%, rgba(241,203,97,1) 100%) ; 
+            background: linear-gradient(260deg, rgba(129,178,20,1) 0%, rgba(80,182,20,1) 100%);
+
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -508,13 +509,13 @@
 
         .main .products .row > div a
         {
-            background-color: rgba(241, 203, 97, 0.8);
-            border-color:rgba(241, 203, 97, .9) ;
+            background: rgb(129,178,20);
+            border-color:rgb(129,178,20);
             color: rgba(0, 0, 0, 0.8);
         }
         .main .products .row > div h5
         {
-            color: rgba(244, 148, 31, 0.8);
+            color: rgb(129,178,20);
         }
         .pagination {
             margin-top: 30px;

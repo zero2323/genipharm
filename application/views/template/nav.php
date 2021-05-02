@@ -41,7 +41,7 @@
                     </li>
 
             <li class="nav-item ms-2">
-                <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Où nous trouver ?</a>
+                <a class="nav-link" id="btn-contact" href="#map"> Où nous trouver ?</a>
             </li>
             <li class="nav-item ms-2">
                 <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
@@ -162,58 +162,38 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item active ms-2">
-                            <a class="nav-link active-link" href="<?php echo base_url(); ?>" id="btn-accueil"> Accueil <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item ms-2 drop-down">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                notre entreprise
-                            </a>
-                            <div class="drop-content  container ">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-xxl-4 ">
-                                        <h4>Notre Entreprise</h4>
-                                        <p>Genipharm est un laboratoire algérien <br> engagé dans
-                                            le développement et la production de produits pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-xxl-4 ">
-                                        <h6>Nos Valeurs</h6>
-                                        <p>Savoir-faire et Qualité, Engagement, Disponibilité, Responsabilité, Confiance.</p>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-xxl-4 ">
-                                        <h6>Notre Philosophie</h6>
-                                        <p>Réaliser des produits de qualité dans une recherche constante de la satisfaction du client.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Qui Somme Nous ?
+                        </a>
+                        <div class="dropdown-menu w-100 p-4 " aria-labelledby="navbarDropdown">
+                            <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Vision </a>
+                            <a class="  dropdown-item" href="<?php echo base_url(); ?>page/histoire">Notre Mission</a>
+                            <a class=" dropdown-item" href="<?php echo base_url(); ?>page/histoire">Nos Valeurs</a>
+                        </div>
+                    </li>
 
-                        <li class="nav-item ms-2 drop-down">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                nos expertises
-                            </a>
-                            <div class="drop-content  container ">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-xxl-4 ">
-                                        <h4>Nos Expertises</h4>
-                                        <p>Genipharm est un laboratoire algérien <br> engagé dans
-                                            le développement et la production de produits pharmaceutiques, parapharmaceutiques et cosmétiques. Classé GMP.</p>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-xxl-4 ">
-                                        <h6 class="text-center ">Compléments alimentaires(Gélules et comprimés)</h6>
-                                        <p><a href="<?php echo base_url(); ?>page/compliments">Voir nos Compliements alimentaires.</a></p>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-xxl-4 ">
-                                        <h6 class="text-center ">Produits parapharmaceutiques</h6>
-                                        <p><a href="<?php echo base_url(); ?>page/parapharma">Voir nos produits parapharmaceutiques.</a></p>
-                                    </div>
-                                </div>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Nos produits
+                        </a>
+                        <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                            <div class="domaine-wrap">
+                                <a class="dropdown-item domaine" href="<?php echo base_url(); ?>page/compliments">Complément alimentaires </a>
                             </div>
-                        </li>
 
-                        <li class="nav-item ms-2">
-                            <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
-                        </li>
+                            <div class="domaine-wrap">
+                                <a href="<?php echo base_url(); ?>page/parapharma" class="dropdown-item domaine">Dermo-cosmétique </a>
+                            </div>
+                        </div>
+                    </li>
+
+            <li class="nav-item ms-2">
+                <a class="nav-link" id="btn-contact" href="#map"> Où nous trouver ?</a>
+            </li>
+            <li class="nav-item ms-2">
+                <a class="nav-link" id="btn-contact" href="<?php echo base_url(); ?>page/contact"> Contactez-Nous</a>
+            </li>
 
 
                     </ul>

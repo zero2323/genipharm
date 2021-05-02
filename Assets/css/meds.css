@@ -54,11 +54,15 @@
         {
             border-left: 2px solid #000 !important;
         }
-        .collapse .nav-item a:hover
+        .collapse .navbar-nav:first-child .nav-item a:hover
         {
             border-left: 2px solid #000 !important;
             margin: 0px 5px;
             transform: scale(1.1);
+        }
+        .social-media a:hover
+        {
+            border-left: unset !important;
         }
 
         .collapse .partenaire {
